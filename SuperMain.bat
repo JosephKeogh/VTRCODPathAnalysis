@@ -12,6 +12,8 @@ set Zipper="C:\Program Files\7-Zip\7z.exe"
 rem this is the program that will analyze the trip data
 set Analyzer="C:\Users\JK\Google Drive\Non Acedemics\Occupational\VTRC\Python Files\ODIdentification\Main.py"
 
+rem this is the location of the 2017 Inrix Data
+
 rem this control the output of the file
 set printProgress="true"
 set testPerformance="false"
