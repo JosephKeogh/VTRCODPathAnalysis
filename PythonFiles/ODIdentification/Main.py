@@ -382,88 +382,87 @@ with open(inputFileName, 'r') as inputFile:
                 # assign data values to variables
                 tripID = inputLine[0]
 
-                # todo this will mess up the counts, but will speed up the process
-                if tripPaths.__contains__(tripID):
-                    StartLat = inputLine[8]
-                    StartLong = inputLine[9]
-                    EndLat = inputLine[10]
-                    EndLong = inputLine[11]
-                    weekDay = int(inputLine[5])
 
-                    # snap to origin and desination sections
-                    # snap to OD node
+                StartLat = inputLine[8]
+                StartLong = inputLine[9]
+                EndLat = inputLine[10]
+                EndLong = inputLine[11]
+                weekDay = int(inputLine[5])
 
-                    # update the count on that OD node
-                    # create a place holder OD
-                    origin = Coordinate.Coordinate(StartLat, StartLong)
-                    destination = Coordinate.Coordinate(EndLat, EndLong)
-                    tempNode = ODNode.ODNode(origin, destination, 0)
+                # snap to origin and desination sections
+                # snap to OD node
 
-                    # find if the origin and destination are of interst
-                    # if they are of interest, incremement the appropriate ODNode
-                    if ODNodes.__contains__(tempNode, novaClose, dcClose):
-                        '''find the correct od node'''
-                        n = ODNodes.find(tempNode, novaClose, dcClose)
-                        '''find the index of the correct od node'''
-                        getindex = ODNodes.getIndex(tempNode, novaClose, dcClose)
+                # update the count on that OD node
+                # create a place holder OD
+                origin = Coordinate.Coordinate(StartLat, StartLong)
+                destination = Coordinate.Coordinate(EndLat, EndLong)
+                tempNode = ODNode.ODNode(origin, destination, 0)
 
-                        '''add the trip id to the dict of trip id mapped to od node index'''
-                        tripIDandODNode[tripID] = getindex
+                # find if the origin and destination are of interst
+                # if they are of interest, incremement the appropriate ODNode
+                if ODNodes.__contains__(tempNode, novaClose, dcClose):
+                    '''find the correct od node'''
+                    n = ODNodes.find(tempNode, novaClose, dcClose)
+                    '''find the index of the correct od node'''
+                    getindex = ODNodes.getIndex(tempNode, novaClose, dcClose)
 
-                        '''increment the correct od node'''
-                        n.inc()
-                        '''make note that this was mapped'''
-                        ODCounter += 1
+                    '''add the trip id to the dict of trip id mapped to od node index'''
+                    tripIDandODNode[tripID] = getindex
 
-                        '''if this trip was at a time that can be mapped'''
-                        tempTimeNode = TimeNode.TimeNode(startDateLocal, weekDay, timeInterval)
-                        if n.__contains__(tempTimeNode):
+                    '''increment the correct od node'''
+                    n.inc()
+                    '''make note that this was mapped'''
+                    ODCounter += 1
 
-                            '''find the correct timenode'''
-                            t = n.findTime(tempTimeNode)
+                    '''if this trip was at a time that can be mapped'''
+                    tempTimeNode = TimeNode.TimeNode(startDateLocal, weekDay, timeInterval)
+                    if n.__contains__(tempTimeNode):
 
-                            '''add the tripID to the list of trip ids'''
-                            t.addTripID(tripID)
+                        '''find the correct timenode'''
+                        t = n.findTime(tempTimeNode)
 
-                            '''increment the correct time node'''
-                            t.inc()
+                        '''add the tripID to the list of trip ids'''
+                        t.addTripID(tripID)
 
-                            '''increment the global count of time maps'''
-                            TimeCounter += 1
+                        '''increment the correct time node'''
+                        t.inc()
 
-                            '''incremement the correct period in od node'''
-                            if timeToInt(t.getTimeID()) < timeToInt("12:00"):
-                                n.incAmCount()
-                            else:
-                                n.incPmCount()
+                        '''increment the global count of time maps'''
+                        TimeCounter += 1
 
-                            '''the path that was taken'''
-                            a = False
-                            b = False
-                            '''if this trip id can be mapped to a path'''
-                            if tripPaths.__contains__(tripID):
-                                path = tripPaths[tripID]
-                                a = True
-                                PathCounter += 1
-                                '''if this path is already a part of the time nodes path'''
-                                if t.getPaths().__contains__(path):
-                                    b = True
+                        '''incremement the correct period in od node'''
+                        if timeToInt(t.getTimeID()) < timeToInt("12:00"):
+                            n.incAmCount()
+                        else:
+                            n.incPmCount()
 
-                            if a:
-                                if b:
-                                    '''increment the count'''
-                                    oldPaths = t.getPaths()
-                                    newPaths = oldPaths
-                                    newPaths[path].inc()
-                                    t.setPaths(newPaths)
+                        '''the path that was taken'''
+                        a = False
+                        b = False
+                        '''if this trip id can be mapped to a path'''
+                        if tripPaths.__contains__(tripID):
+                            path = tripPaths[tripID]
+                            a = True
+                            PathCounter += 1
+                            '''if this path is already a part of the time nodes path'''
+                            if t.getPaths().__contains__(path):
+                                b = True
 
-                                elif b is False:
-                                    '''if this path has not been seen yet'''
-                                    oldPaths = t.getPaths()
-                                    newPaths = oldPaths
-                                    newPaths[path] = PathNode.PathNode(path)
-                                    newPaths[path].inc()
-                                    t.setPaths(newPaths)
+                        if a:
+                            if b:
+                                '''increment the count'''
+                                oldPaths = t.getPaths()
+                                newPaths = oldPaths
+                                newPaths[path].inc()
+                                t.setPaths(newPaths)
+
+                            elif b is False:
+                                '''if this path has not been seen yet'''
+                                oldPaths = t.getPaths()
+                                newPaths = oldPaths
+                                newPaths[path] = PathNode.PathNode(path)
+                                newPaths[path].inc()
+                                t.setPaths(newPaths)
 
 inputFile.close()
 
