@@ -1,0 +1,14 @@
+Origin: 40.5, -78.0 Destination: 50.5, -80.0 Count: 2
+	Times:
+		TimeID: 06:00 Count: 0
+		TimeID: 06:30 Count: 0
+		TimeID: 07:00 Count: 1
+			Trips:
+				TripID: 66W Count: 1
+		TimeID: 07:30 Count: 0
+		TimeID: 08:00 Count: 1
+			Trips:
+				TripID: 66W Count: 1
+		TimeID: 08:30 Count: 0
+		TimeID: 09:00 Count: 0
+		TimeID: 09:30 Count: 0
