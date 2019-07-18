@@ -194,6 +194,20 @@ for i in range(0, 2):
                             temp.setPmCount(vodnode.getPmCount() + temp.getAmCount())
                             temp.setAmCount(vodnode.getAmCount() + temp.getAmCount())
 
+                            '''set the times and paths'''
+                            for tvodnode in vodnode.getTimes():
+                                for ttemp in temp.getTimes():
+                                    if tvodnode.getTimeID() == ttemp.getTimeID():
+
+                                        '''update the time node count'''
+                                        ttemp.setCount(tvodnode.getCount() + ttemp.getCount())
+
+                                        '''go through the paths and update counts'''
+                                        for ptodnode in tvodnode.getPaths():
+                                            for pttemp in ttemp.getPaths():
+                                                print()
+                                                # todo
+
     inputFile.close()
 
 '''output the results to the outputfile'''
