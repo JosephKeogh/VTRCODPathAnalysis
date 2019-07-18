@@ -1,0 +1,78 @@
+July 7 - 1024 
+Notes: Base Line running on 10x10 grids
+Runs: 50
+100 Lines Average:  0.055 sec
+Estimated Run Time: 3.073  hr
+
+July 7 - 1026 
+Notes: Using toStringShort method for hashing
+Runs: 50
+100 Lines Average:  0.084 sec
+Estimated Run Time: 4.705  hr
+
+July 7 - 1026 
+Notes: Using toStringShort method, with more info for Coords
+Runs: 50
+100 Lines Average:  0.055 sec
+Estimated Run Time: 3.105  hr
+
+July 7 - 1100 
+Notes: Using hashlib.md5 on node.toString 
+Runs: 50
+100 Lines Average:  0.057 sec
+Estimated Run Time: 3.193  hr
+
+July 7 - 1100 
+Notes: Using hashlib.md5 on node.toString 
+Runs: 50
+100 Lines Average:  0.058 sec
+Estimated Run Time: 3.245  hr
+
+July 7 - 1100 
+Notes: Using hashlib.md5 on node.toString without utf-8 
+Runs: 50
+100 Lines Average:  0.059 sec
+Estimated Run Time: 3.297  hr
+ 
+July 7 - 1100 
+Notes: Using hashlib.sha1 
+Runs: 50
+100 Lines Average:  0.059 sec
+Estimated Run Time: 3.332  hr
+ 
+July 7 - 1115 
+Notes: Base Line 
+Runs: 50
+100 Lines Average:  0.062 sec
+Estimated Run Time: 3.471  hr
+ 
+July 7 - 1115 
+Notes: Base Line 
+Runs: 50
+100 Lines Average:  0.058 sec
+Estimated Run Time: 3.263  hr
+ 
+July 7 - 1400
+Notes: Base Line after creating new objects 
+Runs: 50
+100 Lines Average:  0.055 sec
+Estimated Run Time: 3.072  hr
+ 
+July 10 - 0910 
+Notes: Base Line after creating new objects 
+Runs: 50
+100 Lines Average:  0.056 sec
+Estimated Run Time: 3.124  hr
+
+July 11 - 1110 
+Notes: Added outbound nodes running on 3x3 grids
+Runs: 50
+100 Lines Average:  0.009 sec
+Estimated Run Time: 0.516  hr
+ 
+July 15 - 1110
+Notes: BaseLine - Many Changes 
+Runs: 51
+100 Lines Average:  0.015 sec
+Estimated Run Time: 0.867  hr
+ 

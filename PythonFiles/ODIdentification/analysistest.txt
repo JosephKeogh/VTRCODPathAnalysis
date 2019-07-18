@@ -1,0 +1,239 @@
+--- Basic Info ---
+Number of ODNodes: 162
+
+--- Raw Numbers ---
+Total Trips: 2000
+Int Trips  : 1582
+OD Maps    : 1562
+Time Maps  : 1562
+Path Maps  : 2
+Total AM   : 636
+Total PM   : 926
+
+--- Percent Analysis ---
+Trips of Interest % : 0.791
+Int Trips Map to OD : 0.987
+OD Tfips Map to Time: 1.0
+Time Mapped to Path : 0.001
+End Amount Mapped   : 0.001
+
+--- ODNodes Holding 6x more of Expected Total Traffic---
+--- If 'Percent total interested trips' >= 0.037 ---
+---2 Nodes Encompass 0.106 of all Interested Trips ---
+
+[0]
+Origin     : 38.92981981981982, -77.01881603757707
+Destination: 37.98351891891892, -77.02644632431243
+Int Trips % (total): 0.041
+
+[1]
+Origin     : 39.11, -77.284
+Destination: 36.90243783783784, -75.3001552409644
+Int Trips % (total): 0.064
+
+--- ODNodes Holding 3x more of Expected AM Traffic---
+--- If 'Percent AM trips' >= 0.018 ---
+---17 Nodes Encompass 0.509 of all AM Trips ---
+
+[0]
+Origin     : 38.92981981981982, -76.75363207515413
+Destination: 37.98351891891892, -78.65719
+Int Trips % (total): 0.034
+AM % (total)       : 0.047
+
+[1]
+Origin     : 39.11, -77.284
+Destination: 37.98351891891892, -77.02644632431243
+Int Trips % (total): 0.018
+AM % (total)       : 0.018
+
+[2]
+Origin     : 38.74963963963964, -77.284
+Destination: 37.98351891891892, -77.02644632431243
+Int Trips % (total): 0.017
+AM % (total)       : 0.018
+
+[3]
+Origin     : 38.74963963963964, -77.01758297077761
+Destination: 39.0646, -75.48596166245726
+Int Trips % (total): 0.016
+AM % (total)       : 0.018
+
+[4]
+Origin     : 39.11, -77.02003774287316
+Destination: 36.90243783783784, -78.65719
+Int Trips % (total): 0.016
+AM % (total)       : 0.025
+
+[5]
+Origin     : 39.11, -76.75607548574631
+Destination: 36.90243783783784, -78.65719
+Int Trips % (total): 0.017
+AM % (total)       : 0.025
+
+[6]
+Origin     : 39.11, -77.284
+Destination: 39.0646, -77.07157583122863
+Int Trips % (total): 0.032
+AM % (total)       : 0.044
+
+[7]
+Origin     : 39.0646, -77.07157583122863
+Destination: 39.11, -77.284
+Int Trips % (total): 0.027
+AM % (total)       : 0.028
+
+[8]
+Origin     : 38.74963963963964, -77.284
+Destination: 39.0646, -78.65719
+Int Trips % (total): 0.018
+AM % (total)       : 0.031
+
+[9]
+Origin     : 39.11, -77.02003774287316
+Destination: 36.90243783783784, -76.9786726204822
+Int Trips % (total): 0.025
+AM % (total)       : 0.025
+
+[10]
+Origin     : 38.92981981981982, -77.284
+Destination: 39.0646, -75.48596166245726
+Int Trips % (total): 0.026
+AM % (total)       : 0.034
+
+[11]
+Origin     : 39.0646, -77.07157583122863
+Destination: 38.92981981981982, -76.75363207515413
+Int Trips % (total): 0.016
+AM % (total)       : 0.022
+
+[12]
+Origin     : 38.92981981981982, -77.01881603757707
+Destination: 39.0646, -77.07157583122863
+Int Trips % (total): 0.011
+AM % (total)       : 0.018
+
+[13]
+Origin     : 38.92981981981982, -77.01881603757707
+Destination: 37.98351891891892, -77.02644632431243
+Int Trips % (total): 0.041
+AM % (total)       : 0.037
+
+[14]
+Origin     : 39.11, -77.284
+Destination: 36.90243783783784, -75.3001552409644
+Int Trips % (total): 0.064
+AM % (total)       : 0.056
+
+[15]
+Origin     : 38.74963963963964, -76.75116594155521
+Destination: 39.0646, -77.07157583122863
+Int Trips % (total): 0.018
+AM % (total)       : 0.037
+
+[16]
+Origin     : 38.92981981981982, -76.75363207515413
+Destination: 39.0646, -77.07157583122863
+Int Trips % (total): 0.013
+AM % (total)       : 0.018
+
+--- ODNodes Holding 3x more of Expected PM Traffic---
+--- If 'Percent PM trips' >= 0.018 ---
+---14 Nodes Encompass 0.388 of all PM Trips ---
+
+[0]
+Origin     : 38.92981981981982, -76.75363207515413
+Destination: 37.98351891891892, -78.65719
+Int Trips % (total): 0.034
+PM % (total)       : 0.025
+
+
+[1]
+Origin     : 39.11, -77.284
+Destination: 37.98351891891892, -77.02644632431243
+Int Trips % (total): 0.018
+PM % (total)       : 0.019
+
+
+[2]
+Origin     : 38.74963963963964, -77.01758297077761
+Destination: 39.0646, -78.65719
+Int Trips % (total): 0.013
+PM % (total)       : 0.021
+
+
+[3]
+Origin     : 39.11, -77.284
+Destination: 39.0646, -77.07157583122863
+Int Trips % (total): 0.032
+PM % (total)       : 0.025
+
+
+[4]
+Origin     : 39.11, -77.02003774287316
+Destination: 39.0646, -78.65719
+Int Trips % (total): 0.015
+PM % (total)       : 0.019
+
+
+[5]
+Origin     : 38.74963963963964, -77.284
+Destination: 36.90243783783784, -76.9786726204822
+Int Trips % (total): 0.016
+PM % (total)       : 0.019
+
+
+[6]
+Origin     : 39.0646, -77.07157583122863
+Destination: 39.11, -77.284
+Int Trips % (total): 0.027
+PM % (total)       : 0.028
+
+
+[7]
+Origin     : 38.74963963963964, -77.01758297077761
+Destination: 36.90243783783784, -76.9786726204822
+Int Trips % (total): 0.011
+PM % (total)       : 0.019
+
+
+[8]
+Origin     : 39.11, -77.02003774287316
+Destination: 36.90243783783784, -76.9786726204822
+Int Trips % (total): 0.025
+PM % (total)       : 0.025
+
+
+[9]
+Origin     : 38.92981981981982, -77.284
+Destination: 39.0646, -75.48596166245726
+Int Trips % (total): 0.026
+PM % (total)       : 0.021
+
+
+[10]
+Origin     : 39.0646, -77.07157583122863
+Destination: 38.74963963963964, -77.284
+Int Trips % (total): 0.016
+PM % (total)       : 0.023
+
+
+[11]
+Origin     : 38.74963963963964, -77.284
+Destination: 36.90243783783784, -75.3001552409644
+Int Trips % (total): 0.015
+PM % (total)       : 0.021
+
+
+[12]
+Origin     : 38.92981981981982, -77.01881603757707
+Destination: 37.98351891891892, -77.02644632431243
+Int Trips % (total): 0.041
+PM % (total)       : 0.045
+
+
+[13]
+Origin     : 39.11, -77.284
+Destination: 36.90243783783784, -75.3001552409644
+Int Trips % (total): 0.064
+PM % (total)       : 0.071
