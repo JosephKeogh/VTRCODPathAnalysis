@@ -88,10 +88,14 @@ programName = sys.argv.pop(0)                                 # ignore this prog
 inputFileName = sys.argv.pop(0)                 # input data file containing the timestamped waypoints snapped to XDs
 utcDatetimeFileName = sys.argv.pop(0)           # file containing the UTC datetime periods of interest
 xdFileName = sys.argv.pop(0)                    # file containing XDs of interest
-outputFileName = sys.argv.pop(0)                # output data file containing count of the XDs seen
 outputTextFileName = sys.argv.pop(0)
 wantProgramProgression = sys.argv.pop(0)        # will be "true" if the user wants to see programs progress
 testingPerformance = sys.argv.pop(0)            # will only print out the time to analyze input file
+programIteration = sys.argv.pop(0)
+
+'''set up the actual input and output file names'''
+inputFileName = inputFileName + str(programIteration) + ".csv"
+outputTextFileName = outputTextFileName + str(programIteration) + ".txt"
 
 '''what we want the program to output'''
 '''turn command line inputs into boolean'''
@@ -478,25 +482,7 @@ if printProgramProgression:
 if testPerformance is True:
     print(str(totalTime))
 
-# open output file
-# open the file in a way that clears out all the old data
-with open(outputFileName, 'w', newline='') as outputFile:
-    writer = csv.writer(outputFile)
-
-    # rewrite the header of the file
-    writer.writerow(["OriginLat", "OriginLong", "DestinationLat", "DestinationLong", "Count"])
-
-    # write the OD count data to the output file
-    for inBoundNode in ODNodes.table:
-
-        # write the information
-        o = inBoundNode.origin
-        d = inBoundNode.destination
-        if inBoundNode.count >= 0:
-            writer.writerow([o.lat, o.long, d.lat, d.long, inBoundNode.count])
-
-outputFile.close()
-
+'''write the basic information to the output file'''
 with open(outputTextFileName, 'r') as outputTextFile:
     line = outputTextFile.readline().strip()
     TripCounter = TripCounter + int(line[13:])
