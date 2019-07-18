@@ -1,0 +1,21 @@
+
+7-Zip 19.00 (x64) : Copyright (c) 1999-2018 Igor Pavlov : 2019-02-21
+
+Scanning the drive for archives:
+1 file, 262280351 bytes (251 MiB)
+
+Extracting archive: C:\Users\JK\Desktop\InrixData\Trips\2017\unzipped\trips.csv.gz
+--
+Path = C:\Users\JK\Desktop\InrixData\Trips\2017\unzipped\trips.csv.gz
+Type = gzip
+Headers Size = 10
+
+
+Would you like to replace the existing file:
+  Path:     .\trips.csv
+  Size:     739949857 bytes (706 MiB)
+  Modified: 2019-07-17 16:22:39
+with the file from archive:
+  Path:     trips.csv
+  Size:     739949857 bytes (706 MiB)
+? (Y)es / (N)o / (A)lways / (S)kip all / A(u)to rename all / (Q)uit? 
