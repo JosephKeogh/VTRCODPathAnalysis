@@ -1,7 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9725cb3b-f67e-47de-a8cc-7c08b193163d" name="Default Changelist" comment="" />
+    <list default="true" id="9725cb3b-f67e-47de-a8cc-7c08b193163d" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/PythonFiles.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/PythonFiles.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ODIdentification/Analyze.bat" beforeDir="false" afterPath="$PROJECT_DIR$/ODIdentification/Analyze.bat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ODIdentification/AnalyzeOutput.py" beforeDir="false" afterPath="$PROJECT_DIR$/ODIdentification/AnalyzeOutput.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ODIdentification/analysis.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ODIdentification/analysis2017.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ODIdentification/analysis2017.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ODIdentification/analysis2017values.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ODIdentification/analysis2018.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ODIdentification/analysis2018.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ODIdentification/analysis2018values.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ODIdentification/analysistest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ODIdentification/analysistest.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ODIdentification/totalOutput2017.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ODIdentification/totalOutput2017.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ODIdentification/totalOutput2018.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ODIdentification/totalOutput2018.txt" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -11,15 +24,10 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ODIdentification/null">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/ODIdentification/Main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3655">
-              <caret line="290" column="29" selection-start-line="290" selection-start-column="10" selection-end-line="290" selection-end-column="29" />
+            <state relative-caret-position="153">
+              <caret line="9" column="37" lean-forward="true" selection-start-line="9" selection-start-column="2" selection-end-line="9" selection-end-column="37" />
               <folding>
                 <element signature="e#0#10#0" expanded="true" />
               </folding>
@@ -27,13 +35,48 @@
           </provider>
         </entry>
       </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/ODIdentification/AnalyzeOutput.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="153">
+              <caret line="258" column="46" selection-start-line="258" selection-start-column="46" selection-end-line="258" selection-end-column="46" />
+              <folding>
+                <element signature="e#0#69#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ODIdentification/Analyze.bat">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="51">
+              <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
+            </state>
+          </provider>
+        </entry>
+      </file>
     </leaf>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>encomp</find>
+    </findStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="1905" />
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/ODIdentification/Main.py" />
+        <option value="$PROJECT_DIR$/ODIdentification/Analyze.bat" />
+        <option value="$PROJECT_DIR$/ODIdentification/AnalyzeOutput.py" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="-15" />
     <option name="width" value="1950" />
     <option name="height" value="2055" />
   </component>
@@ -67,11 +110,12 @@
   <component name="PropertiesComponent">
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/ODIdentification" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\JK\git\VTRCODPathAnalysis\PythonFiles\ODIdentification" />
       <recent name="C:\Users\JK\git\VTRCODPathAnalysis\PythonFiles" />
     </key>
   </component>
@@ -98,13 +142,20 @@
       <option name="presentableId" value="Default" />
       <updated>1563444795345</updated>
     </task>
+    <task id="LOCAL-00001" summary="Changed Main.py to count correctly">
+      <created>1563457114366</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1563457114366</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="635" y="0" width="650" height="685" extended-state="0" />
-    <editor active="true" />
+    <frame x="-5" y="0" width="650" height="685" extended-state="0" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" weight="0.37337664" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.5016234" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -123,16 +174,56 @@
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
     </layout>
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Changed Main.py to count correctly" />
+    <option name="LAST_COMMIT_MESSAGE" value="Changed Main.py to count correctly" />
+  </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/ODIdentification/null">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
+    <entry file="file://$PROJECT_DIR$/ODIdentification/analysis2018.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-102" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ODIdentification/analysis2017values.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ODIdentification/ClearOutput.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ODIdentification/analysis2017.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-306" />
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/ODIdentification/Main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3655">
-          <caret line="290" column="29" selection-start-line="290" selection-start-column="10" selection-end-line="290" selection-end-column="29" />
+        <state relative-caret-position="153">
+          <caret line="9" column="37" lean-forward="true" selection-start-line="9" selection-start-column="2" selection-end-line="9" selection-end-column="37" />
           <folding>
             <element signature="e#0#10#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ODIdentification/totalOutput2017.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ODIdentification/Analyze.bat">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ODIdentification/AnalyzeOutput.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="258" column="46" selection-start-line="258" selection-start-column="46" selection-end-line="258" selection-end-column="46" />
+          <folding>
+            <element signature="e#0#69#0" expanded="true" />
           </folding>
         </state>
       </provider>

@@ -1,6 +1,7 @@
 from Objects import Coordinate, TimeNode, ODNode, PathNode, HashTable
 from datetime import datetime, timedelta
 import sys
+import csv
 
 sys.argv.pop(0)                                 # ignore this program's name
 inputFileName = sys.argv.pop(0)
@@ -175,16 +176,17 @@ outputTextFile1.close()
 with open(outputFileName, 'w') as file:
 
     file.write("--- Basic Info ---")
-    file.write("\nNumber of ODNodes: 162")
+    file.write("\nNumber of ODNodes: " + str(ODNodes.__len__()))
 
     file.write("\n\n--- Raw Numbers ---")
     file.write("\nTotal Trips: " + str(totalTripCount))
     file.write("\nInt Trips  : " + str(interestTripCount))
     file.write("\nOD Maps    : " + str(odMapCount))
     file.write("\nTime Maps  : " + str(timeMapCount))
-    file.write("\nPath Maps  : " + str(pathMapCount))
     file.write("\nTotal AM   : " + str(totalAM))
     file.write("\nTotal PM   : " + str(totalPM))
+    file.write("\nPath Maps  : " + str(pathMapCount))
+
 
     file.write("\n\n--- Percent Analysis ---")
     file.write("\nTrips of Interest % : " + str(interestTripCount / totalTripCount)[:5])
@@ -231,8 +233,7 @@ with open(outputFileName, 'w') as file:
     l.append(timePaths)
     l.append(weekdayHourPaths)
 
-
-
+    '''collect the counts for each path'''
     for node in ODNodes:
 
         times = node.getTimes()
@@ -249,51 +250,86 @@ with open(outputFileName, 'w') as file:
                 path = p.getPathID()
                 count = p.getCount()
 
-                '''weekday'''
-                if weekdays.__contains__(wkdy):
-                    weekdays[wkdy] = weekdays[wkdy] + int(count)
-                else:
-                    weekdays[wkdy] = int(count)
-
-                '''hour'''
-                if justTimes.__contains__(hour):
-                    justTimes[hour] = justTimes[hour] + int(count)
-                else:
-                    justTimes[hour] = int(count)
-
                 '''path'''
                 if justPaths.__contains__(path):
                     justPaths[path] = justPaths[path] + int(count)
                 else:
                     justPaths[path] = int(count)
 
-                '''weekday and hour'''
-                weekdayHour = str(wkdy) + " " + str(hour)
-                if weekdayTimes.__contains__(weekdayHour):
-                    weekdayTimes[weekdayHour] = weekdayTimes[weekdayHour] + int(count)
-                else:
-                    weekdayTimes[weekdayHour] = int(count)
+    with open("PathCounts.csv", 'w', newline='') as csvfile:
+        writer = csv.writer(csvfile)
+        for p in justPaths:
+            a = [str(p), str(justPaths[p])]
+            writer.writerow(a)
+    csvfile.close()
 
-                '''weekday and path'''
-                weekdayPath = str(wkdy) + " " + str(path)
-                if weekdayPaths.__contains__(weekdayPath):
-                    weekdayPaths[weekdayPath] = weekdayPaths[weekdayPath] + int(count)
-                else:
-                    weekdayPaths[weekdayPath] = int(count)
+    '''remove the paths that are not frequently used'''
+    cutOff = 100
+    newPaths = justPaths.copy()
+    for p in newPaths:
+        if newPaths[p] < cutOff:
+            del justPaths[p]
 
-                '''hour and path'''
-                hourPath = str(hour) + " " + str(path)
-                if timePaths.__contains__(hourPath):
-                    timePaths[hourPath] = timePaths[hourPath] + int(count)
-                else:
-                    timePaths[hourPath] = int(count)
+    '''update the other counts'''
+    '''collect the counts for each path'''
+    for node in ODNodes:
 
-                '''weekday and hour and path'''
-                weekdayHourPath = str(wkdy) + " " + str(hour) + " " + str(path)
-                if weekdayHourPaths.__contains__(weekdayHourPath):
-                    weekdayHourPaths[weekdayHourPath] = weekdayHourPaths[weekdayHourPath] + int(count)
-                else:
-                    weekdayHourPaths[weekdayHourPath] = int(count)
+        times = node.getTimes()
+
+        for t in times.values():
+
+            wkdy = t.getWeekDay()
+            hour = t.getTimeID()
+
+            paths = t.getPaths()
+
+            for p in paths.values():
+
+                path = p.getPathID()
+                count = p.getCount()
+
+                '''if this path is one with a large enough count'''
+                if path in justPaths.keys():
+
+                    '''weekday'''
+                    if weekdays.__contains__(wkdy):
+                        weekdays[wkdy] = weekdays[wkdy] + int(count)
+                    else:
+                        weekdays[wkdy] = int(count)
+
+                    '''hour'''
+                    if justTimes.__contains__(hour):
+                        justTimes[hour] = justTimes[hour] + int(count)
+                    else:
+                        justTimes[hour] = int(count)
+
+                    '''weekday and hour'''
+                    weekdayHour = str(wkdy) + " " + str(hour)
+                    if weekdayTimes.__contains__(weekdayHour):
+                        weekdayTimes[weekdayHour] = weekdayTimes[weekdayHour] + int(count)
+                    else:
+                        weekdayTimes[weekdayHour] = int(count)
+
+                    '''weekday and path'''
+                    weekdayPath = str(wkdy) + " " + str(path)
+                    if weekdayPaths.__contains__(weekdayPath):
+                        weekdayPaths[weekdayPath] = weekdayPaths[weekdayPath] + int(count)
+                    else:
+                        weekdayPaths[weekdayPath] = int(count)
+
+                    '''hour and path'''
+                    hourPath = str(hour) + " " + str(path)
+                    if timePaths.__contains__(hourPath):
+                        timePaths[hourPath] = timePaths[hourPath] + int(count)
+                    else:
+                        timePaths[hourPath] = int(count)
+
+                    '''weekday and hour and path'''
+                    weekdayHourPath = str(wkdy) + " " + str(hour) + " " + str(path)
+                    if weekdayHourPaths.__contains__(weekdayHourPath):
+                        weekdayHourPaths[weekdayHourPath] = weekdayHourPaths[weekdayHourPath] + int(count)
+                    else:
+                        weekdayHourPaths[weekdayHourPath] = int(count)
 
     for aa in weekdays.values():
         weekdayTotal += aa
@@ -312,23 +348,40 @@ with open(outputFileName, 'w') as file:
 
     '''list to hold all totals'''
     ll = []
+    llNames = []
+    llexamples = []
     ll.append(weekdayTotal)
+    llNames.append("Average Weekday Total Path Count: ")
+    llexamples.append("Example: Wednesday had 100 trips with map-able paths")
     ll.append(justTimeTotal)
+    llNames.append("Average Time Segment Path Count: ")
+    llexamples.append("Example: 08:00 had 100 trips with map-able paths")
     ll.append(pathTotal)
+    llNames.append("Average Distinct Path Count: ")
+    llexamples.append("Example: I-66 had 100 trips with map-able paths")
     ll.append(weekdayTimeTotal)
+    llNames.append("Average Weekday Time Segment Path Count: ")
+    llexamples.append("Example: Wednesday at 08:00 had 100 trips with map-able paths")
     ll.append(weekdayPathTotal)
+    llNames.append("Average Weekday Distinct Path Count: ")
+    llexamples.append("Example: I-66 on Wednesday had 100 trips with map-able paths")
     ll.append(timePathTotal)
+    llNames.append("Average Time Segment on Distinct Path Path Count: ")
+    llexamples.append("Example: I-66 on Wednesdays had 100 trips with map-able paths")
     ll.append(weekdayHourPathTotal)
+    llNames.append("Average Distinct Path during Time Segment on Weekday Path Count: ")
+    llexamples.append("Example: I-66 taken at 08:30 on Wednesdays had 100 trips with map-able paths")
 
+    '''header'''
+    file.write("\n\n--- Path Count Analysis ---")
+    file.write("\nOnly looking at paths with a count more than: " + str(cutOff))
     count = 0
     for a in l:
         average = ll[count] / int(a.__len__())
         average = round(average, 1)
-        file.write("\n\nThe Average Count: " + str(average))
+        file.write("\n" + llNames[count] + str(average))
+        file.write("\n\t" + llexamples[count])
         count += 1
-        for b in sorted(a.keys()):
-            file.write("\nkey: " + str(b) + " value: " + str(a[b]))
-    """
 
     '''total traffic analysis'''
     significantFactor = 3
@@ -357,9 +410,9 @@ with open(outputFileName, 'w') as file:
 
             counter += 1
 
-    string = string + "\n---" + str(counter) + " Nodes Encompass " + str(totalProportion)[:5] + \
+    string = string + "\n---" + str(counter) + " OD Nodes Encompass " + str(totalProportion)[:5] + \
              " of all Interested Trips ---"
-    string = string + nodeString
+    # string = string + nodeString
 
 
     '''AM traffic analysis'''
@@ -391,9 +444,9 @@ with open(outputFileName, 'w') as file:
 
             counter += 1
 
-    string = string + "\n---" + str(counter) + " Nodes Encompass " + str(totalProportion)[:5] + \
+    string = string + "\n---" + str(counter) + " OD Nodes Encompass " + str(totalProportion)[:5] + \
              " of all AM Trips ---"
-    string = string + nodeString
+    # string = string + nodeString
 
 
     '''PM traffic analysis'''
@@ -425,14 +478,11 @@ with open(outputFileName, 'w') as file:
 
             counter += 1
 
-    string = string + "\n---" + str(counter) + " Nodes Encompass " + str(totalProportion)[:5] + \
+    string = string + "\n---" + str(counter) + " OD Nodes Encompass " + str(totalProportion)[:5] + \
              " of all PM Trips ---"
-    string = string + nodeString
+    # string = string + nodeString
 
     file.write(string)
-    
-    """
-
 
 file.close()
 
