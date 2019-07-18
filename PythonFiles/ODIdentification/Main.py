@@ -324,8 +324,6 @@ with open("tripsDetected.csv", 'r', newline='') as trips:
 
 trips.close()
 
-print(tripPaths.__len__())
-
 '''read in the file that contains TripIDs and paths'''
 with open("tripsDetected (1).csv", 'r', newline='') as trips:
     reader = csv.reader(trips)
@@ -341,8 +339,6 @@ with open("tripsDetected (1).csv", 'r', newline='') as trips:
                 tripPaths[line[0]] = line[1]
 
 trips.close()
-
-print(tripPaths.__len__())
 
 # load input file and process it line by line
 # count the OD
