@@ -95,7 +95,7 @@ programIteration = sys.argv.pop(0)
 
 '''set up the actual input and output file names'''
 inputFileName = inputFileName + str(programIteration) + ".csv"
-outputTextFileName = outputTextFileName + str(programIteration) + ".txt"
+outputTextFileName = outputTextFileName + "-" + str(programIteration) + ".txt"
 
 '''what we want the program to output'''
 '''turn command line inputs into boolean'''
@@ -507,15 +507,6 @@ with open(outputTextFileName, 'w') as outputTextFile:
     outputTextFile.write("\nOD Maps    : " + str(ODCounter))
     outputTextFile.write("\nTime Maps  : " + str(TimeCounter))
     outputTextFile.write("\nPath Maps  : " + str(PathCounter))
-
-    '''does this belong here, or in the analysis file'''
-    """
-    outputTextFile.write("\nTrip Int % : " + str(TripsOfInterestCounter / TripCounter)[:5])
-    outputTextFile.write("\nOD %       : " + str(ODCounter / TripsOfInterestCounter)[:5])
-    outputTextFile.write("\nTime %     : " + str(TimeCounter / ODCounter)[:5])
-    outputTextFile.write("\nPath %     : " + str(PathCounter / TimeCounter)[:5])
-    outputTextFile.write("\nTotal %    : " + str(PathCounter / TripCounter)[:5])
-    """
     outputTextFile.write("\n" + ODNodes.toString())
 outputTextFile.close()
 

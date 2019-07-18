@@ -5,7 +5,7 @@ for i in range(0, 6):
 
     i = str(i)
 
-    fileName = "totalOutput2017" + i + ".txt"
+    fileName = "totalOutput2017-" + i + ".txt"
 
     with open(fileName, 'w') as file:
         file.write("Total Trips: " + str(0))
@@ -15,7 +15,7 @@ for i in range(0, 6):
         file.write("\nPath Maps  : " + str(0))
     file.close()
 
-    fileName = "totalOutput2018" + i + ".txt"
+    fileName = "totalOutput2018-" + i + ".txt"
     with open(fileName, 'w') as file:
         file.write("Total Trips: " + str(0))
         file.write("\nInt Trips  : " + str(0))
