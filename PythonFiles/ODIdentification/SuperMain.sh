@@ -1,5 +1,9 @@
 #!/bin/bash
 
+# initialize the environment
+module purge
+module load anaconda
+
 # variables moving forward
 printProgress=true
 testPerformance=false
