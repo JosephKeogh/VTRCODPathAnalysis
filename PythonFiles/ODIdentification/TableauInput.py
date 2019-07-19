@@ -161,29 +161,34 @@ with open(inputFileName, 'r') as outputTextFile1:
 
 outputTextFile1.close()
 
+index = 0
 
 '''write all the nodes to a csv file'''
 with open(outputFileName, 'w', newline='') as output:
     writer = csv.writer(output)
 
-    writer.writerow(["OriginLat", "OriginLong", "DestinationLat", "DestinationLong", "InterestCount%", "AM%", "PM%"])
+    writer.writerow(["Index", "NodeType", "Latitude", "Longitude", "InterestCount%", "AM%", "PM%"])
 
     for i in ODNodes:
 
-        totalPercent = str(round((i.getCount() / interestTripCount), 4))
-        print('Total percent: ' + str(totalPercent))
+        totalPercent = (i.getCount() / odMapCount)
+        totalPercentf = '{:f}'.format(totalPercent)
+        amPercent = i.getAmCount() / totalAM
+        pmPercent = i.getPmCount() / totalPM
 
-        if float(totalPercent) > 1:
-            print('Total percent: ' + str(totalPercent))
-            print('node count: ' + str(i.getCount()))
-            print('interest trip count: ' + str(interestTripCount))
+        '''if not a dummy node write to file'''
+        dummy = Coordinate.Coordinate(0, 0)
+        dn = ODNode.ODNode(dummy, dummy, 0)
+        if i.__eq__(dn) is False:
+            writer.writerow([index, "Origin", i.origin.getLat(), i.origin.getLong(), '{:f}'.format(totalPercent),
+                             '{:f}'.format(amPercent), '{:f}'.format(pmPercent)])
+            writer.writerow([index, "Destination", i.destination.getLat(), i.destination.getLong(),
+                             '{:f}'.format(totalPercent), '{:f}'.format(amPercent), '{:f}'.format(pmPercent)])
 
-        amPercent = str(i.getAmCount() / totalAM)[:5]
-        pmPercent = str(i.getPmCount() / totalPM)[:5]
+            index += 1
 
-        '''if not a dummy node'''
-        writer.writerow([i.origin.lat, i.origin.long, i.destination.lat, i.destination.long,
-                             totalPercent, amPercent, pmPercent])
+
+
 
 output.close()
 
