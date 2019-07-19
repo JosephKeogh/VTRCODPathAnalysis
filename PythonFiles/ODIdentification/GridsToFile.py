@@ -1,16 +1,17 @@
 import math
 from Objects import Coordinate
+import csv
 
 # main --------------------------------------------------------------------
 
 # create a list of OD's, maybe a hashtable
 # create a grid of Origins
 # create the top left coordinate
-TLNovaLat = 39.0646
-TLNovaLong = -78.65719
+TLNovaLat = 39.06679
+TLNovaLong = -77.53886
 TLNovaCoor = Coordinate.Coordinate(TLNovaLat, TLNovaLong)
 # the size of the grid, this is in km
-novaSize = 240
+novaSize = 57
 # the number of sections wanted
 novaNum = 3
 # create the actual grid
@@ -47,6 +48,19 @@ with open("ODNodes.txt", 'w') as file:
         # file.write(str(d.lat) + "," + str(d.long) + "\n")
 
         IDCount += 1
+
+file.close()
+
+with open("TableauInput.csv", 'w', newline='') as file:
+    writer = csv.writer(file)
+
+    writer.writerow(["Latitude", "Longitude", "Zone"])
+
+    for anode in novaGrid:
+        writer.writerow([anode.getLat(), anode.getLong(), "Nova"])
+
+    for bnode in dcGrid:
+        writer.writerow([bnode.getLat(), bnode.getLong(), "DC"])
 
 file.close()
 
