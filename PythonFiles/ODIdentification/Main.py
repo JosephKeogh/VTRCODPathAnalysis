@@ -385,8 +385,6 @@ with open(inputFileName, 'r') as inputFile:
 
                 # assign data values to variables
                 tripID = inputLine[0]
-
-
                 StartLat = inputLine[8]
                 StartLong = inputLine[9]
                 EndLat = inputLine[10]
@@ -482,7 +480,7 @@ if printProgramProgression:
 if testPerformance is True:
     print(str(totalTime))
 
-'''write the basic information to the output file'''
+'''read the basic info from the output file'''
 with open(outputTextFileName, 'r') as outputTextFile:
     line = outputTextFile.readline().strip()
     TripCounter = TripCounter + int(line[13:])
