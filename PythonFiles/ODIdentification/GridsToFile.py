@@ -7,13 +7,13 @@ import csv
 # create a list of OD's, maybe a hashtable
 # create a grid of Origins
 # create the top left coordinate
-TLNovaLat = 39.06679
-TLNovaLong = -77.53886
+TLNovaLat = 39.03815
+TLNovaLong = -77.63416
 TLNovaCoor = Coordinate.Coordinate(TLNovaLat, TLNovaLong)
 # the size of the grid, this is in km
-novaSize = 57
+novaSize = 60
 # the number of sections wanted
-novaNum = 3
+novaNum = int(novaSize / 4.82)
 # create the actual grid
 novaGrid = TLNovaCoor.createGrid(novaSize, novaNum)
 
@@ -59,8 +59,6 @@ with open("TableauInput.csv", 'w', newline='') as file:
     for anode in novaGrid:
         writer.writerow([anode.getLat(), anode.getLong(), "Nova"])
 
-    for bnode in dcGrid:
-        writer.writerow([bnode.getLat(), bnode.getLong(), "DC"])
 
 file.close()
 

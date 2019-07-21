@@ -116,13 +116,13 @@ PathCounter = 0
 '''create the OD Nodes'''
 # create a grid of Origins
 # create the top left coordinate
-TLNovaLat = 39.0646
-TLNovaLong = -78.65719
+TLNovaLat = 39.03815
+TLNovaLong = -77.63416
 TLNovaCoor = Coordinate.Coordinate(TLNovaLat, TLNovaLong)
 # the size of the grid, this is in km
-novaSize = 240
+novaSize = 60
 # the number of sections wanted
-novaNum = 3
+novaNum = int(novaSize / 4.82)
 # create the actual grid
 novaGrid = TLNovaCoor.createGrid(novaSize, novaNum)
 
