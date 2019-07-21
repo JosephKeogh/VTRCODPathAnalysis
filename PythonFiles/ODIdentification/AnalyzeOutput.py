@@ -83,6 +83,9 @@ with open(inputFileName, 'r') as outputTextFile1:
             vdestlong = vdestination[vcommaIndex + 1:]
             vdestC = Coordinate.Coordinate(float(vdestlat), float(vdestlong))
 
+            '''readout the direction'''
+            direction = outputTextFile1.readline()
+
             '''get the count of the od node'''
             vcountLine = outputTextFile1.readline().strip()
             vcount = vcountLine[7:]
@@ -105,6 +108,12 @@ with open(inputFileName, 'r') as outputTextFile1:
             '''update the period counts of the od node'''
             vodnode.setAmCount(int(vamCount))
             vodnode.setPmCount(int(vpmCount))
+
+            '''set the direction of the node'''
+            if direction.__contains__("In-"):
+                vodnode.setInbound(True)
+            else:
+                vodnode.setInbound(False)
 
             '''readout the "Times: "'''
             readOut = outputTextFile1.readline().strip()
@@ -264,7 +273,7 @@ with open(outputFileName, 'w') as file:
     csvfile.close()
 
     '''remove the paths that are not frequently used'''
-    cutOff = 100
+    cutOff = 0
     newPaths = justPaths.copy()
     for p in newPaths:
         if newPaths[p] < cutOff:

@@ -25,8 +25,17 @@ class ODNode:
         self.amCount = 0
         self.pmCount = 0
 
+        # the direction of the node
+        self.inbound = True
+
 
     """getters and setters"""
+    def setInbound(self, d: bool):
+        self.inbound = d
+
+    def getInbound(self):
+        return self.inbound
+
     def setCount(self, num):
         self.count = num
 

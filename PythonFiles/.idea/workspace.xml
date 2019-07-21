@@ -1,10 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9725cb3b-f67e-47de-a8cc-7c08b193163d" name="Default Changelist" comment="">
+    <list default="true" id="9725cb3b-f67e-47de-a8cc-7c08b193163d" name="Default Changelist" comment="adding inbound an">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ODIdentification/GridsToFile.py" beforeDir="false" afterPath="$PROJECT_DIR$/ODIdentification/GridsToFile.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ODIdentification/ODNodes.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ODIdentification/ODNodes.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ODIdentification/AnalyzeOutput.py" beforeDir="false" afterPath="$PROJECT_DIR$/ODIdentification/AnalyzeOutput.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ODIdentification/ClearOutput.py" beforeDir="false" afterPath="$PROJECT_DIR$/ODIdentification/ClearOutput.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ODIdentification/CreateShortData.py" beforeDir="false" afterPath="$PROJECT_DIR$/ODIdentification/CreateShortData.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ODIdentification/Main.py" beforeDir="false" afterPath="$PROJECT_DIR$/ODIdentification/Main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ODIdentification/Objects/HashTable.py" beforeDir="false" afterPath="$PROJECT_DIR$/ODIdentification/Objects/HashTable.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ODIdentification/Objects/ODNode.py" beforeDir="false" afterPath="$PROJECT_DIR$/ODIdentification/Objects/ODNode.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ODIdentification/PathCounts.csv" beforeDir="false" afterPath="$PROJECT_DIR$/ODIdentification/PathCounts.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ODIdentification/ShortDataTrip.csv" beforeDir="false" afterPath="$PROJECT_DIR$/ODIdentification/ShortDataTrip0.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ODIdentification/SuperMain.bat" beforeDir="false" afterPath="$PROJECT_DIR$/ODIdentification/SuperMain.bat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ODIdentification/SuperMain.sh" beforeDir="false" afterPath="$PROJECT_DIR$/ODIdentification/SuperMain.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ODIdentification/TestSuperMain.bat" beforeDir="false" afterPath="$PROJECT_DIR$/ODIdentification/TestSuperMain.bat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ODIdentification/totalOutputTest-0.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ODIdentification/totalOutputTest-0.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ODIdentification/totalOutputTest-1.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ODIdentification/totalOutputTest-1.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ODIdentification/totalOutputTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ODIdentification/totalOutputTest.txt" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -14,23 +26,49 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/ODIdentification/GridsToFile.py">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ODIdentification/Main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="228">
-              <caret line="62" column="61" selection-start-line="62" selection-start-column="61" selection-end-line="62" selection-end-column="61" />
+            <state relative-caret-position="153">
+              <caret line="9" column="26" selection-start-line="9" selection-start-column="2" selection-end-line="9" selection-end-column="26" />
               <folding>
-                <element signature="e#0#11#0" expanded="true" />
+                <element signature="e#0#10#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/ODIdentification/AnalyzeOutput.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="136">
+              <caret line="275" column="14" selection-start-line="275" selection-start-column="14" selection-end-line="275" selection-end-column="14" />
+              <folding>
+                <element signature="e#0#69#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ODIdentification/TableauInput.csv">
+        <entry file="file://$PROJECT_DIR$/ODIdentification/totalOutputTest-0.txt">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ODIdentification/TestSuperMain.bat">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="5" column="28" lean-forward="true" selection-start-line="5" selection-start-column="28" selection-end-line="5" selection-end-column="28" />
+            <state relative-caret-position="308">
+              <caret line="20" column="8" selection-start-line="20" selection-start-column="8" selection-end-line="20" selection-end-column="8" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ODIdentification/ClearOutput.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="340">
+              <caret line="26" column="31" selection-start-line="26" selection-start-column="31" selection-end-line="26" selection-end-column="31" />
             </state>
           </provider>
         </entry>
@@ -48,6 +86,8 @@
     <findStrings>
       <find>encomp</find>
       <find>outputfilename</find>
+      <find>tostr</find>
+      <find>print</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -57,16 +97,19 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/ODIdentification/Analyze.bat" />
-        <option value="$PROJECT_DIR$/ODIdentification/AnalyzeOutput.py" />
-        <option value="$PROJECT_DIR$/ODIdentification/SuperMain.bat" />
-        <option value="$PROJECT_DIR$/ODIdentification/SuperMain.sh" />
-        <option value="$PROJECT_DIR$/ODIdentification/ClearOutput.py" />
         <option value="$PROJECT_DIR$/ODIdentification/totalOutputTest-1.txt" />
         <option value="$PROJECT_DIR$/ODIdentification/Combine.py" />
-        <option value="$PROJECT_DIR$/ODIdentification/Main.py" />
         <option value="$PROJECT_DIR$/ODIdentification/TableauInput.py" />
         <option value="$PROJECT_DIR$/ODIdentification/TableauInput.bat" />
         <option value="$PROJECT_DIR$/ODIdentification/GridsToFile.py" />
+        <option value="$PROJECT_DIR$/ODIdentification/Objects/ODNode.py" />
+        <option value="$PROJECT_DIR$/ODIdentification/Objects/HashTable.py" />
+        <option value="$PROJECT_DIR$/ODIdentification/SuperMain.bat" />
+        <option value="$PROJECT_DIR$/ODIdentification/SuperMain.sh" />
+        <option value="$PROJECT_DIR$/ODIdentification/Main.py" />
+        <option value="$PROJECT_DIR$/ODIdentification/ClearOutput.py" />
+        <option value="$PROJECT_DIR$/ODIdentification/TestSuperMain.bat" />
+        <option value="$PROJECT_DIR$/ODIdentification/AnalyzeOutput.py" />
       </list>
     </option>
   </component>
@@ -83,7 +126,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -100,6 +142,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -235,18 +278,26 @@
       <option name="project" value="LOCAL" />
       <updated>1563541098334</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="grid change, only in GridsToFile&#10;will need to change in other spots also">
+      <created>1563550238647</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1563550238647</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-6" y="-6" width="1292" height="692" extended-state="6" />
+    <frame x="-5" y="0" width="650" height="685" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.23688394" />
+      <window_info content_ui="combo" id="Project" order="0" weight="0.48376623" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32978722" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32978722" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32978722" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -268,7 +319,8 @@
     <MESSAGE value="changed clearoutput to make and clear separate output files for each run" />
     <MESSAGE value="working on combining outputs" />
     <MESSAGE value="Tableau Input changes" />
-    <option name="LAST_COMMIT_MESSAGE" value="Tableau Input changes" />
+    <MESSAGE value="grid change, only in GridsToFile&#10;will need to change in other spots also" />
+    <option name="LAST_COMMIT_MESSAGE" value="grid change, only in GridsToFile&#10;will need to change in other spots also" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/ODIdentification/null">
@@ -284,52 +336,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ODIdentification/SuperMain.bat">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="359">
-          <caret line="81" column="53" lean-forward="true" selection-start-line="81" selection-start-column="53" selection-end-line="81" selection-end-column="53" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/ODIdentification/trips0.csv">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/ODIdentification/SuperMain.sh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="18" lean-forward="true" selection-start-line="7" selection-start-column="18" selection-end-line="7" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ODIdentification/ClearOutput.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="16" lean-forward="true" selection-start-line="15" selection-start-column="16" selection-end-line="15" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/ODIdentification/request.slurm">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ODIdentification/Combine.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3468">
-          <caret line="209" selection-start-line="209" selection-end-line="209" />
-          <folding>
-            <element signature="e#0#10#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ODIdentification/Main.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="492" lean-forward="true" selection-start-line="492" selection-end-line="492" />
-          <folding>
-            <element signature="e#0#10#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ODIdentification/Objects/TimeNode.py">
       <provider selected="true" editor-type-id="text-editor">
@@ -339,29 +350,6 @@
           </folding>
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ODIdentification/Objects/ODNode.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="18" column="36" selection-start-line="18" selection-start-column="36" selection-end-line="18" selection-end-column="36" />
-          <folding>
-            <element signature="e#0#40#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ODIdentification/AnalyzeOutput.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="482">
-          <caret line="61" column="41" selection-start-line="51" selection-start-column="8" selection-end-line="61" selection-end-column="41" />
-          <folding>
-            <element signature="e#0#69#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ODIdentification/totalOutputTest-0.txt">
-      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/ODIdentification/totalOutputTest-1.txt">
       <provider selected="true" editor-type-id="text-editor">
@@ -404,19 +392,100 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ODIdentification/TableauInput.csv">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="28" lean-forward="true" selection-start-line="5" selection-start-column="28" selection-end-line="5" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/ODIdentification/GridsToFile.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="228">
+        <state relative-caret-position="312">
           <caret line="62" column="61" selection-start-line="62" selection-start-column="61" selection-end-line="62" selection-end-column="61" />
           <folding>
             <element signature="e#0#11#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ODIdentification/TableauInput.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="28" selection-start-line="5" selection-start-column="28" selection-end-line="5" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ODIdentification/Combine.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2788">
+          <caret line="209" selection-start-line="209" selection-end-line="209" />
+          <folding>
+            <element signature="e#0#10#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ODIdentification/Objects/HashTable.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="314">
+          <caret line="213" column="62" selection-start-line="213" selection-start-column="62" selection-end-line="213" selection-end-column="62" />
+          <folding>
+            <element signature="e#0#38#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ODIdentification/Objects/ODNode.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="493">
+          <caret line="29" lean-forward="true" selection-start-line="29" selection-end-line="29" />
+          <folding>
+            <element signature="e#0#40#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ODIdentification/SuperMain.bat">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="359">
+          <caret line="81" column="36" selection-start-line="81" selection-start-column="36" selection-end-line="81" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ODIdentification/SuperMain.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="15" column="38" selection-start-line="15" selection-start-column="38" selection-end-line="15" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ODIdentification/totalOutputTest-0.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ODIdentification/ClearOutput.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="26" column="31" selection-start-line="26" selection-start-column="31" selection-end-line="26" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ODIdentification/Main.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="26" selection-start-line="9" selection-start-column="2" selection-end-line="9" selection-end-column="26" />
+          <folding>
+            <element signature="e#0#10#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ODIdentification/TestSuperMain.bat">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="308">
+          <caret line="20" column="8" selection-start-line="20" selection-start-column="8" selection-end-line="20" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ODIdentification/AnalyzeOutput.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="275" column="14" selection-start-line="275" selection-start-column="14" selection-end-line="275" selection-end-column="14" />
+          <folding>
+            <element signature="e#0#69#0" expanded="true" />
           </folding>
         </state>
       </provider>

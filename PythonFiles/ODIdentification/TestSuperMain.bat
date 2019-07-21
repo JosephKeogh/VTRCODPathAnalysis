@@ -12,25 +12,13 @@ set testPerformance="false"
 
 py ClearOutput.py
 
-rem execute the program
-rem echo Executing the Program...
-py %Analyzer% ShortDataTrip.csv %utc2017% AllXDInfo-17.csv OutputTest.csv totalOutputTest.txt %printProgress% %testPerformance%
+py Main.py ShortDataTrip %utc2017% totalOutputTest %printProgress% %testPerformance% 0
 
-rem totaloutputtest.txt
+notepad totaloutputtest-0.txt
 
-rem py %Analyzer% ShortDataTrip.csv %utc2017% AllXDInfo-17.csv OutputTest.csv totalOutputTest.txt %printProgress% %testPerformance%
+py AnalyzeOutput.py totalOutputTest-0.txt analysistest.txt
 
-rem totaloutputtest.txt
-
-rem echo Program Executed.
-
-rem py Testing.py
-
-rem py AnalyzeOutput.py totalOutputTest.txt analysis.txt
-
-rem totalOutputTest.txt
-
-rem analysis.txt
+notepad analysistest.txt
 
 echo.
 

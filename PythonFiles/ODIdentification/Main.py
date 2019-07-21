@@ -7,7 +7,7 @@ from Objects import Coordinate, HashTable, ODNode, TimeNode, PathNode, LatLongMa
 
 PYTHONHASHSEED = 0
 
-# cd google*/non*/occ*/vtrc/pyth*/od*
+# cd git/VTRC*/Python*/OD*
 
 
 year1 = 2017
@@ -87,7 +87,6 @@ def correctPeakPeriod(h, p):
 programName = sys.argv.pop(0)                                 # ignore this program's name
 inputFileName = sys.argv.pop(0)                 # input data file containing the timestamped waypoints snapped to XDs
 utcDatetimeFileName = sys.argv.pop(0)           # file containing the UTC datetime periods of interest
-xdFileName = sys.argv.pop(0)                    # file containing XDs of interest
 outputTextFileName = sys.argv.pop(0)
 wantProgramProgression = sys.argv.pop(0)        # will be "true" if the user wants to see programs progress
 testingPerformance = sys.argv.pop(0)            # will only print out the time to analyze input file
@@ -154,10 +153,12 @@ for nova in novaGrid:
         # create inbound node
         inBoundNode = ODNode.ODNode(nova, dc, 0)
         inBoundNode.createTimeIntervals(startAM, endAM, timeInterval)
+        inBoundNode.setInbound(True)
 
         # create outbound node
         outBoundNode = ODNode.ODNode(dc, nova, 0)
         outBoundNode.createTimeIntervals(startAM, endAM, timeInterval)
+        outBoundNode.setInbound(False)
 
         # append to container
         ODNodes.insert(inBoundNode)
@@ -196,9 +197,14 @@ with open(outputTextFileName, 'r') as outputTextFile1:
             vdestlong = vdestination[vcommaIndex + 1:]
             vdestC = Coordinate.Coordinate(float(vdestlat), float(vdestlong))
 
+            '''readout the direction'''
+            direction = outputTextFile1.readline()
+
             '''get the count of the od node'''
             vcountLine = outputTextFile1.readline().strip()
             vcount = vcountLine[7:]
+
+            print(vcountLine)
 
             '''get the am count of the od node'''
             vamCountLine = outputTextFile1.readline().strip()

@@ -16,7 +16,7 @@ with open("trips.csv", "r", newline='') as inputFile:
 inputFile.close()
 
 # write the short data into file
-with open("ShortDataTrip.csv", 'w', newline='') as csvFile:
+with open("ShortDataTrip0.csv", 'w', newline='') as csvFile:
     writer = csv.writer(csvFile)
     writer.writerows(data)
 csvFile.close()

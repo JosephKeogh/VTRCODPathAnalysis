@@ -79,7 +79,7 @@ for %%i in (C:\Users\JK\Desktop\InrixData\Trips\2018\unzipped\*.gz) do (
 
     rem execute the program
     echo Executing the Program...
-    py %Analyzer% data.csv %utc2018% AllXDInfo-18.csv totalOutput2018.txt %printProgress% %testPerformance%
+    py %Analyzer% data.csv %utc2018% totalOutput2018.txt %printProgress% %testPerformance%
     echo Program Executed.
 
     rem delete the unzipped file

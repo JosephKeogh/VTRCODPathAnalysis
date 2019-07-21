@@ -202,10 +202,16 @@ class HashTable:
                 if odnode.getCount() >= 0:
                     string = string + ("\nIndex[" + str(index) + "]")
 
+                    direction = "Out-Bound"
+
+                    if odnode.getInbound() is True:
+                        direction = "In-Bound"
+
                     '''the to string method of the odnode'''
                     string = string + \
                              "\n\tOrigin: " + odnode.origin.toString() + \
                              "\n\tDestination: " + odnode.destination.toString() + \
+                             "\n\tDirection: " + direction + \
                              "\n\tCount: " + str(odnode.count) + \
                              "\n\tAMCount: " + str(odnode.getAmCount()) + \
                              "\n\tPMCount: " + str(odnode.getPmCount()) + \
