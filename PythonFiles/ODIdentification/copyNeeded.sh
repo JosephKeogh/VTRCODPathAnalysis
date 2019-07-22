@@ -8,6 +8,10 @@ cp request.slurm /scratch/jgk7uf/Everything-18
 cp SuperMain.sh /scratch/jgk7uf/Everything-17
 cp SuperMain.sh /scratch/jgk7uf/Everything-18
 
+# copy the output clearer
+cp ClearOutput.py /scratch/jgk7uf/Everything-17
+cp ClearOutput.py /scratch/jgk7uf/Everything-18
+
 # copy the date time file
 cp utc2017AllDay.csv /scratch/jgk7uf/Everything-17
 cp utc2018AllDay.csv /scratch/jgk7uf/Everything-18
