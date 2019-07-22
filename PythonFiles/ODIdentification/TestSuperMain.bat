@@ -7,7 +7,7 @@ set utc2018="C:\Users\JK\Google Drive\Non Acedemics\Occupational\VTRC\Python Fil
 set Zipper="C:\Program Files\7-Zip\7z.exe"
 set Analyzer="C:\Users\JK\Google Drive\Non Acedemics\Occupational\VTRC\Python Files\ODIdentification\Main.py"
 set DataOrigin=""
-set printProgress="false"
+set printProgress="true"
 set testPerformance="false"
 
 py ClearOutput.py

@@ -169,6 +169,7 @@ if printProgramProgression:
     print("HashTable of OD Nodes created of size: " + str(ODNodes.table.__len__()))
     print("To hold: " + str(minSizeOfHashTable) + " nodes")
 
+"""
 '''update the virtual objects based on the output of other files'''
 with open(outputTextFileName, 'r') as outputTextFile1:
 
@@ -289,6 +290,7 @@ with open(outputTextFileName, 'r') as outputTextFile1:
                         temp.setAmCount(vodnode.getAmCount())
 
 outputTextFile1.close()
+"""
 
 
 # print progression statement
@@ -423,6 +425,7 @@ with open(inputFileName, 'r') as inputFile:
                     ODCounter += 1
 
                     '''if this trip was at a time that can be mapped'''
+                    '''every od node is created with all the times of interest'''
                     tempTimeNode = TimeNode.TimeNode(startDateLocal, weekDay, timeInterval)
                     if n.__contains__(tempTimeNode):
 
@@ -456,7 +459,9 @@ with open(inputFileName, 'r') as inputFile:
                             if t.getPaths().__contains__(path):
                                 b = True
 
+                        '''if this trip can be mapped to a path'''
                         if a:
+                            '''if this path is already a part of the time nodes path'''
                             if b:
                                 '''increment the count'''
                                 oldPaths = t.getPaths()

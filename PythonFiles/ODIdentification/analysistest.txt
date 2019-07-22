@@ -1,18 +1,18 @@
 --- Basic Info ---
-Number of ODNodes: 162
+Number of ODNodes: 2592
 
 --- Raw Numbers ---
 Total Trips: 1000
 Int Trips  : 791
-OD Maps    : 781
-Time Maps  : 781
-Total AM   : 318
-Total PM   : 463
+OD Maps    : 702
+Time Maps  : 702
+Total AM   : 276
+Total PM   : 426
 Path Maps  : 1
 
 --- Percent Analysis ---
 Trips of Interest % : 0.791
-Int Trips Map to OD : 0.987
+Int Trips Map to OD : 0.887
 OD Trips Map to Time: 1.0
 Time Mapped to Path : 0.001
 End Amount Mapped   : 0.001
@@ -35,13 +35,13 @@ Average Distinct Path during Time Segment on Weekday Path Count: 1.0
 	Example: I-66 taken at 08:30 on Wednesdays had 100 trips with map-able paths
 
 --- ODNodes Holding 3x more of Expected Total Traffic---
---- If 'Percent total interested trips' >= 0.018 ---
----10 OD Nodes Encompass 0.313 of all Interested Trips ---
+--- If 'Percent total interested trips' >= 0.001 ---
+---353 OD Nodes Encompass 1.000 of all Interested Trips ---
 
 --- ODNodes Holding 3x more of Expected AM Traffic---
---- If 'Percent AM trips' >= 0.018 ---
----17 OD Nodes Encompass 0.509 of all AM Trips ---
+--- If 'Percent AM trips' >= 0.001 ---
+---200 OD Nodes Encompass 1.000 of all AM Trips ---
 
 --- ODNodes Holding 3x more of Expected PM Traffic---
---- If 'Percent PM trips' >= 0.018 ---
----14 OD Nodes Encompass 0.388 of all PM Trips ---
+--- If 'Percent PM trips' >= 0.001 ---
+---255 OD Nodes Encompass 1.000 of all PM Trips ---
