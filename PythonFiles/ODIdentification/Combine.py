@@ -69,6 +69,7 @@ for nova in novaGrid:
         ODNodes.insert(outBoundNode)
 
 '''update the virtual objects based on the output of other files'''
+"""
 print("reading output file...")
 with open(outputFileName, 'r') as outputFile:
 
@@ -202,154 +203,159 @@ with open(outputFileName, 'r') as outputFile:
                         temp.setAmCount(vodnode.getAmCount())
 
 outputFile.close()
+"""
 
-print("reading input file...")
+for i in range(0, 6):
 
-'''read in one of the partial output files and update the nodes accordingly'''
-with open(inputFileName, 'r') as inputfile:
+    inputFileNameIter = inputFileName + "-" + str(i) + ".txt"
 
-    for line in inputfile:
+    print("reading input file...")
 
-        line = line.strip()
+    '''read in one of the partial output files and update the nodes accordingly'''
+    with open(inputFileNameIter, 'r') as inputfile:
 
-        '''get the general attributes from the outputfile'''
-        if line.__contains__("Total Trips"):
-            TripCounter += int(line[13:])
-        if line.__contains__("Int Trips"):
-            TripsOfInterestCounter += int(line[13:])
-        if line.__contains__("OD Maps"):
-            ODCounter += int(line[13:])
-        if line.__contains__("Time Maps"):
-            TimeCounter += int(line[13:])
-        if line.__contains__("Path Maps"):
-            PathCounter += int(line[13:])
+        for line in inputfile:
 
-        '''if we are looking at a new od node'''
-        while line.__contains__("Index"):
+            line = line.strip()
 
-            '''get the origin of the od node'''
-            voriginLine = inputfile.readline().strip()
-            if voriginLine == '':
-                break
+            '''get the general attributes from the outputfile'''
+            if line.__contains__("Total Trips"):
+                TripCounter += int(line[13:])
+            if line.__contains__("Int Trips"):
+                TripsOfInterestCounter += int(line[13:])
+            if line.__contains__("OD Maps"):
+                ODCounter += int(line[13:])
+            if line.__contains__("Time Maps"):
+                TimeCounter += int(line[13:])
+            if line.__contains__("Path Maps"):
+                PathCounter += int(line[13:])
 
-            vorigin = voriginLine[8:]
-            vcommaIndex = vorigin.index(",")
-            voriginLat = vorigin[:vcommaIndex]
-            voriginLong = vorigin[vcommaIndex + 1:]
-            voriginC = Coordinate.Coordinate(float(voriginLat), float(voriginLong))
+            '''if we are looking at a new od node'''
+            while line.__contains__("Index"):
 
-            '''get the destination of the od node'''
-            vdestLine = inputfile.readline().strip()
-            vdestination = vdestLine[13:]
-            vcommaIndex = vdestination.index(",")
-            vdestlat = vdestination[:vcommaIndex]
-            vdestlong = vdestination[vcommaIndex + 1:]
-            vdestC = Coordinate.Coordinate(float(vdestlat), float(vdestlong))
+                '''get the origin of the od node'''
+                voriginLine = inputfile.readline().strip()
+                if voriginLine == '':
+                    break
 
-            '''readout the direction'''
-            direction = inputfile.readline()
+                vorigin = voriginLine[8:]
+                vcommaIndex = vorigin.index(",")
+                voriginLat = vorigin[:vcommaIndex]
+                voriginLong = vorigin[vcommaIndex + 1:]
+                voriginC = Coordinate.Coordinate(float(voriginLat), float(voriginLong))
 
-            '''get the count of the od node'''
-            vcountLine = inputfile.readline().strip()
-            vcount = vcountLine[7:]
+                '''get the destination of the od node'''
+                vdestLine = inputfile.readline().strip()
+                vdestination = vdestLine[13:]
+                vcommaIndex = vdestination.index(",")
+                vdestlat = vdestination[:vcommaIndex]
+                vdestlong = vdestination[vcommaIndex + 1:]
+                vdestC = Coordinate.Coordinate(float(vdestlat), float(vdestlong))
 
-            '''get the am count of the od node'''
-            vamCountLine = inputfile.readline().strip()
-            vamCount = vamCountLine[9:]
+                '''readout the direction'''
+                direction = inputfile.readline()
 
-            '''get the pm count of the od node'''
-            vpmCountLine = inputfile.readline().strip()
-            vpmCount = vpmCountLine[9:]
+                '''get the count of the od node'''
+                vcountLine = inputfile.readline().strip()
+                vcount = vcountLine[7:]
 
-            '''create the od node'''
-            vodnode = ODNode.ODNode(voriginC, vdestC, int(vcount))
+                '''get the am count of the od node'''
+                vamCountLine = inputfile.readline().strip()
+                vamCount = vamCountLine[9:]
 
-            '''update the period counts of the od node'''
-            vodnode.setAmCount(int(vamCount))
-            vodnode.setPmCount(int(vpmCount))
+                '''get the pm count of the od node'''
+                vpmCountLine = inputfile.readline().strip()
+                vpmCount = vpmCountLine[9:]
 
-            realODNode = ODNode.ODNode(Coordinate.Coordinate(0, 0), Coordinate.Coordinate(0, 0), 0 )
+                '''create the od node'''
+                vodnode = ODNode.ODNode(voriginC, vdestC, int(vcount))
 
-            for node in ODNodes.table:
-                if node.__eq__(vodnode):
-                    realODNode = node
+                '''update the period counts of the od node'''
+                vodnode.setAmCount(int(vamCount))
+                vodnode.setPmCount(int(vpmCount))
 
-            # realODNode = ODNodes.find(vodnode, novaClose, dcClose)
-            realODNode.setCount(realODNode.getCount() + vodnode.getCount())
-            realODNode.setAmCount(realODNode.getAmCount() + vodnode.getAmCount())
-            realODNode.setPmCount(realODNode.getPmCount() + vodnode.getPmCount())
+                realODNode = ODNode.ODNode(Coordinate.Coordinate(0, 0), Coordinate.Coordinate(0, 0), 0 )
 
-            '''readout the "Times: "'''
-            readOut = inputfile.readline().strip()
+                for node in ODNodes.table:
+                    if node.__eq__(vodnode):
+                        realODNode = node
 
-            '''update the times of the od node'''
-            vt = inputfile.readline().strip()
+                # realODNode = ODNodes.find(vodnode, novaClose, dcClose)
+                realODNode.setCount(realODNode.getCount() + vodnode.getCount())
+                realODNode.setAmCount(realODNode.getAmCount() + vodnode.getAmCount())
+                realODNode.setPmCount(realODNode.getPmCount() + vodnode.getPmCount())
 
-            '''for all the timenodes listed'''
-            while vt.__contains__("WeekDay"):
-                '''get the weekday, time, and count'''
-                weekday = int(vt[9:11])
-                vtime = vt[19:24]
-                vcount = int(vt[32:])
+                '''readout the "Times: "'''
+                readOut = inputfile.readline().strip()
 
-                '''create the TimeNode'''
-                vdt = datetime.strptime(vtime, "%H:%M")
-                vtimenode = TimeNode.TimeNode(vdt, weekday, timeInterval)
-                vtimenode.setCount(vcount)
+                '''update the times of the od node'''
+                vt = inputfile.readline().strip()
 
-                vtimecode = str(vtimenode.getTimeID() + str(vtimenode.getWeekDay()))
+                '''for all the timenodes listed'''
+                while vt.__contains__("WeekDay"):
+                    '''get the weekday, time, and count'''
+                    weekday = int(vt[9:11])
+                    vtime = vt[19:24]
+                    vcount = int(vt[32:])
 
-                '''update the real time node'''
-                realTimeNode = realODNode.findTime(vtimenode)
-                realTimeNode.setCount(realTimeNode.getCount() + vtimenode.getCount())
+                    '''create the TimeNode'''
+                    vdt = datetime.strptime(vtime, "%H:%M")
+                    vtimenode = TimeNode.TimeNode(vdt, weekday, timeInterval)
+                    vtimenode.setCount(vcount)
 
-                '''the dict to be used as the dict of paths for timenode'''
-                paths = {}
+                    vtimecode = str(vtimenode.getTimeID() + str(vtimenode.getWeekDay()))
 
-                '''read the next line in the file'''
-                nl = inputfile.readline().strip()
+                    '''update the real time node'''
+                    realTimeNode = realODNode.findTime(vtimenode)
+                    realTimeNode.setCount(realTimeNode.getCount() + vtimenode.getCount())
 
-                # changed the output of the hashtable to be correct
-                if nl.__contains__("Paths"):
+                    '''the dict to be used as the dict of paths for timenode'''
+                    paths = {}
 
+                    '''read the next line in the file'''
                     nl = inputfile.readline().strip()
 
-                    while nl.__contains__("PathID"):
-                        '''get the PathNode attributes'''
-                        countIndex = nl.index("Count:")
-                        path = nl[8:countIndex - 1]
-                        count = nl[countIndex + 7:]
-
-                        '''if this path has already been seen'''
-                        if realTimeNode.getPaths().__contains__(path) is True:
-                            old = realTimeNode.getPaths()
-                            new = old
-                            timeNode = new[path]
-                            oldCount = timeNode.getCount()
-                            newCount = oldCount + count
-                            timeNode.setCount(newCount)
-                            new[path] = timeNode
-                            realTimeNode.setPaths(new)
-
-                        '''if this node has not already been seen'''
-                        if realTimeNode.getPaths().__contains__(path) is False:
-                            old = realTimeNode.getPaths()
-                            new = old
-                            pathNode = PathNode.PathNode(path)
-                            pathNode.inc()
-                            new[path] = pathNode
-                            realTimeNode.setPaths(new)
+                    # changed the output of the hashtable to be correct
+                    if nl.__contains__("Paths"):
 
                         nl = inputfile.readline().strip()
 
+                        while nl.__contains__("PathID"):
+                            '''get the PathNode attributes'''
+                            countIndex = nl.index("Count:")
+                            path = nl[8:countIndex - 1]
+                            count = nl[countIndex + 7:]
+
+                            '''if this path has already been seen'''
+                            if realTimeNode.getPaths().__contains__(path) is True:
+                                old = realTimeNode.getPaths()
+                                new = old
+                                timeNode = new[path]
+                                oldCount = timeNode.getCount()
+                                newCount = oldCount + count
+                                timeNode.setCount(newCount)
+                                new[path] = timeNode
+                                realTimeNode.setPaths(new)
+
+                            '''if this node has not already been seen'''
+                            if realTimeNode.getPaths().__contains__(path) is False:
+                                old = realTimeNode.getPaths()
+                                new = old
+                                pathNode = PathNode.PathNode(path)
+                                pathNode.inc()
+                                new[path] = pathNode
+                                realTimeNode.setPaths(new)
+
+                            nl = inputfile.readline().strip()
+
+                        vt = nl
+
                     vt = nl
 
-                vt = nl
+                if vt.__contains__("Index"):
+                    line = vt
 
-            if vt.__contains__("Index"):
-                line = vt
-
-inputfile.close()
+    inputfile.close()
 
 '''put the results into the final file'''
 with open(outputFileName, 'w') as outputTextFile:
