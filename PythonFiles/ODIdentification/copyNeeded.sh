@@ -1,4 +1,4 @@
-!#bin/bash
+#!bin/bash
 
 # copy the slurm request
 cp request.slurm /scratch/jgk7uf/Everything-17
