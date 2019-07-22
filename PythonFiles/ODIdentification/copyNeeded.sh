@@ -1,12 +1,8 @@
 !#bin/bash
 
-cd
-
-cd git/V*/P*/OD*
-
 # variables
-17=/scratch/jgk7uf/*17
-18=/scratch/jgk7uf/*18
+17=/scratch/jgk7uf/Everything-17
+18=/scratch/jgk7uf/Everything-18
 
 # copy the slurm request
 cp request.slurm ${17}
