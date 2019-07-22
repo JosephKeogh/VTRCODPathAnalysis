@@ -77,6 +77,9 @@ with open(inputFileName, 'r') as outputTextFile1:
             vdestlong = vdestination[vcommaIndex + 1:]
             vdestC = Coordinate.Coordinate(float(vdestlat), float(vdestlong))
 
+            '''get the direction of the node'''
+            direction = outputTextFile1.readline().strip()
+
             '''get the count of the od node'''
             vcountLine = outputTextFile1.readline().strip()
             vcount = vcountLine[7:]
@@ -95,6 +98,10 @@ with open(inputFileName, 'r') as outputTextFile1:
 
             '''create the od node'''
             vodnode = ODNode.ODNode(voriginC, vdestC, int(vcount))
+            if direction.__contains__("In-Bound"):
+                vodnode.setInbound(True)
+            else:
+                vodnode.setInbound(False)
 
             '''update the period counts of the od node'''
             vodnode.setAmCount(int(vamCount))
@@ -167,7 +174,7 @@ index = 0
 with open(outputFileName, 'w', newline='') as output:
     writer = csv.writer(output)
 
-    writer.writerow(["Index", "NodeType", "Latitude", "Longitude", "InterestCount%", "AM%", "PM%"])
+    writer.writerow(["Index", "NodeType", "Direction", "Latitude", "Longitude", "InterestCount%", "AM%", "PM%"])
 
     for i in ODNodes:
 
@@ -175,20 +182,21 @@ with open(outputFileName, 'w', newline='') as output:
         totalPercentf = '{:f}'.format(totalPercent)
         amPercent = i.getAmCount() / totalAM
         pmPercent = i.getPmCount() / totalPM
+        inBound = i.getInbound()
+        d = "In-Bound"
+        if inBound is False:
+            d = "Out-Bound"
 
         '''if not a dummy node write to file'''
         dummy = Coordinate.Coordinate(0, 0)
         dn = ODNode.ODNode(dummy, dummy, 0)
         if i.__eq__(dn) is False:
-            writer.writerow([index, "Origin", i.origin.getLat(), i.origin.getLong(), '{:f}'.format(totalPercent),
+            writer.writerow([index, "Origin", inBound, i.origin.getLat(), i.origin.getLong(), '{:f}'.format(totalPercent),
                              '{:f}'.format(amPercent), '{:f}'.format(pmPercent)])
-            writer.writerow([index, "Destination", i.destination.getLat(), i.destination.getLong(),
+            writer.writerow([index, "Destination", inBound, i.destination.getLat(), i.destination.getLong(),
                              '{:f}'.format(totalPercent), '{:f}'.format(amPercent), '{:f}'.format(pmPercent)])
 
             index += 1
-
-
-
 
 output.close()
 

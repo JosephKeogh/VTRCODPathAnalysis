@@ -17,7 +17,7 @@ for /L %%i in (1,1,50) do (
 
     rem execute the program
     rem echo Executing the Program...
-    py %Analyzer% ShortDataTrip.csv %utc2017% AllXDInfo-17.csv OutputTest.csv totalOutputTest.txt %printProgress% %testPerformance% >> runs.txt
+    py Main.py ShortDataTrip.csv utc2017AllDay.csv totalOutputTest.txt %printProgress% %testPerformance% >> runs.txt
     rem echo Program Executed.
     )
 
