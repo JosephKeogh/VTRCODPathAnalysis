@@ -22,6 +22,10 @@ cp tripsDetected.csv /scratch/jgk7uf/Everything-18
 cp 'tripsDetected (1).csv' /scratch/jgk7uf/Everything-17
 cp 'tripsDetected (1).csv' /scratch/jgk7uf/Everything-18
 
+# copy the objects
+cp -a Objects /scratch/jgk7uf/Everything-17
+cp -a Objects /scratch/jgk7uf/Everything-18
+
 # copy Main.py
 cp Main.py /scratch/jgk7uf/Everything-17
 cp Main.py /scratch/jgk7uf/Everything-18
