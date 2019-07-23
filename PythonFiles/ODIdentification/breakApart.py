@@ -10,6 +10,8 @@ for d in range(0, 5):
 
     with open(originalFileName, 'r', newline='') as original:
 
+        print("Reading file: " + originalFileName)
+
         reader = csv.reader(original)
 
         '''the line count for this smaller file'''
@@ -20,6 +22,7 @@ for d in range(0, 5):
             if lineCount % 100000 == 0:
                 fileCount += 1
                 lineCount = 0
+                print("writing to file: " + str(fileCount))
 
             fileName = "smaller-" + str(fileCount) + ".csv"
             with open(fileName, 'a', newline='') as smaller:
