@@ -14,7 +14,7 @@ for d in range(0, 5):
 
         for line in reader:
 
-            if lineCount % 100 == 0:
+            if lineCount % 100000 == 0:
                 fileCount += 1
                 lineCount = 0
 
