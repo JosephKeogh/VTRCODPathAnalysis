@@ -28,9 +28,6 @@ def timeToInt(now):
 '''the time intervals we are looking at'''
 timeInterval = 30
 
-'''the file we are looking at'''
-outputTxtFile = "totalOutputTest.txt"
-
 """the running counts"""
 totalAM = 0
 totalPM = 0

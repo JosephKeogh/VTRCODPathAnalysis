@@ -50,5 +50,13 @@ cp AnalyzeOutput.py /scratch/jgk7uf/Everything-18
 cp analysis2017.txt /scratch/jgk7uf/Everything-17
 cp analysis2018.txt /scratch/jgk7uf/Everything-18
 
+# copy slurm script to combine
+cp combine17.slurm /scratch/jgk7uf/Everything-17
+cp combine18.slurm /scratch/jgk7uf/Everything-18
+
+# copy slurm script to analyze
+cp analyze17.slurm /scratch/jgk7uf/Everything-17
+cp analyze18.slurm /scratch/jgk7uf/Everything-18
+
 
 
