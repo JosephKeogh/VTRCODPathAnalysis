@@ -491,6 +491,7 @@ if printProgramProgression:
 if testPerformance is True:
     print(str(totalTime))
 
+"""
 '''read the basic info from the output file'''
 with open(outputTextFileName, 'r') as outputTextFile:
     line = outputTextFile.readline().strip()
@@ -508,6 +509,7 @@ with open(outputTextFileName, 'r') as outputTextFile:
     line = outputTextFile.readline().strip()
     PathCounter = PathCounter + int(line[13:])
 outputTextFile.close()
+"""
 
 with open(outputTextFileName, 'w') as outputTextFile:
     '''write the header'''
