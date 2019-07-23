@@ -18,17 +18,26 @@ for d in range(0, 5):
         '''the line count for this smaller file'''
         lineCount = 0
 
+        '''keep track of the lines to write to the smaller file'''
+        lines = []
+
         for line in reader:
 
             if lineCount % 100000 == 0:
+
+                fileName = "smaller-" + str(fileCount) + ".csv"
+                print("writing to file: " + fileName)
+                with open(fileName, 'w', newline='') as smaller:
+                    writer = csv.writer(smaller)
+                    writer.writerows(lines)
+                smaller.close()
+
+                '''reset'''
                 fileCount += 1
                 lineCount = 0
-                print("writing to file: " + str(fileCount))
+                lines = []
 
-            fileName = "smaller-" + str(fileCount) + ".csv"
-            with open(fileName, 'a', newline='') as smaller:
-                writer = csv.writer(smaller)
-                writer.writerow(line)
+
 
             lineCount += 1
 

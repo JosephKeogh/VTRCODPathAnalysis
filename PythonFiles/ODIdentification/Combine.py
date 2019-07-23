@@ -209,8 +209,7 @@ with open(outputFileName, 'r') as outputFile:
 outputFile.close()
 """
 
-'''the smaller data files start at index 1'''
-for i in range(1, fileNumber):
+for i in range(0, fileNumber):
 
     inputFileNameIter = inputFileName + "-" + str(i) + ".txt"
 
