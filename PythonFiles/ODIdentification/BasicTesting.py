@@ -1,6 +1,6 @@
 
 
-print(0 % 100)
+print(1 % 100)
 
 
 # end of file
