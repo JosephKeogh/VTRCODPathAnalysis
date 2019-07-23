@@ -11,4 +11,4 @@
 module purge
 module load anaconda
 
-python combine.py totalOutput2017 finalOutput2017.txt 99
+python Combine.py totalOutput2017 finalOutput2017.txt 99
