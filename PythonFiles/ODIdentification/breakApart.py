@@ -23,7 +23,8 @@ for d in range(0, 5):
 
         for line in reader:
 
-            lines.append(line)
+            if line.__len__() >= 11:
+                lines.append(line)
             lineCount += 1
 
             if lineCount % 100000 == 0:

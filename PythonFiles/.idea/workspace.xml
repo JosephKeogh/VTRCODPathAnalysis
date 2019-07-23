@@ -3,7 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="9725cb3b-f67e-47de-a8cc-7c08b193163d" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ODIdentification/Main.py" beforeDir="false" afterPath="$PROJECT_DIR$/ODIdentification/Main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ODIdentification/17" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ODIdentification/18" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ODIdentification/BasicTesting.py" beforeDir="false" afterPath="$PROJECT_DIR$/ODIdentification/BasicTesting.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ODIdentification/breakApart.py" beforeDir="false" afterPath="$PROJECT_DIR$/ODIdentification/breakApart.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -14,19 +17,26 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ODIdentification/breakApart.py">
+        <entry file="file://$PROJECT_DIR$/ODIdentification/BasicTesting.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="122">
-              <caret line="27" selection-start-line="27" selection-end-line="27" />
+            <state relative-caret-position="272">
+              <caret line="16" column="23" selection-start-line="16" selection-start-column="23" selection-end-line="16" selection-end-column="23" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ODIdentification/Combine.py">
+        <entry file="file://$PROJECT_DIR$/ODIdentification/smaller-44.csv">
+          <provider selected="true" editor-type-id="LargeFileEditor">
+            <state relative-caret-position="-74097" />
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ODIdentification/Main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="211" selection-start-line="211" selection-end-line="211" />
+            <state relative-caret-position="109">
+              <caret line="398" column="35" selection-start-line="398" selection-start-column="26" selection-end-line="398" selection-end-column="35" />
               <folding>
                 <element signature="e#0#10#0" expanded="true" />
               </folding>
@@ -35,31 +45,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/ODIdentification/Main.py">
+        <entry file="file://$PROJECT_DIR$/ODIdentification/breakApart.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="274">
-              <caret line="511" column="3" selection-start-line="511" selection-start-column="3" selection-end-line="511" selection-end-column="3" />
-              <folding>
-                <element signature="e#0#10#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ODIdentification/totalOutputTest-0.txt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="9" column="8" selection-start-line="9" selection-end-line="10" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ODIdentification/BasicTesting.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
+            <state relative-caret-position="139">
+              <caret line="28" lean-forward="true" selection-start-line="28" selection-end-line="28" />
             </state>
           </provider>
         </entry>
@@ -109,9 +98,10 @@
         <option value="$PROJECT_DIR$/ODIdentification/TableauInput.py" />
         <option value="$PROJECT_DIR$/ODIdentification/TestPerformance.bat" />
         <option value="$PROJECT_DIR$/ODIdentification/Combine.py" />
-        <option value="$PROJECT_DIR$/ODIdentification/breakApart.py" />
-        <option value="$PROJECT_DIR$/ODIdentification/BasicTesting.py" />
         <option value="$PROJECT_DIR$/ODIdentification/Main.py" />
+        <option value="$PROJECT_DIR$/Clean.sh" />
+        <option value="$PROJECT_DIR$/ODIdentification/BasicTesting.py" />
+        <option value="$PROJECT_DIR$/ODIdentification/breakApart.py" />
       </list>
     </option>
   </component>
@@ -415,7 +405,14 @@
       <option name="project" value="LOCAL" />
       <updated>1563887942024</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="took out section that was for updating as the program went linearly">
+      <created>1563890881646</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1563890881646</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TodoView" selected-index="4">
@@ -466,7 +463,8 @@
     <MESSAGE value="adjusting lines per smaller file" />
     <MESSAGE value="not writing over other larger files data" />
     <MESSAGE value="keep track of reading and writing" />
-    <option name="LAST_COMMIT_MESSAGE" value="keep track of reading and writing" />
+    <MESSAGE value="took out section that was for updating as the program went linearly" />
+    <option name="LAST_COMMIT_MESSAGE" value="took out section that was for updating as the program went linearly" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/ODIdentification/analysis2018.txt" />
@@ -648,13 +646,6 @@
     <entry file="file://$PROJECT_DIR$/ODIdentification/trips0.csv">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/ODIdentification/totalOutputTest-0.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="8" selection-start-line="9" selection-end-line="10" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/ODIdentification/TableauInput.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="482">
@@ -675,27 +666,49 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ODIdentification/breakApart.py">
+    <entry file="file://$PROJECT_DIR$/Clean.sh">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ODIdentification/setUp.sh">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="122">
-          <caret line="27" selection-start-line="27" selection-end-line="27" />
+        <state relative-caret-position="68">
+          <caret line="4" column="9" lean-forward="true" selection-start-line="4" selection-start-column="9" selection-end-line="4" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ODIdentification/totalOutputTest-0.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="8" selection-start-line="9" selection-end-line="10" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ODIdentification/BasicTesting.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
+        <state relative-caret-position="272">
+          <caret line="16" column="23" selection-start-line="16" selection-start-column="23" selection-end-line="16" selection-end-column="23" />
         </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ODIdentification/smaller-44.csv">
+      <provider selected="true" editor-type-id="LargeFileEditor">
+        <state relative-caret-position="-74097" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ODIdentification/Main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="274">
-          <caret line="511" column="3" selection-start-line="511" selection-start-column="3" selection-end-line="511" selection-end-column="3" />
+        <state relative-caret-position="109">
+          <caret line="398" column="35" selection-start-line="398" selection-start-column="26" selection-end-line="398" selection-end-column="35" />
           <folding>
             <element signature="e#0#10#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ODIdentification/breakApart.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="139">
+          <caret line="28" lean-forward="true" selection-start-line="28" selection-end-line="28" />
         </state>
       </provider>
     </entry>
