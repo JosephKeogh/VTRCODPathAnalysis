@@ -6,6 +6,6 @@ testPerformance=false
 
 # analyze the data
 # $1 is the iteration, this is passed in by request.slurm
-python Main.py smaller- utc2017AllDay.csv totalOutputTest $printProgress $testPerformance $1
+python Main.py smaller- utc2018AllDay.csv totalOutput2018 $printProgress $testPerformance $1
 
 

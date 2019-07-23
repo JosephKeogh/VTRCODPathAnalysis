@@ -9,8 +9,8 @@ cp request.slurm /scratch/jgk7uf/Everything-17
 cp request.slurm /scratch/jgk7uf/Everything-18
 
 # copy the super main shell program
-cp SuperMain.sh /scratch/jgk7uf/Everything-17
-cp SuperMain.sh /scratch/jgk7uf/Everything-18
+cp SuperMain17.sh /scratch/jgk7uf/Everything-17
+cp SuperMain18.sh /scratch/jgk7uf/Everything-18
 
 # copy the output clearer
 cp ClearOutput.py /scratch/jgk7uf/Everything-17

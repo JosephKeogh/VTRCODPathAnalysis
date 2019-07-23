@@ -9,6 +9,10 @@ sys.argv.pop(0)                                 # ignore this program's name
 inputFileName = sys.argv.pop(0)
 outputFileName = sys.argv.pop(0)
 
+'''the input into this is the number of the last smaller file, so we need to inc by one'''
+fileNumber = sys.argv.pop(0)
+fileNumber = int(fileNumber) + 1
+
 '''running counters'''
 TripCounter = 0
 TripsOfInterestCounter = 0
@@ -205,7 +209,7 @@ with open(outputFileName, 'r') as outputFile:
 outputFile.close()
 """
 
-for i in range(0, 6):
+for i in range(0, fileNumber):
 
     inputFileNameIter = inputFileName + "-" + str(i) + ".txt"
 

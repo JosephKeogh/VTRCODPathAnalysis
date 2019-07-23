@@ -1,8 +1,6 @@
 
 
-string = "Direction: Out-Bound"
-
-print(string[11:])
+print(0 % 100)
 
 
 # end of file
