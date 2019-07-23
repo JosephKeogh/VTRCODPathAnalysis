@@ -336,7 +336,7 @@ for i in range(0, fileNumber):
                                 new = old
                                 timeNode = new[path]
                                 oldCount = timeNode.getCount()
-                                newCount = oldCount + count
+                                newCount = oldCount + int(count)
                                 timeNode.setCount(newCount)
                                 new[path] = timeNode
                                 realTimeNode.setPaths(new)

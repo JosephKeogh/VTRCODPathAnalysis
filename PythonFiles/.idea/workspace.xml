@@ -3,10 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="9725cb3b-f67e-47de-a8cc-7c08b193163d" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ODIdentification/17" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ODIdentification/18" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ODIdentification/BasicTesting.py" beforeDir="false" afterPath="$PROJECT_DIR$/ODIdentification/BasicTesting.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ODIdentification/breakApart.py" beforeDir="false" afterPath="$PROJECT_DIR$/ODIdentification/breakApart.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -74,6 +70,7 @@
       <find>close</find>
       <find>1512]</find>
       <find>paths</find>
+      <find>inputline</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -105,7 +102,7 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="-15" />
     <option name="width" value="1950" />
     <option name="height" value="2055" />
@@ -118,22 +115,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="PythonFiles" type="b2602c69:ProjectViewProjectNode" />
-              <item name="PythonFiles" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="PythonFiles" type="b2602c69:ProjectViewProjectNode" />
-              <item name="PythonFiles" type="462c0819:PsiDirectoryNode" />
-              <item name="ODIdentification" type="462c0819:PsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
+      <pane id="ProjectPane" />
       <pane id="Scope" />
     </panes>
   </component>
@@ -412,7 +394,14 @@
       <option name="project" value="LOCAL" />
       <updated>1563890881646</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="only write lines that have the right amount of data">
+      <created>1563893778568</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1563893778568</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="TodoView" selected-index="4">
@@ -425,15 +414,14 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-6" y="-6" width="1292" height="692" extended-state="6" />
-    <editor active="true" />
+    <frame x="-6" y="-6" width="1292" height="692" extended-state="7" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.20508744" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32978722" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.27659574" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.27659574" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -464,7 +452,8 @@
     <MESSAGE value="not writing over other larger files data" />
     <MESSAGE value="keep track of reading and writing" />
     <MESSAGE value="took out section that was for updating as the program went linearly" />
-    <option name="LAST_COMMIT_MESSAGE" value="took out section that was for updating as the program went linearly" />
+    <MESSAGE value="only write lines that have the right amount of data" />
+    <option name="LAST_COMMIT_MESSAGE" value="only write lines that have the right amount of data" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/ODIdentification/analysis2018.txt" />
