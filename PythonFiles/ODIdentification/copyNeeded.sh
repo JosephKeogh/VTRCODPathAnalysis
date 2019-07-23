@@ -5,8 +5,8 @@ cp breakApart.py /scratch/jgk7uf/Everything-17
 cp breakApart.py /scratch/jgk7uf/Everything-18
 
 # copy the slurm request
-cp request.slurm /scratch/jgk7uf/Everything-17
-cp request.slurm /scratch/jgk7uf/Everything-18
+cp request17.slurm /scratch/jgk7uf/Everything-17
+cp request18.slurm /scratch/jgk7uf/Everything-18
 
 # copy the super main shell program
 cp SuperMain17.sh /scratch/jgk7uf/Everything-17
