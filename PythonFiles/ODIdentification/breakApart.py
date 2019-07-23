@@ -23,6 +23,9 @@ for d in range(0, 5):
 
         for line in reader:
 
+            lines.append(line)
+            lineCount += 1
+
             if lineCount % 100000 == 0:
 
                 fileName = "smaller-" + str(fileCount) + ".csv"
@@ -37,9 +40,6 @@ for d in range(0, 5):
                 lineCount = 0
                 lines = []
 
-
-
-            lineCount += 1
 
     original.close()
 
