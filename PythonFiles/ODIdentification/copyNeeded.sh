@@ -1,5 +1,9 @@
 #!/bin/bash
 
+# copy the set up files
+cp setUp.sh /scratch/jgk7uf/Everything-17
+cp setUp.sh /scratch/jgk7uf/Everything-18
+
 # copy the script to make smaller data files
 cp breakApart.py /scratch/jgk7uf/Everything-17
 cp breakApart.py /scratch/jgk7uf/Everything-18
