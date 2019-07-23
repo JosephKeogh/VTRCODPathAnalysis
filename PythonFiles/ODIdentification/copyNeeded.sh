@@ -34,17 +34,9 @@ cp -a Objects /scratch/jgk7uf/Everything-18
 cp Main.py /scratch/jgk7uf/Everything-17
 cp Main.py /scratch/jgk7uf/Everything-18
 
-# copy the appropriate output files
-cp totalOutput2017-*.txt /scratch/jgk7uf/Everything-17
-cp totalOutput2018-*.txt /scratch/jgk7uf/Everything-18
-
 # copy the combine program
 cp Combine.py /scratch/jgk7uf/Everything-17
 cp Combine.py /scratch/jgk7uf/Everything-18
-
-# copy the combined output file
-cp finalOutput2017.txt /scratch/jgk7uf/Everything-17
-cp finalOutput2018.txt /scratch/jgk7uf/Everything-18
 
 # copy the analyzer
 cp AnalyzeOutput.py /scratch/jgk7uf/Everything-17
