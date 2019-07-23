@@ -1,12 +1,13 @@
 import csv
 
+fileCount = 0
+
 for d in range(0, 5):
 
     originalFileName = "trips" + str(d) + ".csv"
 
     '''needs to be outside of file loop'''
     '''need to have separate smaller files for each of larger trip files'''
-    fileCount = 0
 
     with open(originalFileName, 'r', newline='') as original:
 
