@@ -1,6 +1,6 @@
 import csv
 
-with open("smaller-050.csv", 'r', newline='') as f:
+with open("smaller-074.csv", 'r', newline='') as f:
 
     reader = csv.reader(f)
 

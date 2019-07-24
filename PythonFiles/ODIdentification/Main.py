@@ -372,7 +372,7 @@ with open(inputFileName, 'r') as inputFile:
 
         # print progression statement
         if printProgramProgression:
-            if TripCounter % 100000 == 0:
+            if TripCounter % 10000 == 0:
                 thisTime = time.time()
                 print("Line: " + str(TripCounter) + " - In " + str(int(thisTime - lastTime)) + " sec - Total Time: " +
                       str(int(thisTime - startTime)))
