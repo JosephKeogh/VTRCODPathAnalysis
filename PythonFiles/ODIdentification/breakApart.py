@@ -41,7 +41,6 @@ for d in range(0, 5):
                 lineCount = 0
                 lines = []
 
-
     original.close()
 
 # end of file
