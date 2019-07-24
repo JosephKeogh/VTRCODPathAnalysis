@@ -92,6 +92,11 @@ wantProgramProgression = sys.argv.pop(0)        # will be "true" if the user wan
 testingPerformance = sys.argv.pop(0)            # will only print out the time to analyze input file
 programIteration = sys.argv.pop(0)
 
+'''get the iteration to the correct length'''
+programIteration = str(programIteration)
+while programIteration.__len__() < 3:
+    programIteration = "0" + programIteration
+
 '''set up the actual input and output file names'''
 inputFileName = inputFileName + str(programIteration) + ".csv"
 outputTextFileName = outputTextFileName + "-" + str(programIteration) + ".txt"

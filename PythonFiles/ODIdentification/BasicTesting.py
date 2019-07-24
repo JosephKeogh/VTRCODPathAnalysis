@@ -1,25 +1,10 @@
 
-import csv
+programIteration = 11
 
-count = 0
+programIteration = str(programIteration)
+while programIteration.__len__() < 3:
+    programIteration = "0" + programIteration
 
-with open("smaller-44.csv", 'r', newline='') as f:
-
-    reader = csv.reader(f)
-
-    for line in reader:
-
-        count += 1
-
-        length = line.__len__()
-
-        if length < 5:
-            print(count)
-
-            print(line)
-
-
-
-f.close()
+print(programIteration)
 
 # end of file
