@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fbee1a1c-ed6b-4bd7-89fe-5a5f633f317d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/PythonFiles/ODIdentification/MainTester.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PythonFiles/ODIdentification/Main.py" beforeDir="false" afterPath="$PROJECT_DIR$/PythonFiles/ODIdentification/Main.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -40,7 +38,7 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/PythonFiles/ODIdentification/Main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1673">
+            <state relative-caret-position="3560">
               <caret line="230" column="56" lean-forward="true" selection-start-line="230" selection-start-column="56" selection-end-line="230" selection-end-column="56" />
               <folding>
                 <element signature="e#0#10#0" expanded="true" />
@@ -260,7 +258,14 @@
       <option name="project" value="LOCAL" />
       <updated>1563989263985</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="main method now catches if there is empty line">
+      <created>1563991970787</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1563991970787</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -304,7 +309,8 @@
     <MESSAGE value="have three digits named for each split file" />
     <MESSAGE value="correct number of files for combine" />
     <MESSAGE value="changing when the program prints out line progression, now 10k lines" />
-    <option name="LAST_COMMIT_MESSAGE" value="changing when the program prints out line progression, now 10k lines" />
+    <MESSAGE value="main method now catches if there is empty line" />
+    <option name="LAST_COMMIT_MESSAGE" value="main method now catches if there is empty line" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/PythonFiles/ODIdentification/Objects/HashTable.py">
@@ -436,7 +442,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/PythonFiles/ODIdentification/Main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1673">
+        <state relative-caret-position="3560">
           <caret line="230" column="56" lean-forward="true" selection-start-line="230" selection-start-column="56" selection-end-line="230" selection-end-column="56" />
           <folding>
             <element signature="e#0#10#0" expanded="true" />
