@@ -1,6 +1,9 @@
 import csv
+import sys
 
-with open("smaller-074.csv", 'r', newline='') as f:
+sys.argv.pop(0)
+
+with open(sys.argv.pop(0), 'r', newline='') as f:
 
     reader = csv.reader(f)
 
