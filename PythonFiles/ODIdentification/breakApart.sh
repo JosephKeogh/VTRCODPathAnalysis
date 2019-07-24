@@ -15,6 +15,6 @@ echo >> combined.txt
 cat trips4.csv >> combined.txt
 echo >> combined.txt
 
-split -d 3 -50000 --additional-suffix=.csv combined.txt smaller-
+split -a 3 -d -50000 --additional-suffix=.csv combined.txt smaller-
 
 rm combined.txt
