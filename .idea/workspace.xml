@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="fbee1a1c-ed6b-4bd7-89fe-5a5f633f317d" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/PythonFiles/ODIdentification/getJobNum.py" beforeDir="false" afterPath="$PROJECT_DIR$/PythonFiles/ODIdentification/getJobNum.py" afterDir="false" />
-    </list>
+    <list default="true" id="fbee1a1c-ed6b-4bd7-89fe-5a5f633f317d" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -127,7 +125,7 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-15" />
     <option name="width" value="1950" />
     <option name="height" value="2055" />
@@ -450,11 +448,18 @@
       <option name="project" value="LOCAL" />
       <updated>1564068832046</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="correct number of characters output">
+      <created>1564069173289</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1564069173289</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-5" y="0" width="650" height="685" extended-state="0" />
+    <frame x="-5" y="0" width="650" height="685" extended-state="1" />
     <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.34415585" />
@@ -510,7 +515,8 @@
     <MESSAGE value="comments" />
     <MESSAGE value="different dc grid" />
     <MESSAGE value="` not single quote" />
-    <option name="LAST_COMMIT_MESSAGE" value="` not single quote" />
+    <MESSAGE value="correct number of characters output" />
+    <option name="LAST_COMMIT_MESSAGE" value="correct number of characters output" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/PythonFiles/ODIdentification/Objects/HashTable.py">

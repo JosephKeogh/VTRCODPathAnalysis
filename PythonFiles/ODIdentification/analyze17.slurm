@@ -12,3 +12,4 @@ module purge
 module load anaconda
 
 python AnalyzeOutput.py finalOutput2017.txt analysis2017.txt
+python TableauInput.py finalOutput2017.txt TableauInput2017.csv
