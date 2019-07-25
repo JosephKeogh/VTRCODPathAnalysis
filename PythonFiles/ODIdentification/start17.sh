@@ -1,3 +1,5 @@
+#!/bin/bash
+
 module load anaconda
 
 sbatch --array=0-203 request17.slurm >> r1.txt
