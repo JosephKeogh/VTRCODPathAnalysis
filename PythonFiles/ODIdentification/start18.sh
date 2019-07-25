@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 module load anaconda
 sbatch --array=0-208 request18.slurm >> r1.txt
 job1='python getJobNum.py r1.txt'
