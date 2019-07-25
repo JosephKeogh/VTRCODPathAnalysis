@@ -3,7 +3,12 @@
   <component name="ChangeListManager">
     <list default="true" id="fbee1a1c-ed6b-4bd7-89fe-5a5f633f317d" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PythonFiles/ODIdentification/Combine.py" beforeDir="false" afterPath="$PROJECT_DIR$/PythonFiles/ODIdentification/Combine.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PythonFiles/ODIdentification/Main.py" beforeDir="false" afterPath="$PROJECT_DIR$/PythonFiles/ODIdentification/Main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PythonFiles/ODIdentification/TableauInput.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PythonFiles/ODIdentification/TableauInput2017.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PythonFiles/ODIdentification/TableauInput2018.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PythonFiles/ODIdentification/finalOutput2017.txt" beforeDir="false" afterPath="$PROJECT_DIR$/PythonFiles/ODIdentification/finalOutput2017.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PythonFiles/ODIdentification/finalOutput2018.txt" beforeDir="false" afterPath="$PROJECT_DIR$/PythonFiles/ODIdentification/finalOutput2018.txt" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -14,10 +19,10 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/PythonFiles/ODIdentification/Combine.py">
+        <entry file="file://$PROJECT_DIR$/PythonFiles/ODIdentification/Main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="374">
-              <caret line="294" column="23" selection-start-line="294" selection-start-column="23" selection-end-line="294" selection-end-column="23" />
+            <state relative-caret-position="260">
+              <caret line="134" column="18" lean-forward="true" selection-start-line="134" selection-start-column="18" selection-end-line="134" selection-end-column="18" />
               <folding>
                 <element signature="e#0#10#0" expanded="true" />
               </folding>
@@ -53,7 +58,6 @@
         <option value="$PROJECT_DIR$/PythonFiles/ODIdentification/combine18.slurm" />
         <option value="$PROJECT_DIR$/PythonFiles/ODIdentification/MainTester.py" />
         <option value="$PROJECT_DIR$/testing.py" />
-        <option value="$PROJECT_DIR$/PythonFiles/ODIdentification/Main.py" />
         <option value="$PROJECT_DIR$/PythonFiles/ODIdentification/BasicTesting.py" />
         <option value="$PROJECT_DIR$/PythonFiles/ODIdentification/getJobNum.py" />
         <option value="$PROJECT_DIR$/PythonFiles/ODIdentification/copyNeeded.sh" />
@@ -61,11 +65,12 @@
         <option value="$PROJECT_DIR$/PythonFiles/ODIdentification/start17.sh" />
         <option value="$PROJECT_DIR$/PythonFiles/ODIdentification/start18.sh" />
         <option value="$PROJECT_DIR$/PythonFiles/ODIdentification/Combine.py" />
+        <option value="$PROJECT_DIR$/PythonFiles/ODIdentification/Main.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="1905" />
+    <option name="x" value="-15" />
     <option name="width" value="1950" />
     <option name="height" value="2055" />
   </component>
@@ -337,14 +342,21 @@
       <option name="project" value="LOCAL" />
       <updated>1564058751151</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="comments">
+      <created>1564062654985</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1564062654985</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-6" y="-6" width="1292" height="692" extended-state="6" />
+    <frame x="-5" y="0" width="650" height="685" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.41812402" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.4935065" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -394,7 +406,8 @@
     <MESSAGE value="no blank lines" />
     <MESSAGE value=".sh not .bash" />
     <MESSAGE value="no {}" />
-    <option name="LAST_COMMIT_MESSAGE" value="no {}" />
+    <MESSAGE value="comments" />
+    <option name="LAST_COMMIT_MESSAGE" value="comments" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/PythonFiles/ODIdentification/Objects/HashTable.py">
@@ -496,16 +509,6 @@
         <state relative-caret-position="-99470" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/PythonFiles/ODIdentification/Main.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4777">
-          <caret line="368" column="28" lean-forward="true" selection-start-line="368" selection-start-column="28" selection-end-line="368" selection-end-column="28" />
-          <folding>
-            <element signature="e#0#10#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/PythonFiles/ODIdentification/getJobNum.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
@@ -552,6 +555,25 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="374">
           <caret line="294" column="23" selection-start-line="294" selection-start-column="23" selection-end-line="294" selection-end-column="23" />
+          <folding>
+            <element signature="e#0#10#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PythonFiles/ODIdentification/TableauInput.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-153">
+          <folding>
+            <element signature="e#0#10#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PythonFiles/ODIdentification/Main.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="260">
+          <caret line="134" column="18" lean-forward="true" selection-start-line="134" selection-start-column="18" selection-end-line="134" selection-end-column="18" />
           <folding>
             <element signature="e#0#10#0" expanded="true" />
           </folding>

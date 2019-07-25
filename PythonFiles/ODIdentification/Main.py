@@ -132,11 +132,11 @@ novaNum = int(novaSize / 4.82)
 novaGrid = TLNovaCoor.createGrid(novaSize, novaNum)
 
 # create a grid of Desitinations
-TLDcLat = 39.11
-TLDcLong = -77.284
+TLDcLat = 39.03431
+TLDcLong = -77.221
 TLDcCoor = Coordinate.Coordinate(TLDcLat, TLDcLong)
-dcSize = 40
-dcNum = 3
+dcSize = 32.1869
+dcNum = int(dcSize / 4.82)
 dcGrid = TLDcCoor.createGrid(dcSize, dcNum)
 
 # the variable that is the distance for a point to be close to another
