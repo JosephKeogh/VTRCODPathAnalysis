@@ -284,12 +284,15 @@ for i in range(0, fileNumber):
                     vodnode.setAmCount(int(vamCount))
                     vodnode.setPmCount(int(vpmCount))
 
-                    realODNode = ODNode.ODNode(Coordinate.Coordinate(0, 0), Coordinate.Coordinate(0, 0), 0 )
+                    realODNode = ODNode.ODNode(Coordinate.Coordinate(0, 0), Coordinate.Coordinate(0, 0), 0)
 
+                    '''this is slow, but only way right now to find actual node, not just one close to it'''
                     for node in ODNodes.table:
                         if node.__eq__(vodnode):
                             realODNode = node
+                            break
 
+                    ''''''
                     # realODNode = ODNodes.find(vodnode, novaClose, dcClose)
                     realODNode.setCount(realODNode.getCount() + vodnode.getCount())
                     realODNode.setAmCount(realODNode.getAmCount() + vodnode.getAmCount())
