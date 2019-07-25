@@ -211,7 +211,11 @@ outputFile.close()
 
 for i in range(0, fileNumber):
 
-    inputFileNameIter = inputFileName + "-" + str(i) + ".txt"
+    fileNumber = str(fileNumber)
+    while fileNumber.__len__() < 3:
+        fileNumber = "0" + fileNumber
+
+    inputFileNameIter = inputFileName + "-" + fileNumber + ".txt"
 
     try:
 

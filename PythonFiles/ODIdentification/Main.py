@@ -368,6 +368,7 @@ with open(inputFileName, 'r') as inputFile:
     # loop through the data lines
     for inputLine in reader:
 
+        '''this seemed to cause only half the trips to go through'''
         if inputLine.__len__() > 0:
 
             TripCounter += 1
