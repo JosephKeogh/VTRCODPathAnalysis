@@ -211,7 +211,7 @@ outputFile.close()
 
 for i in range(0, fileNumber):
 
-    fileNumber = str(fileNumber)
+    fileNumber = str(i)
     while fileNumber.__len__() < 3:
         fileNumber = "0" + fileNumber
 
