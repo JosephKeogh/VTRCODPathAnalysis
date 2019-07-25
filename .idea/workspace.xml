@@ -4,6 +4,7 @@
     <list default="true" id="fbee1a1c-ed6b-4bd7-89fe-5a5f633f317d" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PythonFiles/ODIdentification/start17.sh" beforeDir="false" afterPath="$PROJECT_DIR$/PythonFiles/ODIdentification/start17.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PythonFiles/ODIdentification/start18.sh" beforeDir="false" afterPath="$PROJECT_DIR$/PythonFiles/ODIdentification/start18.sh" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -25,8 +26,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/PythonFiles/ODIdentification/start17.sh">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="15" selection-start-column="15" selection-end-column="15" />
+            <state relative-caret-position="136">
+              <caret line="8" selection-start-line="8" selection-end-line="8" />
             </state>
           </provider>
         </entry>
@@ -34,8 +35,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/PythonFiles/ODIdentification/start18.sh">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
+            <state relative-caret-position="136">
+              <caret line="8" selection-start-line="8" selection-end-line="8" />
             </state>
           </provider>
         </entry>
@@ -101,16 +102,15 @@
         <option value="$PROJECT_DIR$/PythonFiles/ODIdentification/getJobNum.py" />
         <option value="$PROJECT_DIR$/PythonFiles/ODIdentification/copyNeeded.sh" />
         <option value="$PROJECT_DIR$/PythonFiles/ODIdentification/setUp.sh" />
-        <option value="$PROJECT_DIR$/PythonFiles/ODIdentification/start18.sh" />
         <option value="$PROJECT_DIR$/PythonFiles/ODIdentification/start17.sh" />
+        <option value="$PROJECT_DIR$/PythonFiles/ODIdentification/start18.sh" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds">
     <option name="x" value="1905" />
-    <option name="y" value="1020" />
     <option name="width" value="1950" />
-    <option name="height" value="1035" />
+    <option name="height" value="2055" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
@@ -345,11 +345,25 @@
       <option name="project" value="LOCAL" />
       <updated>1564057414480</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="correct spelling of anaconda">
+      <created>1564057613080</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1564057613080</updated>
+    </task>
+    <task id="LOCAL-00019" summary="#!">
+      <created>1564057672517</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1564057672519</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-6" y="-6" width="1292" height="692" extended-state="6" />
+    <frame x="635" y="0" width="650" height="685" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" weight="0.41883117" />
@@ -397,7 +411,9 @@
     <MESSAGE value="commands to start entire program" />
     <MESSAGE value="compile all file that can be compiled" />
     <MESSAGE value="18 not 17" />
-    <option name="LAST_COMMIT_MESSAGE" value="18 not 17" />
+    <MESSAGE value="correct spelling of anaconda" />
+    <MESSAGE value="#!" />
+    <option name="LAST_COMMIT_MESSAGE" value="#!" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/PythonFiles/ODIdentification/Objects/HashTable.py">
@@ -533,13 +549,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/PythonFiles/ODIdentification/copyNeeded.sh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="48" selection-start-line="4" selection-start-column="48" selection-end-line="4" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/PythonFiles/ODIdentification/setUp.sh">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="268">
@@ -547,17 +556,24 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/PythonFiles/ODIdentification/copyNeeded.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="48" selection-start-line="4" selection-start-column="48" selection-end-line="4" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/PythonFiles/ODIdentification/start17.sh">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="15" selection-start-column="15" selection-end-column="15" />
+        <state relative-caret-position="136">
+          <caret line="8" selection-start-line="8" selection-end-line="8" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/PythonFiles/ODIdentification/start18.sh">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
+        <state relative-caret-position="136">
+          <caret line="8" selection-start-line="8" selection-end-line="8" />
         </state>
       </provider>
     </entry>
