@@ -12,7 +12,5 @@ cp smaller/* .
 
 rm -rf smaller
 
-chmod +x Super*
-
-chmod +x cleanUp.sh
+chmod +x *.sh
 
