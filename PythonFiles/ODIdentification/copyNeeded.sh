@@ -1,5 +1,13 @@
 #!/bin/bash
 
+# copy the program to get the job id numbers
+cp getJobNum.py /newscratch/jgk7uf/Everything-17
+cp getJobNum.py /newscratch/jgk7uf/Everything-18
+
+# copy the commands to start the entire program
+cp start17.sh /newscratch/jgk7uf/Everything-17
+cp start18.sh /newscratch/jgk7uf/Everything-18
+
 # copy the script that breaks apart the large files into smaller ones
 cp breakApart.sh /newscratch/jgk7uf/Everything-17
 cp breakApart.sh /newscratch/jgk7uf/Everything-18
