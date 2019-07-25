@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fbee1a1c-ed6b-4bd7-89fe-5a5f633f317d" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/PythonFiles/ODIdentification/start17.sh" beforeDir="false" afterPath="$PROJECT_DIR$/PythonFiles/ODIdentification/start17.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PythonFiles/ODIdentification/start18.sh" beforeDir="false" afterPath="$PROJECT_DIR$/PythonFiles/ODIdentification/start18.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PythonFiles/ODIdentification/getJobNum.py" beforeDir="false" afterPath="$PROJECT_DIR$/PythonFiles/ODIdentification/getJobNum.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -46,11 +45,20 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/PythonFiles/ODIdentification/start18.sh">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="102">
               <caret line="6" column="6" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="6" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/PythonFiles/ODIdentification/getJobNum.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="85">
+              <caret line="5" column="37" selection-start-line="5" selection-start-column="37" selection-end-line="5" selection-end-column="37" />
             </state>
           </provider>
         </entry>
@@ -108,7 +116,6 @@
         <option value="$PROJECT_DIR$/PythonFiles/ODIdentification/MainTester.py" />
         <option value="$PROJECT_DIR$/testing.py" />
         <option value="$PROJECT_DIR$/PythonFiles/ODIdentification/BasicTesting.py" />
-        <option value="$PROJECT_DIR$/PythonFiles/ODIdentification/getJobNum.py" />
         <option value="$PROJECT_DIR$/PythonFiles/ODIdentification/copyNeeded.sh" />
         <option value="$PROJECT_DIR$/PythonFiles/ODIdentification/setUp.sh" />
         <option value="$PROJECT_DIR$/PythonFiles/ODIdentification/Main.py" />
@@ -116,10 +123,11 @@
         <option value="$PROJECT_DIR$/PythonFiles/ODIdentification/GridsToFile.py" />
         <option value="$PROJECT_DIR$/PythonFiles/ODIdentification/start17.sh" />
         <option value="$PROJECT_DIR$/PythonFiles/ODIdentification/start18.sh" />
+        <option value="$PROJECT_DIR$/PythonFiles/ODIdentification/getJobNum.py" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds">
     <option name="x" value="-15" />
     <option name="width" value="1950" />
     <option name="height" value="2055" />
@@ -435,19 +443,26 @@
       <option name="project" value="LOCAL" />
       <updated>1564067980115</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="` not single quote">
+      <created>1564068832046</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1564068832046</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-6" y="-6" width="1292" height="692" extended-state="6" />
+    <frame x="-5" y="0" width="650" height="685" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24165341" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.34415585" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.32978722" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.33393177" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -494,7 +509,8 @@
     <MESSAGE value="no {}" />
     <MESSAGE value="comments" />
     <MESSAGE value="different dc grid" />
-    <option name="LAST_COMMIT_MESSAGE" value="different dc grid" />
+    <MESSAGE value="` not single quote" />
+    <option name="LAST_COMMIT_MESSAGE" value="` not single quote" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/PythonFiles/ODIdentification/Objects/HashTable.py">
@@ -586,13 +602,6 @@
         <state relative-caret-position="-99470" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/PythonFiles/ODIdentification/getJobNum.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" selection-start-line="9" selection-end-line="9" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/PythonFiles/ODIdentification/copyNeeded.sh">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
@@ -674,6 +683,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
           <caret line="6" column="6" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PythonFiles/ODIdentification/getJobNum.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="37" selection-start-line="5" selection-start-column="37" selection-end-line="5" selection-end-column="37" />
         </state>
       </provider>
     </entry>
