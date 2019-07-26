@@ -297,8 +297,10 @@ statOutput = []
 short = []
 statOutput.append(["Origin Lat", "Origin Long",
                    "Destination Lat", "Destination Long",
-                   "DateTime" "Path",
-                   "2017 Count", "2018 Count"])
+                   "DateTime" "PathID",
+                   "OD Node 2017 Count","OD Node 2018 Count",
+                   "DateTime 2017 Count", "DateTime 2018 Count"
+                   "2017 Path Count", "2018 Path Count"])
 
 print("working...")
 for i in range(0, ODNodes17.__len__()):
@@ -347,26 +349,18 @@ for i in range(0, ODNodes17.__len__()):
                             node17.origin.getLat(), node17.origin.getLong(),
                             node17.destination.getLat(), node17.destination.getLong(),
                             timeNode17.getTimeID() + str(timeNode17.getWeekDay()), pathNode17.getPathID(),
+                            node17.getCount(), node18.getCount(),
+                            timeNode17.getCount(), timeNode18.getCount(),
                             pathNode17.getCount(), pathNode18.getCount()
                            ]
                     statOutput.append(add)
 
-                    if timeNode18.getCount() > 0 and timeNode17.getCount() > 0:
-
-                        p1 = pathNode17.getCount() / timeNode17.getCount()
-                        p2 = pathNode18.getCount() / timeNode18.getCount()
-
-                        diff = p1 - p1
-                        short.append([p1, p2])
-
-for i in statOutput:
-    print(i)
 
 with open("stat.csv", 'w', newline='') as stat:
 
     writer = csv.writer(stat)
 
-    writer.writerows(short)
+    writer.writerows(statOutput)
 
 
 stat.close()

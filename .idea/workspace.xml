@@ -2,10 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fbee1a1c-ed6b-4bd7-89fe-5a5f633f317d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/PythonFiles/StatAnalysis.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PythonFiles/finalOutput2017.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PythonFiles/finalOutput2018.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PythonFiles/ODIdentification/Combine2.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PythonFiles/ODIdentification/Output2017.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PythonFiles/ODIdentification/Output2018.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PythonFiles/ODIdentification/null" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PythonFiles/ODIdentification/request.slurm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PythonFiles/StatAnalysis.py" beforeDir="false" afterPath="$PROJECT_DIR$/PythonFiles/StatAnalysis.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PythonFiles/stat.csv" beforeDir="false" afterPath="$PROJECT_DIR$/PythonFiles/stat.csv" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -14,23 +18,12 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/PythonFiles/ODIdentification/Objects/Coordinate.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-306">
-              <folding>
-                <element signature="e#0#31#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
+    <leaf>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/PythonFiles/ODIdentification/Main.py">
+        <entry file="file://$PROJECT_DIR$/PythonFiles/StatAnalysis.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-242">
-              <caret line="130" column="24" lean-forward="true" selection-start-line="130" selection-start-column="24" selection-end-line="130" selection-end-column="24" />
+            <state relative-caret-position="110">
+              <caret line="352" column="73" selection-start-line="352" selection-start-column="73" selection-end-line="352" selection-end-column="73" />
               <folding>
                 <element signature="e#0#10#0" expanded="true" />
               </folding>
@@ -38,30 +31,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/PythonFiles/ODIdentification/Objects/TimeNode.py">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/PythonFiles/stat.csv">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-255">
-              <folding>
-                <element signature="e#0#28#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/PythonFiles/ODIdentification/Objects/PathNode.py">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/PythonFiles/ODIdentification/AnalyzeOutput.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="697">
-              <caret line="41" lean-forward="true" selection-start-line="41" selection-end-line="41" />
-              <folding>
-                <element signature="e#0#69#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="187">
+              <caret line="11" column="16" selection-start-line="11" selection-start-column="16" selection-end-line="11" selection-end-column="16" />
             </state>
           </provider>
         </entry>
@@ -105,6 +79,7 @@
         <option value="$PROJECT_DIR$/PythonFiles/ODIdentification/analyze17.slurm" />
         <option value="$PROJECT_DIR$/PythonFiles/ODIdentification/start18.sh" />
         <option value="$PROJECT_DIR$/PythonFiles/ODIdentification/start17.sh" />
+        <option value="$PROJECT_DIR$/PythonFiles/ODIdentification/Combine2.py" />
         <option value="$PROJECT_DIR$/PythonFiles/StatAnalysis.py" />
       </list>
     </option>
@@ -131,19 +106,6 @@
               <item name="VTRCODPathAnalysis" type="b2602c69:ProjectViewProjectNode" />
               <item name="VTRCODPathAnalysis" type="462c0819:PsiDirectoryNode" />
               <item name="PythonFiles" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="VTRCODPathAnalysis" type="b2602c69:ProjectViewProjectNode" />
-              <item name="VTRCODPathAnalysis" type="462c0819:PsiDirectoryNode" />
-              <item name="PythonFiles" type="462c0819:PsiDirectoryNode" />
-              <item name="ODIdentification" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="VTRCODPathAnalysis" type="b2602c69:ProjectViewProjectNode" />
-              <item name="VTRCODPathAnalysis" type="462c0819:PsiDirectoryNode" />
-              <item name="PythonFiles" type="462c0819:PsiDirectoryNode" />
-              <item name="ODIdentification" type="462c0819:PsiDirectoryNode" />
-              <item name="Objects" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="VTRCODPathAnalysis" type="b2602c69:ProjectViewProjectNode" />
@@ -179,13 +141,13 @@
   <component name="PropertiesComponent">
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/PythonFiles" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/PythonFiles/ODIdentification" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\JK\git\VTRCODPathAnalysis\PythonFiles" />
       <recent name="C:\Users\JK\git\VTRCODPathAnalysis\PythonFiles\ODIdentification" />
+      <recent name="C:\Users\JK\git\VTRCODPathAnalysis\PythonFiles" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -515,19 +477,26 @@
       <option name="project" value="LOCAL" />
       <updated>1564073703959</updated>
     </task>
-    <option name="localTasksCounter" value="31" />
+    <task id="LOCAL-00031" summary="stat analysis start">
+      <created>1564084637800</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1564084637800</updated>
+    </task>
+    <option name="localTasksCounter" value="32" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="-6" y="-6" width="1292" height="692" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.16852146" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.16852146" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32978722" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.32978722" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -552,7 +521,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="print as combining - try and except" />
     <MESSAGE value="stream lining process" />
     <MESSAGE value="have program iteration be three digits" />
     <MESSAGE value="have three digits named for each split file" />
@@ -577,7 +545,8 @@
     <MESSAGE value="correct number of characters output" />
     <MESSAGE value="doing tableau input automatically in slurm script" />
     <MESSAGE value="print out sbatch outputs" />
-    <option name="LAST_COMMIT_MESSAGE" value="print out sbatch outputs" />
+    <MESSAGE value="stat analysis start" />
+    <option name="LAST_COMMIT_MESSAGE" value="stat analysis start" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/PythonFiles/ODIdentification/cleanUp.sh">
@@ -594,9 +563,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/PythonFiles/ODIdentification/SuperClean.sh">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/PythonFiles/ODIdentification/SuperClean.sh" />
     <entry file="file://$PROJECT_DIR$/PythonFiles/ODIdentification/breakApart.sh">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="190">
@@ -618,20 +585,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/finalOutput2017.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/finalOutput2018.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/smaller-050.csv">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-632313" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/PythonFiles/ODIdentification/smaller-074.csv">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/finalOutput2017.txt" />
+    <entry file="file://$PROJECT_DIR$/finalOutput2018.txt" />
+    <entry file="file://$PROJECT_DIR$/smaller-050.csv" />
+    <entry file="file://$PROJECT_DIR$/PythonFiles/ODIdentification/smaller-074.csv" />
     <entry file="file://$PROJECT_DIR$/PythonFiles/ODIdentification/MainTester.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
@@ -639,26 +596,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/testing.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
-          <folding>
-            <element signature="e#0#10#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/smaller-046.csv">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-849803" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/smaller-073.csv">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-99470" />
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/testing.py" />
+    <entry file="file://$PROJECT_DIR$/smaller-046.csv" />
+    <entry file="file://$PROJECT_DIR$/smaller-073.csv" />
     <entry file="file://$PROJECT_DIR$/PythonFiles/ODIdentification/copyNeeded.sh">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
@@ -760,12 +700,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/PythonFiles/ODIdentification/AnalyzeOutput.py">
+    <entry file="file://$PROJECT_DIR$/PythonFiles/ODIdentification/Objects/Coordinate.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="697">
-          <caret line="41" lean-forward="true" selection-start-line="41" selection-end-line="41" />
+        <state relative-caret-position="119">
+          <caret line="25" column="20" lean-forward="true" selection-start-line="25" selection-start-column="20" selection-end-line="25" selection-end-column="20" />
           <folding>
-            <element signature="e#0#69#0" expanded="true" />
+            <element signature="e#0#31#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -780,9 +720,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/PythonFiles/ODIdentification/Objects/PathNode.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/PythonFiles/ODIdentification/Objects/TimeNode.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-255">
@@ -792,22 +729,46 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/PythonFiles/ODIdentification/Objects/PathNode.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PythonFiles/ODIdentification/AnalyzeOutput.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="697">
+          <caret line="41" lean-forward="true" selection-start-line="41" selection-end-line="41" />
+          <folding>
+            <element signature="e#0#69#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PythonFiles/ODIdentification/Combine2.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="74" selection-start-line="74" selection-end-line="74" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PythonFiles/ODIdentification/finalOutput2017.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PythonFiles/ODIdentification/finalOutput2018.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/PythonFiles/StatAnalysis.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="194">
-          <caret line="364" column="24" selection-start-line="364" selection-start-column="24" selection-end-line="364" selection-end-column="24" />
+        <state relative-caret-position="110">
+          <caret line="352" column="73" selection-start-line="352" selection-start-column="73" selection-end-line="352" selection-end-column="73" />
           <folding>
             <element signature="e#0#10#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/PythonFiles/ODIdentification/Objects/Coordinate.py">
+    <entry file="file://$PROJECT_DIR$/PythonFiles/stat.csv">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-306">
-          <folding>
-            <element signature="e#0#31#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="187">
+          <caret line="11" column="16" selection-start-line="11" selection-start-column="16" selection-end-line="11" selection-end-column="16" />
         </state>
       </provider>
     </entry>
