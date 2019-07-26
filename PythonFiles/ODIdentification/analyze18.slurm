@@ -12,4 +12,5 @@ module purge
 module load anaconda
 
 python AnalyzeOutput.py finalOutput2018.txt analysis2018.txt
+mv PathCounts.csv PathCounts2018.csv
 python TableauInput.py finalOutput2018.txt TableauInput2018.csv
