@@ -62,5 +62,10 @@ cp combine18.slurm /newscratch/jgk7uf/Everything-18
 cp analyze17.slurm /newscratch/jgk7uf/Everything-17
 cp analyze18.slurm /newscratch/jgk7uf/Everything-18
 
+# copy the tableau input creator
+cp TableauInput.py /newscratch/jgk7uf/Everything-17
+cp TableauInput.py /newscratch/jgk7uf/Everything-18
+
+
 
 

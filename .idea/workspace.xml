@@ -2,14 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fbee1a1c-ed6b-4bd7-89fe-5a5f633f317d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/PythonFiles/ODIdentification/Combine2.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PythonFiles/ODIdentification/Output2017.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PythonFiles/ODIdentification/Output2018.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PythonFiles/ODIdentification/null" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PythonFiles/ODIdentification/request.slurm" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PythonFiles/StatAnalysis.py" beforeDir="false" afterPath="$PROJECT_DIR$/PythonFiles/StatAnalysis.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PythonFiles/stat.csv" beforeDir="false" afterPath="$PROJECT_DIR$/PythonFiles/stat.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PythonFiles/ODIdentification/copyNeeded.sh" beforeDir="false" afterPath="$PROJECT_DIR$/PythonFiles/ODIdentification/copyNeeded.sh" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -31,11 +25,20 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/PythonFiles/stat.csv">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="187">
               <caret line="11" column="16" selection-start-line="11" selection-start-column="16" selection-end-line="11" selection-end-column="16" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/PythonFiles/ODIdentification/copyNeeded.sh">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="272">
+              <caret line="67" lean-forward="true" selection-start-line="67" selection-end-line="67" />
             </state>
           </provider>
         </entry>
@@ -69,7 +72,6 @@
         <option value="$PROJECT_DIR$/PythonFiles/ODIdentification/MainTester.py" />
         <option value="$PROJECT_DIR$/testing.py" />
         <option value="$PROJECT_DIR$/PythonFiles/ODIdentification/BasicTesting.py" />
-        <option value="$PROJECT_DIR$/PythonFiles/ODIdentification/copyNeeded.sh" />
         <option value="$PROJECT_DIR$/PythonFiles/ODIdentification/setUp.sh" />
         <option value="$PROJECT_DIR$/PythonFiles/ODIdentification/Main.py" />
         <option value="$PROJECT_DIR$/PythonFiles/ODIdentification/Combine.py" />
@@ -81,6 +83,7 @@
         <option value="$PROJECT_DIR$/PythonFiles/ODIdentification/start17.sh" />
         <option value="$PROJECT_DIR$/PythonFiles/ODIdentification/Combine2.py" />
         <option value="$PROJECT_DIR$/PythonFiles/StatAnalysis.py" />
+        <option value="$PROJECT_DIR$/PythonFiles/ODIdentification/copyNeeded.sh" />
       </list>
     </option>
   </component>
@@ -106,6 +109,12 @@
               <item name="VTRCODPathAnalysis" type="b2602c69:ProjectViewProjectNode" />
               <item name="VTRCODPathAnalysis" type="462c0819:PsiDirectoryNode" />
               <item name="PythonFiles" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="VTRCODPathAnalysis" type="b2602c69:ProjectViewProjectNode" />
+              <item name="VTRCODPathAnalysis" type="462c0819:PsiDirectoryNode" />
+              <item name="PythonFiles" type="462c0819:PsiDirectoryNode" />
+              <item name="ODIdentification" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="VTRCODPathAnalysis" type="b2602c69:ProjectViewProjectNode" />
@@ -484,7 +493,14 @@
       <option name="project" value="LOCAL" />
       <updated>1564084637800</updated>
     </task>
-    <option name="localTasksCounter" value="32" />
+    <task id="LOCAL-00032" summary="stat analysis now outputs all possible interested variables">
+      <created>1564131728880</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1564131728880</updated>
+    </task>
+    <option name="localTasksCounter" value="33" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -521,7 +537,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="stream lining process" />
     <MESSAGE value="have program iteration be three digits" />
     <MESSAGE value="have three digits named for each split file" />
     <MESSAGE value="correct number of files for combine" />
@@ -546,7 +561,8 @@
     <MESSAGE value="doing tableau input automatically in slurm script" />
     <MESSAGE value="print out sbatch outputs" />
     <MESSAGE value="stat analysis start" />
-    <option name="LAST_COMMIT_MESSAGE" value="stat analysis start" />
+    <MESSAGE value="stat analysis now outputs all possible interested variables" />
+    <option name="LAST_COMMIT_MESSAGE" value="stat analysis now outputs all possible interested variables" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/PythonFiles/ODIdentification/cleanUp.sh">
@@ -599,13 +615,6 @@
     <entry file="file://$PROJECT_DIR$/testing.py" />
     <entry file="file://$PROJECT_DIR$/smaller-046.csv" />
     <entry file="file://$PROJECT_DIR$/smaller-073.csv" />
-    <entry file="file://$PROJECT_DIR$/PythonFiles/ODIdentification/copyNeeded.sh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="48" selection-start-line="4" selection-start-column="48" selection-end-line="4" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/PythonFiles/ODIdentification/setUp.sh">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="272">
@@ -769,6 +778,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
           <caret line="11" column="16" selection-start-line="11" selection-start-column="16" selection-end-line="11" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PythonFiles/ODIdentification/copyNeeded.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="67" lean-forward="true" selection-start-line="67" selection-end-line="67" />
         </state>
       </provider>
     </entry>
