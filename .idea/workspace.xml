@@ -2,10 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fbee1a1c-ed6b-4bd7-89fe-5a5f633f317d" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PythonFiles/ODIdentification/GridsToFile.py" beforeDir="false" afterPath="$PROJECT_DIR$/PythonFiles/ODIdentification/GridsToFile.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PythonFiles/ODIdentification/TableauInput.csv" beforeDir="false" afterPath="$PROJECT_DIR$/PythonFiles/ODIdentification/TableauInput.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Results/25July1013/17/TableauInput2017 - Copy.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Results/25July1013/17/TableauInput2017 - Copy.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Results/25July1013/17/TableauInput2017 - Copy.csv" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -16,40 +13,22 @@
   <component name="FileEditorManager">
     <leaf>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/PythonFiles/StatAnalysis.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="110">
-              <caret line="352" column="73" selection-start-line="352" selection-start-column="73" selection-end-line="352" selection-end-column="73" />
-              <folding>
-                <element signature="e#0#10#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/PythonFiles/stat.csv">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="11" column="16" selection-start-line="11" selection-start-column="16" selection-end-line="11" selection-end-column="16" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/PythonFiles/ODIdentification/copyNeeded.sh">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
-              <caret line="68" selection-start-line="68" selection-end-line="68" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/PythonFiles/ODIdentification/analyze17.slurm">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="238">
-              <caret line="14" column="63" selection-start-line="14" selection-start-column="63" selection-end-line="14" selection-end-column="63" />
+              <caret line="14" column="36" selection-start-line="14" selection-start-column="36" selection-end-line="14" selection-end-column="36" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/PythonFiles/ODIdentification/AnalyzeOutput.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="184">
+              <caret line="269" column="19" lean-forward="true" selection-start-line="269" selection-start-column="19" selection-end-line="269" selection-end-column="19" />
+              <folding>
+                <element signature="e#0#69#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -58,18 +37,41 @@
         <entry file="file://$PROJECT_DIR$/PythonFiles/ODIdentification/analyze18.slurm">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="238">
-              <caret line="14" column="19" selection-start-line="14" selection-end-line="14" selection-end-column="63" />
+              <caret line="14" column="36" selection-start-line="14" selection-start-column="36" selection-end-line="14" selection-end-column="36" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/PythonFiles/ODIdentification/Combine.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="714">
+              <caret line="42" selection-start-line="42" selection-end-line="42" />
+              <folding>
+                <element signature="e#0#10#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/PythonFiles/ODIdentification/TableauInput.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-1326">
+              <folding>
+                <element signature="e#0#10#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/PythonFiles/ODIdentification/GridsToFile.py">
+        <entry file="file://$PROJECT_DIR$/PythonFiles/ODIdentification/Main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="25" column="43" lean-forward="true" selection-start-line="25" selection-start-column="43" selection-end-line="25" selection-end-column="43" />
+            <state relative-caret-position="-391">
+              <caret line="130" column="24" lean-forward="true" selection-start-line="130" selection-start-column="24" selection-end-line="130" selection-end-column="24" />
               <folding>
-                <element signature="e#0#11#0" expanded="true" />
+                <element signature="e#0#10#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -87,6 +89,7 @@
   <component name="FindInProjectRecents">
     <findStrings>
       <find>count</find>
+      <find>pathcount</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -108,14 +111,14 @@
         <option value="$PROJECT_DIR$/PythonFiles/ODIdentification/Main.py" />
         <option value="$PROJECT_DIR$/PythonFiles/ODIdentification/Combine.py" />
         <option value="$PROJECT_DIR$/PythonFiles/ODIdentification/getJobNum.py" />
-        <option value="$PROJECT_DIR$/PythonFiles/ODIdentification/analyze18.slurm" />
-        <option value="$PROJECT_DIR$/PythonFiles/ODIdentification/analyze17.slurm" />
         <option value="$PROJECT_DIR$/PythonFiles/ODIdentification/start18.sh" />
         <option value="$PROJECT_DIR$/PythonFiles/ODIdentification/start17.sh" />
         <option value="$PROJECT_DIR$/PythonFiles/ODIdentification/Combine2.py" />
         <option value="$PROJECT_DIR$/PythonFiles/StatAnalysis.py" />
         <option value="$PROJECT_DIR$/PythonFiles/ODIdentification/copyNeeded.sh" />
         <option value="$PROJECT_DIR$/PythonFiles/ODIdentification/GridsToFile.py" />
+        <option value="$PROJECT_DIR$/PythonFiles/ODIdentification/analyze17.slurm" />
+        <option value="$PROJECT_DIR$/PythonFiles/ODIdentification/analyze18.slurm" />
       </list>
     </option>
   </component>
@@ -539,11 +542,19 @@
       <option name="project" value="LOCAL" />
       <updated>1564132196424</updated>
     </task>
-    <option name="localTasksCounter" value="34" />
+    <task id="LOCAL-00034" summary="renaming PathCounts output from analyzeoutput">
+      <created>1564137216593</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1564137216593</updated>
+    </task>
+    <option name="localTasksCounter" value="35" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="-6" y="-6" width="1292" height="692" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.16852146" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -575,7 +586,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="have three digits named for each split file" />
     <MESSAGE value="correct number of files for combine" />
     <MESSAGE value="changing when the program prints out line progression, now 10k lines" />
     <MESSAGE value="main method now catches if there is empty line" />
@@ -600,7 +610,8 @@
     <MESSAGE value="stat analysis start" />
     <MESSAGE value="stat analysis now outputs all possible interested variables" />
     <MESSAGE value="now copy tableau input script" />
-    <option name="LAST_COMMIT_MESSAGE" value="now copy tableau input script" />
+    <MESSAGE value="renaming PathCounts output from analyzeoutput" />
+    <option name="LAST_COMMIT_MESSAGE" value="renaming PathCounts output from analyzeoutput" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/PythonFiles/ODIdentification/cleanUp.sh">
@@ -667,25 +678,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/PythonFiles/ODIdentification/TableauInput.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-153">
-          <folding>
-            <element signature="e#0#10#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/PythonFiles/ODIdentification/Combine.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="42" selection-start-line="42" selection-end-line="42" />
-          <folding>
-            <element signature="e#0#10#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/PythonFiles/ODIdentification/getJobNum.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
@@ -733,16 +725,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/PythonFiles/ODIdentification/Main.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-242">
-          <caret line="130" column="24" lean-forward="true" selection-start-line="130" selection-start-column="24" selection-end-line="130" selection-end-column="24" />
-          <folding>
-            <element signature="e#0#10#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/PythonFiles/ODIdentification/Objects/TimeNode.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-255">
@@ -754,16 +736,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/PythonFiles/ODIdentification/Objects/PathNode.py">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/PythonFiles/ODIdentification/AnalyzeOutput.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="697">
-          <caret line="41" lean-forward="true" selection-start-line="41" selection-end-line="41" />
-          <folding>
-            <element signature="e#0#69#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/PythonFiles/ODIdentification/Combine2.py">
       <provider selected="true" editor-type-id="text-editor">
@@ -802,26 +774,65 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/PythonFiles/ODIdentification/GridsToFile.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="25" column="43" selection-start-line="25" selection-start-column="43" selection-end-line="25" selection-end-column="43" />
+          <folding>
+            <element signature="e#0#11#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/PythonFiles/ODIdentification/analyze17.slurm">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="238">
-          <caret line="14" column="63" selection-start-line="14" selection-start-column="63" selection-end-line="14" selection-end-column="63" />
+          <caret line="14" column="36" selection-start-line="14" selection-start-column="36" selection-end-line="14" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PythonFiles/ODIdentification/AnalyzeOutput.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="184">
+          <caret line="269" column="19" lean-forward="true" selection-start-line="269" selection-start-column="19" selection-end-line="269" selection-end-column="19" />
+          <folding>
+            <element signature="e#0#69#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/PythonFiles/ODIdentification/analyze18.slurm">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="238">
-          <caret line="14" column="19" selection-start-line="14" selection-end-line="14" selection-end-column="63" />
+          <caret line="14" column="36" selection-start-line="14" selection-start-column="36" selection-end-line="14" selection-end-column="36" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/PythonFiles/ODIdentification/GridsToFile.py">
+    <entry file="file://$PROJECT_DIR$/PythonFiles/ODIdentification/Combine.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="25" column="43" lean-forward="true" selection-start-line="25" selection-start-column="43" selection-end-line="25" selection-end-column="43" />
+        <state relative-caret-position="714">
+          <caret line="42" selection-start-line="42" selection-end-line="42" />
           <folding>
-            <element signature="e#0#11#0" expanded="true" />
+            <element signature="e#0#10#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PythonFiles/ODIdentification/TableauInput.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1326">
+          <folding>
+            <element signature="e#0#10#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PythonFiles/ODIdentification/Main.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-391">
+          <caret line="130" column="24" lean-forward="true" selection-start-line="130" selection-start-column="24" selection-end-line="130" selection-end-column="24" />
+          <folding>
+            <element signature="e#0#10#0" expanded="true" />
           </folding>
         </state>
       </provider>
