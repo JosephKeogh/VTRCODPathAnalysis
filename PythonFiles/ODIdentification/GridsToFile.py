@@ -25,16 +25,23 @@ dcSize = 32.1869
 dcNum = int(dcSize / 4.82)
 dcGrid = TLDcCoor.createGrid(dcSize, dcNum)
 
-with open("TableauInput.csv", 'w', newline='') as file:
+with open("NovaGrid.csv", 'w', newline='') as file:
+    writer = csv.writer(file)
+
+    writer.writerow(["Latitude", "Longitude", "Zone"])
+
+    for bnode in novaGrid:
+        writer.writerow([bnode.getLat(), bnode.getLong(), "NOVA"])
+
+file.close()
+
+with open("DCGrid.csv", 'w', newline='') as file:
     writer = csv.writer(file)
 
     writer.writerow(["Latitude", "Longitude", "Zone"])
 
     for anode in dcGrid:
         writer.writerow([anode.getLat(), anode.getLong(), "DC"])
-
-    for bnode in novaGrid:
-        writer.writerow([bnode.getLat(), bnode.getLong(), "NOVA"])
 
 
 file.close()
