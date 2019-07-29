@@ -30,6 +30,7 @@ class ODNode:
 
 
     """getters and setters"""
+
     def setInbound(self, d: bool):
         self.inbound = d
 

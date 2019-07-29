@@ -6,6 +6,13 @@ class Coordinate:
     def __init__(self, lat, long):
         self.lat = float(lat)
         self.long = float(long)
+        self.district = "blank"
+
+    def getDistrict(self):
+        return self.district
+
+    def setDistrict(self, d: str):
+        self.district = d
 
     def getLong(self):
         return self.long

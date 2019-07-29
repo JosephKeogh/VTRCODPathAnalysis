@@ -1,0 +1,27 @@
+
+
+with open("(NOVA) OD Map by Region.kml", 'r') as file:
+    for line in file:
+        line = line.strip()
+
+        # print(line)
+
+        if line == "<Folder>":
+            print("\nfolder found")
+
+            name = file.readline().strip()
+            name = name[13:name.__len__() - 7]
+
+            if name.__contains__("Node"):
+
+                print(name)
+
+                line = file.readline().strip()
+
+                for line in file:
+                    print(line.strip())
+
+
+file.close()
+# end of file
+
