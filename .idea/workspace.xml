@@ -2,14 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fbee1a1c-ed6b-4bd7-89fe-5a5f633f317d" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/PythonFiles/ODIdentification/Objects/Region.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PythonFiles/ODIdentification/AnalyzeOutput.py" beforeDir="false" afterPath="$PROJECT_DIR$/PythonFiles/ODIdentification/AnalyzeOutput.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PythonFiles/ODIdentification/GridToRegion.csv" beforeDir="false" afterPath="$PROJECT_DIR$/PythonFiles/ODIdentification/GridToRegion.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PythonFiles/ODIdentification/KMLtoCoordinates" beforeDir="false" afterPath="$PROJECT_DIR$/PythonFiles/ODIdentification/KMLtoCoordinates" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PythonFiles/ODIdentification/PathCounts.csv" beforeDir="false" afterPath="$PROJECT_DIR$/PythonFiles/ODIdentification/PathCounts.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PythonFiles/ODIdentification/Testing.py" beforeDir="false" afterPath="$PROJECT_DIR$/PythonFiles/ODIdentification/Testing.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PythonFiles/ODIdentification/analysistest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/PythonFiles/ODIdentification/analysistest.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Results/29July0905/Testing.py" beforeDir="false" afterPath="$PROJECT_DIR$/Results/29July0905/Testing.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -31,8 +27,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/PythonFiles/ODIdentification/KMLtoCoordinates">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="261">
-              <caret line="64" column="59" lean-forward="true" selection-start-line="30" selection-start-column="4" selection-end-line="64" selection-end-column="59" />
+            <state relative-caret-position="251">
+              <caret line="70" column="32" lean-forward="true" selection-start-line="70" selection-start-column="32" selection-end-line="70" selection-end-column="32" />
               <folding>
                 <element signature="e#0#24#0" expanded="true" />
               </folding>
@@ -43,13 +39,27 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/PythonFiles/ODIdentification/AnalyzeOutput.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="159">
-              <caret line="534" column="17" selection-start-line="534" selection-start-column="17" selection-end-line="534" selection-end-column="17" />
+            <state relative-caret-position="204">
+              <caret line="519" column="45" lean-forward="true" selection-start-line="519" selection-start-column="45" selection-end-line="519" selection-end-column="45" />
               <folding>
                 <element signature="e#0#69#0" expanded="true" />
               </folding>
             </state>
           </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/PythonFiles/ODIdentification/Objects/Region.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="317">
+              <caret line="38" column="20" selection-start-line="38" selection-start-column="20" selection-end-line="38" selection-end-column="20" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/PythonFiles/ODIdentification/ActualGridToRegion.csv">
+          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
@@ -104,6 +114,7 @@
       <find>points found</find>
       <find>folder</find>
       <find>file.write</find>
+      <find>gridtore</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -138,6 +149,7 @@
         <option value="$PROJECT_DIR$/Results/29July0905/Testing.py" />
         <option value="$PROJECT_DIR$/PythonFiles/ODIdentification/Testing.py" />
         <option value="$PROJECT_DIR$/PythonFiles/ODIdentification/KMLtoCoordinates" />
+        <option value="$PROJECT_DIR$/PythonFiles/ODIdentification/Objects/Region.py" />
         <option value="$PROJECT_DIR$/PythonFiles/ODIdentification/AnalyzeOutput.py" />
       </list>
     </option>
@@ -170,6 +182,13 @@
               <item name="PythonFiles" type="462c0819:PsiDirectoryNode" />
               <item name="ODIdentification" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="VTRCODPathAnalysis" type="b2602c69:ProjectViewProjectNode" />
+              <item name="VTRCODPathAnalysis" type="462c0819:PsiDirectoryNode" />
+              <item name="PythonFiles" type="462c0819:PsiDirectoryNode" />
+              <item name="ODIdentification" type="462c0819:PsiDirectoryNode" />
+              <item name="Objects" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -181,7 +200,7 @@
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/Results/29July0905" />
-    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+    <property name="settings.editor.selected.configurable" value="copyright" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -205,7 +224,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.Testing">
+  <component name="RunManager" selected="Python.KMLtoCoordinates">
     <configuration name="GridsToFile" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="VTRCODPathAnalysis" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -313,8 +332,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.Testing" />
         <item itemvalue="Python.KMLtoCoordinates" />
+        <item itemvalue="Python.Testing" />
         <item itemvalue="Python.Testing (1)" />
         <item itemvalue="Python.testing" />
         <item itemvalue="Python.GridsToFile" />
@@ -577,7 +596,14 @@
       <option name="project" value="LOCAL" />
       <updated>1564492243307</updated>
     </task>
-    <option name="localTasksCounter" value="36" />
+    <task id="LOCAL-00036" summary="work for morning">
+      <created>1564509238327</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1564509238327</updated>
+    </task>
+    <option name="localTasksCounter" value="37" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -589,7 +615,7 @@
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.37411347" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.26241136" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -614,7 +640,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="changing when the program prints out line progression, now 10k lines" />
     <MESSAGE value="main method now catches if there is empty line" />
     <MESSAGE value="testing uses command line entries" />
     <MESSAGE value="Combine.py searches for files containing 3 digit identifiers" />
@@ -639,7 +664,8 @@
     <MESSAGE value="now copy tableau input script" />
     <MESSAGE value="renaming PathCounts output from analyzeoutput" />
     <MESSAGE value="grid to region" />
-    <option name="LAST_COMMIT_MESSAGE" value="grid to region" />
+    <MESSAGE value="work for morning" />
+    <option name="LAST_COMMIT_MESSAGE" value="work for morning" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/PythonFiles/ODIdentification/cleanUp.sh">
@@ -845,16 +871,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/PythonFiles/ODIdentification/Objects/ODNode.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="544">
-          <caret line="33" column="4" selection-start-line="33" selection-start-column="4" selection-end-line="33" selection-end-column="4" />
-          <folding>
-            <element signature="e#0#40#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/PythonFiles/ODIdentification/(NOVA) OD Map by Region.kml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-23986">
@@ -891,13 +907,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/PythonFiles/ODIdentification/GridToRegion.csv">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="13" column="36" selection-end-line="120" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/PythonFiles/ODIdentification/Objects/Coordinate.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
@@ -908,20 +917,47 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/PythonFiles/ODIdentification/GridToRegion.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="13" column="36" selection-end-line="120" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/PythonFiles/ODIdentification/KMLtoCoordinates">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="261">
-          <caret line="64" column="59" lean-forward="true" selection-start-line="30" selection-start-column="4" selection-end-line="64" selection-end-column="59" />
+        <state relative-caret-position="251">
+          <caret line="70" column="32" lean-forward="true" selection-start-line="70" selection-start-column="32" selection-end-line="70" selection-end-column="32" />
           <folding>
             <element signature="e#0#24#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/PythonFiles/ODIdentification/Objects/ODNode.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="33" column="4" selection-start-line="33" selection-start-column="4" selection-end-line="33" selection-end-column="4" />
+          <folding>
+            <element signature="e#0#40#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PythonFiles/ODIdentification/ActualGridToRegion.csv">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PythonFiles/ODIdentification/Objects/Region.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="317">
+          <caret line="38" column="20" selection-start-line="38" selection-start-column="20" selection-end-line="38" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/PythonFiles/ODIdentification/AnalyzeOutput.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="159">
-          <caret line="534" column="17" selection-start-line="534" selection-start-column="17" selection-end-line="534" selection-end-column="17" />
+        <state relative-caret-position="204">
+          <caret line="519" column="45" lean-forward="true" selection-start-line="519" selection-start-column="45" selection-end-line="519" selection-end-column="45" />
           <folding>
             <element signature="e#0#69#0" expanded="true" />
           </folding>

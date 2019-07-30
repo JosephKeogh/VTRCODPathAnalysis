@@ -37,6 +37,7 @@ def match():
         for line in reader:
             if str(line[0]).__contains__("a") is False:
                 c = Coordinate.Coordinate(float(line[0]), float(line[1]))
+                c.setDistrict(line[2] + ", " + line[3])
                 yesRegion.append(c)
                 yesRegionCount += 1
 
@@ -58,11 +59,25 @@ def match():
 
                 if along == blong:
                     found += 1
+                    a.lat = b.getLat()
+                    a.long = b.getLong()
                     break
 
     print("with region: " + str(yesRegion.__len__()))
     print("found: " + str(found))
     print("not found: " + str(yesRegion.__len__() - found))
+
+    with open("ActualGridToRegion.csv", 'w', newline='') as out:
+        writer = csv.writer(out)
+
+        for i in yesRegion:
+            writer.writerow([i.getLat(), i.getLong(), i.getDistrict()])
+    out.close()
+
+
+# main ------------
+
+
 
 
 coors = []
@@ -119,6 +134,8 @@ with open("GridToRegion.csv", 'w', newline='') as file:
     writer.writerows(coors)
 file.close()
 
+
+match()
 
 # end of file
 

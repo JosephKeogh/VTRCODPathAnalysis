@@ -1,4 +1,4 @@
-from Objects import Coordinate, TimeNode, ODNode, PathNode, HashTable
+from Objects import Coordinate, TimeNode, ODNode, PathNode, HashTable, Region
 from datetime import datetime, timedelta
 import sys
 import csv
@@ -492,83 +492,50 @@ def NodeProportionAnalysis(total: int, AM: int, PM: int):
 
     return string
 
-def getCoordinatesWithRegions(s: str):
 
-    coors = []
+def regionAnalysis(nodes: list):
 
-    with open(s, 'r') as file:
+    matched = []
 
-        doc = parser.parse(file).getroot().Document
+    with open("ActualGridToRegion.csv", 'r', newline='') as f:
+        reader = csv.reader(f)
 
-        for folder in doc.Folder:
-
-            folderName = str(folder.name)
-            pointCount = 0
-
-            if folderName.__contains__("Nodes"):
-
-                for placemark in folder.Placemark:
-                    pointCount += 1
-
-                    c = placemark.Point.coordinates
-                    c = str(c).strip().split(",")
-
-                    coor = [c[1], c[0], folderName[7:folderName.__len__() - 6], "NOVA"]
-                    coors.append(coor)
-
-    file.close()
-
-    return coors
-
-def regionAnalysis():
-
-    coors = []
-
-    nova = getCoordinatesWithRegions("(NOVA) OD Map by Region.kml")
-    dc = getCoordinatesWithRegions("(DC) OD Map by Region.kml")
-
-    for n in nova:
-        coors.append(n)
-    for n in dc:
-        coors.append(n)
-
-    noRegion = []
-
-    yesRegion = []
-    yesRegionCount = 0
-    with open("GridToRegion.csv", 'r', newline='') as file:
-        reader = csv.reader(file)
-
-        count = 0
         for line in reader:
-            if str(line[0]).__contains__("a") is False:
-                c = Coordinate.Coordinate(float(line[0]), float(line[1]))
-                yesRegion.append(c)
-                yesRegionCount += 1
+            c = Coordinate.Coordinate(line[0], line[1])
+            c.setDistrict(line[2])
+            matched.append(c)
+    f.close()
 
-    file.close()
+    regions = []
 
-    found = 0
-    for a in yesRegion:
+    for a in matched:
 
-        for b in noRegion:
+        for b in matched:
 
-            tol = 8
+            aD = a.getDistrict()
+            bD = b.getDistrict()
 
-            alat = float(str(a.getLat())[:tol])
-            along = float(str(a.getLong())[:tol])
-            blat = float(str(b.getLat())[:tol])
-            blong = float(str(b.getLong())[:tol])
+            if aD.__contains__("NOVA") is True and bD.__contains__("Nova") is False:
 
-            if alat == blat:
+                region = Region.Region(aD, bD)
 
-                if along == blong:
-                    found += 1
-                    break
+            if aD.__contains__("DC") is True and bD.__contains__("DC") is False:
+                region = "From: " + aD + " To: " + bD
+                if regions.__contains__(region) is False:
+                    regions[region] = 0
 
-    print("with region: " + str(yesRegion.__len__()))
-    print("found: " + str(found))
-    print("not found: " + str(yesRegion.__len__() - found))
+    for node in nodes:
+        origin = node.origin
+        dest = node.destination
+        inBound = node.getInbound()
+
+        if inBound is True:
+            for m in matched:
+
+
+        if inBound is False:
+
+
 
     s = ""
 
