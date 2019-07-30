@@ -2,6 +2,7 @@ from Objects import Coordinate, TimeNode, ODNode, PathNode, HashTable
 from datetime import datetime, timedelta
 import sys
 import csv
+from pykml import parser
 
 sys.argv.pop(0)                                 # ignore this program's name
 inputFileName = sys.argv.pop(0)
@@ -177,30 +178,35 @@ with open(inputFileName, 'r') as outputTextFile1:
 
 outputTextFile1.close()
 
-# -----------------------------------------------------------analysis----------------------------
+def basicInfo():
 
-with open(outputFileName, 'w') as file:
+    s = ""
+    s = s + "--- Basic Info ---"
+    s = s + "\nNumber of ODNodes: " + str(ODNodes.__len__())
 
-    file.write("--- Basic Info ---")
-    file.write("\nNumber of ODNodes: " + str(ODNodes.__len__()))
+    s = s + "\n\n--- Raw Numbers ---"
+    s = s + "\nTotal Trips: " + str(totalTripCount)
+    s = s + "\nInt Trips  : " + str(interestTripCount)
+    s = s + "\nOD Maps    : " + str(odMapCount)
+    s = s + "\nTime Maps  : " + str(timeMapCount)
+    s = s + "\nTotal AM   : " + str(totalAM)
+    s = s + "\nTotal PM   : " + str(totalPM)
+    s = s + "\nPath Maps  : " + str(pathMapCount)
+    
+    return s
 
-    file.write("\n\n--- Raw Numbers ---")
-    file.write("\nTotal Trips: " + str(totalTripCount))
-    file.write("\nInt Trips  : " + str(interestTripCount))
-    file.write("\nOD Maps    : " + str(odMapCount))
-    file.write("\nTime Maps  : " + str(timeMapCount))
-    file.write("\nTotal AM   : " + str(totalAM))
-    file.write("\nTotal PM   : " + str(totalPM))
-    file.write("\nPath Maps  : " + str(pathMapCount))
+def percentAnalysis():
 
+    s = "\n\n--- Percent Analysis ---"
+    s = s + "\nTrips of Interest % : " + str(interestTripCount / totalTripCount)[:5]
+    s = s + "\nInt Trips Map to OD : " + str(odMapCount / interestTripCount)[:5]
+    s = s + "\nOD Trips Map to Time: " + str(timeMapCount / odMapCount)[:5]
+    s = s + "\nTime Mapped to Path : " + str(pathMapCount / timeMapCount)[:5]
+    s = s + "\nEnd Amount Mapped   : " + str(pathMapCount / totalTripCount)[:5]
 
-    file.write("\n\n--- Percent Analysis ---")
-    file.write("\nTrips of Interest % : " + str(interestTripCount / totalTripCount)[:5])
-    file.write("\nInt Trips Map to OD : " + str(odMapCount / interestTripCount)[:5])
-    file.write("\nOD Trips Map to Time: " + str(timeMapCount / odMapCount)[:5])
-    file.write("\nTime Mapped to Path : " + str(pathMapCount / timeMapCount)[:5])
-    file.write("\nEnd Amount Mapped   : " + str(pathMapCount / totalTripCount)[:5])
+    return s
 
+def pathCountAnalysis(cutOff: int):
     '''to keep track of the counts per weekday'''
     weekdays = {}
     weekdayTotal = 0
@@ -270,7 +276,6 @@ with open(outputFileName, 'w') as file:
     csvfile.close()
 
     '''remove the paths that are not frequently used'''
-    cutOff = 0
     newPaths = justPaths.copy()
     for p in newPaths:
         if newPaths[p] < cutOff:
@@ -379,18 +384,21 @@ with open(outputFileName, 'w') as file:
     llexamples.append("Example: I-66 taken at 08:30 on Wednesdays had 100 trips with map-able paths")
 
     '''header'''
-    file.write("\n\n--- Path Count Analysis ---")
-    file.write("\nOnly looking at paths with a count more than: " + str(cutOff))
+    s = "\n\n--- Path Count Analysis ---"
+    s = s + "\nOnly looking at paths with a count more than: " + str(cutOff)
     count = 0
     for a in l:
         average = ll[count] / int(a.__len__())
         average = round(average, 1)
-        file.write("\n" + llNames[count] + str(average))
-        file.write("\n\t" + llexamples[count])
+        s = s + "\n" + llNames[count] + str(average)
+        s = s + "\n\t" + llexamples[count]
         count += 1
 
+    return s
+
+def NodeProportionAnalysis(total: int, AM: int, PM: int):
     '''total traffic analysis'''
-    significantFactor = 3
+    significantFactor = total
     expectedProportion = 1 / ODNodes.__len__()
     significantProportion = expectedProportion * significantFactor
 
@@ -404,15 +412,14 @@ with open(outputFileName, 'w') as file:
     for i in ODNodes:
 
         if (i.getCount() / odMapCount) >= significantProportion:
-
             totalProportion += (i.getCount() / odMapCount)
 
             nodeString = nodeString + "\n\n[" + str(counter) + "]"
 
             '''node information'''
             nodeString = nodeString + "\nOrigin     : " + i.origin.toString() + \
-                     "\nDestination: " + i.destination.toString() + \
-                     "\nODMapCount % (total): " + str(i.getCount() / odMapCount)[:5]
+                         "\nDestination: " + i.destination.toString() + \
+                         "\nODMapCount % (total): " + str(i.getCount() / odMapCount)[:5]
 
             counter += 1
 
@@ -420,9 +427,8 @@ with open(outputFileName, 'w') as file:
              " of all Interested Trips ---"
     # string = string + nodeString
 
-
     '''AM traffic analysis'''
-    significantFactor = 3
+    significantFactor = AM
     expectedProportion = 1 / ODNodes.__len__()
     significantProportion = expectedProportion * significantFactor
 
@@ -436,17 +442,16 @@ with open(outputFileName, 'w') as file:
     for i in ODNodes:
 
         if (i.getAmCount() / totalAM) >= significantProportion:
-
             totalProportion += (i.getAmCount() / totalAM)
 
             nodeString = nodeString + "\n\n[" + str(counter) + "]"
 
             '''node information'''
             nodeString = nodeString + \
-                     "\nOrigin     : " + i.origin.toString() + \
-                     "\nDestination: " + i.destination.toString() + \
-                     "\nInt Trips % (total): " + str(i.getCount() / interestTripCount)[:5] + \
-                     "\nAM % (total)       : " + str(i.getAmCount() / totalAM)[:5]
+                         "\nOrigin     : " + i.origin.toString() + \
+                         "\nDestination: " + i.destination.toString() + \
+                         "\nInt Trips % (total): " + str(i.getCount() / interestTripCount)[:5] + \
+                         "\nAM % (total)       : " + str(i.getAmCount() / totalAM)[:5]
 
             counter += 1
 
@@ -454,9 +459,8 @@ with open(outputFileName, 'w') as file:
              " of all AM Trips ---"
     # string = string + nodeString
 
-
     '''PM traffic analysis'''
-    significantFactor = 3
+    significantFactor = PM
     expectedProportion = 1 / ODNodes.__len__()
     significantProportion = expectedProportion * significantFactor
 
@@ -470,23 +474,123 @@ with open(outputFileName, 'w') as file:
     for i in ODNodes:
 
         if (i.getPmCount() / totalPM) >= significantProportion:
-
             totalProportion += (i.getPmCount() / totalPM)
 
             nodeString = nodeString + "\n\n[" + str(counter) + "]"
 
             '''node information'''
             nodeString = nodeString + \
-                     "\nOrigin     : " + i.origin.toString() + \
-                     "\nDestination: " + i.destination.toString() + \
-                     "\nInt Trips % (total): " + str(i.getCount() / interestTripCount)[:5] + \
-                     "\nPM % (total)       : " + str(i.getPmCount() / totalPM)[:5]
+                         "\nOrigin     : " + i.origin.toString() + \
+                         "\nDestination: " + i.destination.toString() + \
+                         "\nInt Trips % (total): " + str(i.getCount() / interestTripCount)[:5] + \
+                         "\nPM % (total)       : " + str(i.getPmCount() / totalPM)[:5]
 
             counter += 1
 
     string = string + "\n---" + str(counter) + " OD Nodes Encompass " + str(totalProportion)[:5] + \
              " of all PM Trips ---"
-    # string = string + nodeString
+
+    return string
+
+def getCoordinatesWithRegions(s: str):
+
+    coors = []
+
+    with open(s, 'r') as file:
+
+        doc = parser.parse(file).getroot().Document
+
+        for folder in doc.Folder:
+
+            folderName = str(folder.name)
+            pointCount = 0
+
+            if folderName.__contains__("Nodes"):
+
+                for placemark in folder.Placemark:
+                    pointCount += 1
+
+                    c = placemark.Point.coordinates
+                    c = str(c).strip().split(",")
+
+                    coor = [c[1], c[0], folderName[7:folderName.__len__() - 6], "NOVA"]
+                    coors.append(coor)
+
+    file.close()
+
+    return coors
+
+def regionAnalysis():
+
+    coors = []
+
+    nova = getCoordinatesWithRegions("(NOVA) OD Map by Region.kml")
+    dc = getCoordinatesWithRegions("(DC) OD Map by Region.kml")
+
+    for n in nova:
+        coors.append(n)
+    for n in dc:
+        coors.append(n)
+
+    noRegion = []
+
+    yesRegion = []
+    yesRegionCount = 0
+    with open("GridToRegion.csv", 'r', newline='') as file:
+        reader = csv.reader(file)
+
+        count = 0
+        for line in reader:
+            if str(line[0]).__contains__("a") is False:
+                c = Coordinate.Coordinate(float(line[0]), float(line[1]))
+                yesRegion.append(c)
+                yesRegionCount += 1
+
+    file.close()
+
+    found = 0
+    for a in yesRegion:
+
+        for b in noRegion:
+
+            tol = 8
+
+            alat = float(str(a.getLat())[:tol])
+            along = float(str(a.getLong())[:tol])
+            blat = float(str(b.getLat())[:tol])
+            blong = float(str(b.getLong())[:tol])
+
+            if alat == blat:
+
+                if along == blong:
+                    found += 1
+                    break
+
+    print("with region: " + str(yesRegion.__len__()))
+    print("found: " + str(found))
+    print("not found: " + str(yesRegion.__len__() - found))
+
+    s = ""
+
+    return s
+
+
+# -----------------------------------------------------------analysis----------------------------
+
+with open(outputFileName, 'w') as file:
+
+    basic = basicInfo()
+
+    percent = percentAnalysis()
+
+    pathAnalysis = pathCountAnalysis(0)
+
+    props = NodeProportionAnalysis(0, 0, 0)
+
+    region = regionAnalysis()
+
+    # string = basic + percent + pathAnalysis + props
+    string = region
 
     file.write(string)
 

@@ -1,39 +1,36 @@
 import csv
 
+with open("DCGrid.csv", 'r') as file:
 
-def repeat(string: str):
+    reader = csv.reader(file)
 
-    roads = []
+    count = 0
+    for line in reader:
+        count += 1
 
-    while string.__contains__("---"):
+    print(count)
 
-        index = string.index("---")
+file.close()
 
-        before = string[:index]
-        after = string[index:]
+with open("NOVAGrid.csv", 'r') as file:
+    reader = csv.reader(file)
 
-        roads.append(before)
+    count = 0
+    for line in reader:
+        count += 1
+    print(count)
 
-        string = after[3:]
+file.close()
 
+with open("GridToRegion.csv", 'r', newline='') as file:
+    reader = csv.reader(file)
 
-for i in range(7, 9):
+    count = 0
+    for line in reader:
+        count += 1
+    print(count)
 
-    fileName = "PathCounts201" + str(i) + ".csv"
-
-    with open(fileName, 'r', newline='') as file:
-
-        reader = csv.reader(file)
-
-        for line in reader:
-
-            path = str(line[0])
-
-            if path.__contains__("---"):
-
-                repeat(path)
-
-    file.close()
+file.close()
 
 
 # end of file
