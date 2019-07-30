@@ -1,27 +1,60 @@
+from pykml import parser
+import csv
 
-
+coors = []
 with open("(NOVA) OD Map by Region.kml", 'r') as file:
-    for line in file:
-        line = line.strip()
 
-        # print(line)
+    doc = parser.parse(file).getroot().Document
 
-        if line == "<Folder>":
-            print("\nfolder found")
+    for folder in doc.Folder:
 
-            name = file.readline().strip()
-            name = name[13:name.__len__() - 7]
+        folderName = str(folder.name)
+        pointCount = 0
 
-            if name.__contains__("Node"):
+        if folderName.__contains__("Nodes"):
 
-                print(name)
+            for placemark in folder.Placemark:
+                pointCount += 1
 
-                line = file.readline().strip()
+                c = placemark.Point.coordinates
+                c = str(c).strip().split(",")
 
-                for line in file:
-                    print(line.strip())
-
+                coor = [c[1], c[0], folderName[7:folderName.__len__() - 7], "NOVA"]
+                coors.append(coor)
 
 file.close()
+
+with open("(DC) OD Map by Region.kml", 'r') as file:
+
+    doc = parser.parse(file).getroot().Document
+
+    for folder in doc.Folder:
+
+        folderName = str(folder.name)
+        pointCount = 0
+
+        if folderName.__contains__("Nodes"):
+
+            for placemark in folder.Placemark:
+                pointCount += 1
+
+                c = placemark.Point.coordinates
+                c = str(c).strip().split(",")
+
+                coor = [c[1], c[0], folderName[:folderName.__len__() - 6], "DC"]
+                coors.append(coor)
+
+file.close()
+
+with open("GridToRegion.csv", 'w', newline='') as file:
+
+    writer = csv.writer(file)
+
+    writer.writerow(["Lat", "Long", "Region", "Grid"])
+
+    writer.writerows(coors)
+file.close()
+
+
 # end of file
 
