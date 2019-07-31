@@ -1,4 +1,4 @@
-from Objects import Coordinate, TimeNode, ODNode, PathNode, HashTable, Region
+from Objects import Coordinate, TimeNode, ODNode, PathNode, HashTable, ODRegion
 from datetime import datetime, timedelta
 import sys
 import csv
@@ -492,60 +492,76 @@ def NodeProportionAnalysis(total: int, AM: int, PM: int):
 
     return string
 
+def createRegions(fileName: str):
+    """
 
-def regionAnalysis(nodes: list):
-
-    matched = []
-
-    with open("ActualGridToRegion.csv", 'r', newline='') as f:
-        reader = csv.reader(f)
-
-        for line in reader:
-            c = Coordinate.Coordinate(line[0], line[1])
-            c.setDistrict(line[2])
-            matched.append(c)
-    f.close()
+    :param fileName: name of the file that contains coordinates mapped to regions
+    :return: a list of all possible regions
+    """
 
     regions = []
 
-    for a in matched:
+    nova = {}
+    dc = {}
 
-        for b in matched:
+    with open(fileName, 'r', newline='') as f:
+        reader = csv.reader(f)
 
-            aD = a.getDistrict()
-            bD = b.getDistrict()
+        for line in reader:
 
-            if aD.__contains__("NOVA") is True and bD.__contains__("Nova") is False:
+            district = str(line[2])
 
-                region = Region.Region(aD, bD)
+            if district.__contains__("NOVA"):
+                nova[district] = 0
+            if district.__contains__("DC"):
+                dc[district] = 0
+    f.close()
 
-            if aD.__contains__("DC") is True and bD.__contains__("DC") is False:
-                region = "From: " + aD + " To: " + bD
-                if regions.__contains__(region) is False:
-                    regions[region] = 0
+    for n in nova:
+        for d in dc:
+            inbound = ODRegion.ODRegion(n, d, True)
+            regions.append(inbound)
+    for d in dc:
+        for n in nova:
+            outbound = ODRegion.ODRegion(d, n, False)
+            regions.append(outbound)
 
-    for node in nodes:
-        origin = node.origin
-        dest = node.destination
-        inBound = node.getInbound()
+    return regions
 
-        if inBound is True:
-            for m in matched:
+def attachRegions(nodes: list):
 
-
-        if inBound is False:
-
+    nodesWithRegions = []
 
 
-    s = ""
+    return nodesWithRegions
 
-    return s
+
+
+
+def regionAnalysis(nodes: list):
+    """
+
+    :param nodes: list of od nodes that contain all the data
+    :return: the counts for each region
+    """
+
+    # what regions are we working with
+    regions = createRegions("ActualGridToRegion.csv")
+
+    # attach regions to the coordinates of the od nodes
+    nodesWithRegions = attachRegions(nodes)
+
+    # go through all the od nodes, and add its counts to the correct regions counts
+
+
+    return ""
 
 
 # -----------------------------------------------------------analysis----------------------------
 
 with open(outputFileName, 'w') as file:
 
+    '''
     basic = basicInfo()
 
     percent = percentAnalysis()
@@ -553,8 +569,9 @@ with open(outputFileName, 'w') as file:
     pathAnalysis = pathCountAnalysis(0)
 
     props = NodeProportionAnalysis(0, 0, 0)
+    '''
 
-    region = regionAnalysis()
+    region = regionAnalysis(ODNodes)
 
     # string = basic + percent + pathAnalysis + props
     string = region
