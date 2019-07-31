@@ -2,10 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fbee1a1c-ed6b-4bd7-89fe-5a5f633f317d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/PythonFiles/ODIdentification/Objects/Region.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PythonFiles/ODIdentification/AnalyzeOutput.py" beforeDir="false" afterPath="$PROJECT_DIR$/PythonFiles/ODIdentification/AnalyzeOutput.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PythonFiles/ODIdentification/KMLtoCoordinates" beforeDir="false" afterPath="$PROJECT_DIR$/PythonFiles/ODIdentification/KMLtoCoordinates" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -603,7 +600,14 @@
       <option name="project" value="LOCAL" />
       <updated>1564509238327</updated>
     </task>
-    <option name="localTasksCounter" value="37" />
+    <task id="LOCAL-00037" summary="work for afternoon">
+      <created>1564514250107</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1564514250107</updated>
+    </task>
+    <option name="localTasksCounter" value="38" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -615,7 +619,7 @@
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.26241136" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.26241136" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -640,7 +644,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="main method now catches if there is empty line" />
     <MESSAGE value="testing uses command line entries" />
     <MESSAGE value="Combine.py searches for files containing 3 digit identifiers" />
     <MESSAGE value="Combine.py look iteratively not just at input number" />
@@ -665,7 +668,8 @@
     <MESSAGE value="renaming PathCounts output from analyzeoutput" />
     <MESSAGE value="grid to region" />
     <MESSAGE value="work for morning" />
-    <option name="LAST_COMMIT_MESSAGE" value="work for morning" />
+    <MESSAGE value="work for afternoon" />
+    <option name="LAST_COMMIT_MESSAGE" value="work for afternoon" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/PythonFiles/ODIdentification/cleanUp.sh">
