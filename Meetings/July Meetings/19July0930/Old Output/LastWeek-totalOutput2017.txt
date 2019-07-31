@@ -1,0 +1,57 @@
+Total Trips: 10190744
+OD Maps    : 3826318
+Time Maps  : 3826259
+Path Maps  : 0
+OD %       : 0.37546993624803054
+Time %     : 0.9999845804765835
+Path %     : 0.0
+Total %    : 0.0
+HashTable: 
+Index[0] Origin: 37.33783783783784, -75.68211193554356 Destination: 39.11, -77.284 Count: 512
+	Times:
+		TimeID: 05:30 Count: 31
+		TimeID: 06:00 Count: 28
+		TimeID: 06:30 Count: 27
+		TimeID: 07:00 Count: 36
+		TimeID: 07:30 Count: 42
+		TimeID: 08:00 Count: 36
+		TimeID: 08:30 Count: 41
+		TimeID: 09:00 Count: 53
+		TimeID: 15:00 Count: 44
+		TimeID: 15:30 Count: 25
+		TimeID: 16:00 Count: 41
+		TimeID: 16:30 Count: 29
+		TimeID: 17:00 Count: 25
+		TimeID: 17:30 Count: 18
+		TimeID: 18:00 Count: 13
+		TimeID: 18:30 Count: 23
+Index[3] Origin: 39.5, -77.43186371500288 Destination: 38.74963963963964, -77.01758297077761 Count: 74483
+	Times:
+		TimeID: 05:30 Count: 1849
+		TimeID: 06:00 Count: 2535
+		TimeID: 06:30 Count: 3762
+		TimeID: 07:00 Count: 4732
+		TimeID: 07:30 Count: 5599
+		TimeID: 08:00 Count: 5578
+		TimeID: 08:30 Count: 5575
+		TimeID: 09:00 Count: 5121
+		TimeID: 15:00 Count: 5178
+		TimeID: 15:30 Count: 5066
+		TimeID: 16:00 Count: 5178
+		TimeID: 16:30 Count: 5076
+		TimeID: 17:00 Count: 5509
+		TimeID: 17:30 Count: 4998
+		TimeID: 18:00 Count: 4605
+		TimeID: 18:30 Count: 4122
+Index[5] Origin: 37.33783783783784, -79.0 Destination: 38.74963963963964, -76.75116594155521 Count: 51
+	Times:
+		TimeID: 05:30 Count: 2
+		TimeID: 06:30 Count: 4
+		TimeID: 07:00 Count: 7
+		TimeID: 07:30 Count: 4
+		TimeID: 08:00 Count: 6
+		TimeID: 08:30 Count: 6
+		TimeID: 16:00 Count: 9
+		TimeID: 16:30 Count: 1
+		TimeID: 17:00 Count: 1
+		TimeID: 18:30 Count: 3
