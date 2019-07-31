@@ -1,0 +1,141 @@
+Total Trips: 10404434
+Int Trips  : 8266681
+OD Maps    : 12904
+Time Maps  : 9147
+Path Maps  : 9147
+HashTable: 
+Index[1]
+	Origin: 36.90243783783784, -78.65719
+	Destination: 39.11, -77.284
+	Count: 0
+	AMCount: 0
+	PMCount: 0
+	Times:
+Index[2]
+	Origin: 39.0646, -78.65719
+	Destination: 38.92981981981982, -77.01881603757707
+	Count: 23
+	AMCount: 12
+	PMCount: 0
+	Times:
+		WeekDay: 1 TimeID: 04:30 Count: 4
+		Paths:
+			PathID: I-66-EB Count: 4
+		WeekDay: 3 TimeID: 04:30 Count: 3
+		Paths:
+			PathID: I-66-EB Count: 3
+		WeekDay: 2 TimeID: 05:00 Count: 2
+		Paths:
+			PathID: I-66-EB Count: 2
+		WeekDay: 1 TimeID: 05:30 Count: 3
+		Paths:
+			PathID: I-66-EB Count: 1
+			PathID: I-66-EB-TZ1-2-3_US-29-NB-TZ4---I-66-EB Count: 2
+Index[3]
+	Origin: 39.0646, -77.07157583122863
+	Destination: 38.92981981981982, -77.284
+	Count: 182
+	AMCount: 71
+	PMCount: 60
+	Times:
+		WeekDay: 4 TimeID: 04:30 Count: 1
+		Paths:
+			PathID: I-66-EB Count: 1
+		WeekDay: 1 TimeID: 05:00 Count: 2
+		Paths:
+			PathID: I-66-WB-TZ4-3_US-29-SB-TZ2-1---I-66-WB-TZ4_US-29-SB-TZ3-2-1---US-29-NB-TZ1-2-3_I-66-EB-TZ4---US-29-NB-TZ1-2_I-66-EB-TZ3-4---US-29-SB Count: 1
+			PathID: I-66-EB Count: 1
+		WeekDay: 2 TimeID: 05:00 Count: 2
+		Paths:
+			PathID: I-66-EB Count: 2
+		WeekDay: 4 TimeID: 05:00 Count: 1
+		Paths:
+			PathID: I-66-EB Count: 1
+		WeekDay: 3 TimeID: 05:30 Count: 2
+		Paths:
+			PathID: I-66-EB Count: 2
+		WeekDay: 4 TimeID: 05:30 Count: 3
+		Paths:
+			PathID: I-66-EB Count: 3
+		WeekDay: 2 TimeID: 06:30 Count: 2
+		Paths:
+			PathID: I-66-EB-TZ1-2-3_US-29-NB-TZ4---I-66-EB Count: 1
+			PathID: US-50-EB---US-50-WB Count: 1
+		WeekDay: 5 TimeID: 06:30 Count: 4
+		Paths:
+			PathID: I-66-EB Count: 3
+			PathID: I-66-EB-TZ1_US-50-EB-TZ2-3-4---US-50-EB Count: 1
+		WeekDay: 2 TimeID: 07:00 Count: 2
+		Paths:
+			PathID: I-66-EB Count: 2
+		WeekDay: 3 TimeID: 07:00 Count: 10
+		Paths:
+			PathID: US-50-WB Count: 1
+			PathID: I-66-EB-TZ1-2-3_US-29-NB-TZ4 Count: 1
+			PathID: US-50-EB Count: 2
+			PathID: I-66-EB Count: 5
+			PathID: I-66-EB-TZ1-2-3_US-50-EB-TZ4---I-66-EB Count: 1
+		WeekDay: 4 TimeID: 07:00 Count: 8
+		Paths:
+			PathID: US-29-NB Count: 2
+			PathID: I-66-EB Count: 3
+			PathID: I-66-EB-TZ1-2-3_US-29-NB-TZ4---I-66-EB Count: 1
+			PathID: US-50-EB Count: 2
+		WeekDay: 5 TimeID: 07:00 Count: 4
+		Paths:
+			PathID: I-66-EB-TZ1-2-3_US-29-NB-TZ4---I-66-EB Count: 1
+			PathID: US-50-EB Count: 1
+			PathID: I-66-EB Count: 2
+		WeekDay: 1 TimeID: 07:30 Count: 5
+		Paths:
+			PathID: I-66-EB-TZ1-2-3_US-29-NB-TZ4---I-66-EB Count: 2
+			PathID: US-29-NB Count: 1
+			PathID: US-50-EB Count: 2
+		WeekDay: 2 TimeID: 07:30 Count: 3
+		Paths:
+			PathID: US-50-EB Count: 1
+			PathID: I-66-EB Count: 2
+		WeekDay: 3 TimeID: 07:30 Count: 6
+		Paths:
+			PathID: I-66-EB Count: 1
+			PathID: US-50-EB Count: 3
+			PathID: I-66-WB---US-29-SB-TZ4_I-66-WB-TZ3-2-1 Count: 1
+			PathID: I-66-WB-TZ4-3-2_US-29-SB-TZ1---I-66-WB---US-29-NB-TZ1-2-3_I-66-EB-TZ4---US-29-NB-TZ1-2_I-66-EB-TZ3-4---US-29-NB---US-29-SB-TZ4-3_I-66-WB-TZ2-1---US-29-SB-TZ4_I-66-WB-TZ3-2-1 Count: 1
+		WeekDay: 5 TimeID: 07:30 Count: 2
+		Paths:
+			PathID: US-50-WB Count: 1
+			PathID: US-50-EB Count: 1
+		WeekDay: 1 TimeID: 08:00 Count: 3
+		Paths:
+			PathID: US-50-EB Count: 1
+			PathID: I-66-EB Count: 2
+		WeekDay: 2 TimeID: 08:00 Count: 6
+		Paths:
+			PathID: US-50-EB Count: 3
+			PathID: US-50-WB Count: 1
+			PathID: US-29-NB Count: 2
+		WeekDay: 3 TimeID: 08:30 Count: 4
+		Paths:
+			PathID: I-66-EB-TZ1-2-3_US-29-NB-TZ4---I-66-EB Count: 2
+			PathID: US-29-NB-TZ1-2_I-66-EB-TZ3-4 Count: 1
+			PathID: US-50-EB Count: 1
+		WeekDay: 5 TimeID: 11:30 Count: 1
+		Paths:
+			PathID: I-66-EB Count: 1
+		WeekDay: 2 TimeID: 14:30 Count: 2
+		Paths:
+			PathID: US-50-WB Count: 2
+		WeekDay: 3 TimeID: 14:30 Count: 6
+		Paths:
+			PathID: US-29-SB Count: 3
+			PathID: US-50-WB Count: 2
+			PathID: I-66-WB Count: 1
+		WeekDay: 1 TimeID: 15:00 Count: 3
+		Paths:
+			PathID: US-50-WB Count: 1
+			PathID: I-66-WB Count: 1
+			PathID: US-29-SB Count: 1
+		WeekDay: 4 TimeID: 15:00 Count: 2
+		Paths:
+			PathID: US-29-SB Count: 1
+			PathID: I-66-WB Count: 1
