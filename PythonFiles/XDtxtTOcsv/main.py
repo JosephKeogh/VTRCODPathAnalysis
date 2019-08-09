@@ -102,14 +102,14 @@ def addData(arr1, arr2):
     return
 
 # main method
-I495N = massiveMethod("18.txt", "I66-E-495-N-GWPKWY-SE", "AM", "East")
+I495N = massiveMethod("rest17.txt", "GWPKWY-N-495-S-7-S-I66-W", "PM", "South")
 
 totalArray = []
 
 addData(I495N, totalArray)
 
 # open the csv file
-with open("Path11-18.csv", 'w', newline='') as csvFile:
+with open("rest17.csv", 'w', newline='') as csvFile:
     writer = csv.writer(csvFile)
     writer.writerows(totalArray)
 
