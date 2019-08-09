@@ -103,7 +103,7 @@ class ODNode:
     def toStringShort(self):
         """returns a more compact version of the toString method"""
         return "O: " + self.origin.toStringShort() + " D: " + self.destination.toStringShort() + \
-               "Count: " + str(self.count)
+               " Count: " + str(self.count)
 
     def print(self):
         """prints the attributes of the ODNode"""

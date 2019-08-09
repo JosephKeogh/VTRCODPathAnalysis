@@ -526,15 +526,100 @@ def createRegions(fileName: str):
             outbound = ODRegion.ODRegion(d, n, False)
             regions.append(outbound)
 
+    for r in regions:
+        r.createTimeIntervals("00:00", "23:59", 30)
+
     return regions
 
-def attachRegions(nodes: list):
+def matchCoordinates(fileName: str):
+
+    matchedCoordinates = []
+
+    try:
+        with open(fileName, 'r', newline='') as file:
+            reader = csv.reader(file)
+
+            for l in reader:
+                c = Coordinate.Coordinate(l[0], l[1])
+                c.setDistrict(l[2])
+                matchedCoordinates.append(c)
+
+        file.close()
+
+    except:
+        print("Error opening file in matchCoordinates()")
+
+    return matchedCoordinates
+
+def attachRegions(nodes: list, coords: list):
+    """
+
+    :param nodes: a list of all the od nodes with all the data
+    :return:
+    """
+
+    '''loop through all passed nodes'''
+    for node in nodes:
+        '''loop though all coordinates that are matched to regions'''
+        for coor in coords:
+            '''snap the region to the coordinates of the od node'''
+            d = coor.getDistrict()
+            if node.origin.equals(coor):
+                node.origin.setDistrict(d)
+            if node.destination.equals(coor):
+                node.destination.setDistrict(d)
+
 
     nodesWithRegions = []
 
+    for node in nodes:
+        if node.origin.getDistrict() != "blank" and node.destination.getDistrict() != "blank":
+            nodesWithRegions.append(node)
 
     return nodesWithRegions
 
+
+def updateRegions(regions: list, nodes: list):
+
+    for node in nodes:
+        for r in regions:
+
+            regionTimes = r.getTimes()
+
+            if node.origin.getDistrict() == r.getOrigin():
+                if node.destination.getDistrict() == r.getDestination():
+                    '''update region'''
+                    '''update the counts'''
+                    r.setCount(r.getCount() + node.getCount())
+                    r.setAMCount(r.getAMCount() + node.getAmCount())
+                    r.setPMCount(r.getPMCount() + node.getPmCount())
+
+                    '''update the time counts'''
+                    nodeTimes = node.getTimes()
+                    for t in nodeTimes:
+                        nodeTimeNode = nodeTimes[t]
+                        if regionTimes.__contains__(t):
+                            regionTimeNode = regionTimes[t]
+
+                            '''update the time count'''
+                            regionTimeNode.setCount(regionTimeNode.getCount() + nodeTimeNode.getCount())
+
+                            '''update the paths'''
+                            nodeTimeNodePaths = nodeTimeNode.getPaths()
+                            regionTimeNodePaths = regionTimeNode.getPaths()
+                            for p in nodeTimeNodePaths:
+                                nodeTimeNodePath = nodeTimeNodePaths[p]
+
+                                if regionTimeNodePaths.__contains__(p):
+                                    regionTimeNodePath = regionTimeNodePaths[p]
+
+                                    regionTimeNodePath.setCount(regionTimeNodePath.getCount() + nodeTimeNodePath.getCount())
+
+                                    regionTimeNodePaths[p] = regionTimeNodePath
+
+                            regionTimes[t] = regionTimeNode
+
+    return regions
 
 
 
@@ -545,13 +630,19 @@ def regionAnalysis(nodes: list):
     :return: the counts for each region
     """
 
+    matchedCoordinates = matchCoordinates("ActualGridToRegion.csv")
+
     # what regions are we working with
     regions = createRegions("ActualGridToRegion.csv")
 
     # attach regions to the coordinates of the od nodes
-    nodesWithRegions = attachRegions(nodes)
+    nodesWithRegions = attachRegions(nodes, matchedCoordinates)
 
     # go through all the od nodes, and add its counts to the correct regions counts
+    updatedRegions = updateRegions(regions, nodesWithRegions)
+
+    for i in updatedRegions:
+        print(i.toString())
 
 
     return ""
