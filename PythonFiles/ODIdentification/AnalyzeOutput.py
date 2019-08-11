@@ -6,9 +6,10 @@ import time
 import matplotlib.pyplot as plt
 from pykml import parser
 
-sys.argv.pop(0)                                 # ignore this program's name
+programName = sys.argv.pop(0)                                 # ignore this program's name
 inputFileName = sys.argv.pop(0)
 outputFileName = sys.argv.pop(0)
+sys.argv.append(programName)
 '''functions'''
 
 def timeToInt(now):
@@ -197,9 +198,9 @@ def basicInfo():
     
     return s
 
-def percentAnalysis():
+def nodePercentAnalysis():
 
-    s = "\n\n--- Percent Analysis ---"
+    s = "\n\n--- Node Percent Analysis ---"
     s = s + "\nTrips of Interest % : " + str(interestTripCount / totalTripCount)[:5]
     s = s + "\nInt Trips Map to OD : " + str(odMapCount / interestTripCount)[:5]
     s = s + "\nOD Trips Map to Time: " + str(timeMapCount / odMapCount)[:5]
@@ -208,7 +209,7 @@ def percentAnalysis():
 
     return s
 
-def pathCountAnalysis(cutOff: int):
+def nodePathCountAnalysis(cutOff: int):
     '''to keep track of the counts per weekday'''
     weekdays = {}
     weekdayTotal = 0
@@ -270,7 +271,7 @@ def pathCountAnalysis(cutOff: int):
                 else:
                     justPaths[path] = int(count)
 
-    with open("PathCounts.csv", 'w', newline='') as csvfile:
+    with open("NodePathCounts.csv", 'w', newline='') as csvfile:
         writer = csv.writer(csvfile)
         for p in justPaths:
             a = [str(p), str(justPaths[p])]
@@ -288,6 +289,196 @@ def pathCountAnalysis(cutOff: int):
     for node in ODNodes:
 
         times = node.getTimes()
+
+        for t in times.values():
+
+            wkdy = t.getWeekDay()
+            hour = t.getTimeID()
+
+            paths = t.getPaths()
+
+            for p in paths.values():
+
+                path = p.getPathID()
+                count = p.getCount()
+
+                '''if this path is one with a large enough count'''
+                if path in justPaths.keys():
+
+                    '''weekday'''
+                    if weekdays.__contains__(wkdy):
+                        weekdays[wkdy] = weekdays[wkdy] + int(count)
+                    else:
+                        weekdays[wkdy] = int(count)
+
+                    '''hour'''
+                    if justTimes.__contains__(hour):
+                        justTimes[hour] = justTimes[hour] + int(count)
+                    else:
+                        justTimes[hour] = int(count)
+
+                    '''weekday and hour'''
+                    weekdayHour = str(wkdy) + " " + str(hour)
+                    if weekdayTimes.__contains__(weekdayHour):
+                        weekdayTimes[weekdayHour] = weekdayTimes[weekdayHour] + int(count)
+                    else:
+                        weekdayTimes[weekdayHour] = int(count)
+
+                    '''weekday and path'''
+                    weekdayPath = str(wkdy) + " " + str(path)
+                    if weekdayPaths.__contains__(weekdayPath):
+                        weekdayPaths[weekdayPath] = weekdayPaths[weekdayPath] + int(count)
+                    else:
+                        weekdayPaths[weekdayPath] = int(count)
+
+                    '''hour and path'''
+                    hourPath = str(hour) + " " + str(path)
+                    if timePaths.__contains__(hourPath):
+                        timePaths[hourPath] = timePaths[hourPath] + int(count)
+                    else:
+                        timePaths[hourPath] = int(count)
+
+                    '''weekday and hour and path'''
+                    weekdayHourPath = str(wkdy) + " " + str(hour) + " " + str(path)
+                    if weekdayHourPaths.__contains__(weekdayHourPath):
+                        weekdayHourPaths[weekdayHourPath] = weekdayHourPaths[weekdayHourPath] + int(count)
+                    else:
+                        weekdayHourPaths[weekdayHourPath] = int(count)
+
+    for aa in weekdays.values():
+        weekdayTotal += aa
+    for aaa in timePaths.values():
+        timePathTotal += aaa
+    for aaaa in weekdayPaths.values():
+        weekdayPathTotal += aaaa
+    for aaaaa in weekdayTimes.values():
+        weekdayTimeTotal += aaaaa
+    for aaaaaa in justTimes.values():
+        justTimeTotal += aaaaaa
+    for aaaaaaa in justPaths.values():
+        pathTotal += aaaaaaa
+    for aaaaaaaa in weekdayHourPaths.values():
+        weekdayHourPathTotal += aaaaaaaa
+
+    '''list to hold all totals'''
+    ll = []
+    llNames = []
+    llexamples = []
+    ll.append(weekdayTotal)
+    llNames.append("Average Weekday Total Path Count: ")
+    llexamples.append("Example: Wednesday had 100 trips with map-able paths")
+    ll.append(justTimeTotal)
+    llNames.append("Average Time Segment Path Count: ")
+    llexamples.append("Example: 08:00 had 100 trips with map-able paths")
+    ll.append(pathTotal)
+    llNames.append("Average Distinct Path Count: ")
+    llexamples.append("Example: I-66 had 100 trips with map-able paths")
+    ll.append(weekdayTimeTotal)
+    llNames.append("Average Weekday Time Segment Path Count: ")
+    llexamples.append("Example: Wednesday at 08:00 had 100 trips with map-able paths")
+    ll.append(weekdayPathTotal)
+    llNames.append("Average Weekday Distinct Path Count: ")
+    llexamples.append("Example: I-66 on Wednesday had 100 trips with map-able paths")
+    ll.append(timePathTotal)
+    llNames.append("Average Time Segment on Distinct Path Path Count: ")
+    llexamples.append("Example: I-66 on Wednesdays had 100 trips with map-able paths")
+    ll.append(weekdayHourPathTotal)
+    llNames.append("Average Distinct Path during Time Segment on Weekday Path Count: ")
+    llexamples.append("Example: I-66 taken at 08:30 on Wednesdays had 100 trips with map-able paths")
+
+    '''header'''
+    s = "\n\n--- Path Count Analysis ---"
+    s = s + "\nOnly looking at paths with a count more than: " + str(cutOff)
+    count = 0
+    for a in l:
+        average = ll[count] / int(a.__len__())
+        average = round(average, 1)
+        s = s + "\n" + llNames[count] + str(average)
+        s = s + "\n\t" + llexamples[count]
+        count += 1
+
+    return s
+
+def regionPathCountAnalysis(cutOff: int, regions: list):
+    '''to keep track of the counts per weekday'''
+    weekdays = {}
+    weekdayTotal = 0
+
+    '''to keep track of the times'''
+    justTimes = {}
+    justTimeTotal = 0
+
+    ''''to keep track of the paths'''
+    justPaths = {}
+    pathTotal = 0
+
+    '''to keep track of the times per weekday'''
+    weekdayTimes = {}
+    weekdayTimeTotal = 0
+
+    '''weekdays and paths'''
+    weekdayPaths = {}
+    weekdayPathTotal = 0
+
+    '''time of day and paths'''
+    timePaths = {}
+    timePathTotal = 0
+
+    '''all three'''
+    weekdayHourPaths = {}
+    weekdayHourPathTotal = 0
+
+    '''list to hold all dicts'''
+    l = []
+    l.append(weekdays)
+    l.append(justTimes)
+    l.append(justPaths)
+    l.append(weekdayTimes)
+    l.append(weekdayPaths)
+    l.append(timePaths)
+    l.append(weekdayHourPaths)
+
+    '''collect the counts for each path'''
+    for region in regions:
+
+        times = region.getTimes()
+
+        for t in times.values():
+
+            wkdy = t.getWeekDay()
+            hour = t.getTimeID()
+
+            paths = t.getPaths()
+
+            for p in paths.values():
+
+                path = p.getPathID()
+                count = p.getCount()
+
+                '''path'''
+                if justPaths.__contains__(path):
+                    justPaths[path] = justPaths[path] + int(count)
+                else:
+                    justPaths[path] = int(count)
+
+    with open("RegionPathCounts.csv", 'w', newline='') as csvfile:
+        writer = csv.writer(csvfile)
+        for p in justPaths:
+            a = [str(p), str(justPaths[p])]
+            writer.writerow(a)
+    csvfile.close()
+
+    '''remove the paths that are not frequently used'''
+    newPaths = justPaths.copy()
+    for p in newPaths:
+        if newPaths[p] < cutOff:
+            del justPaths[p]
+
+    '''update the other counts'''
+    '''collect the counts for each path'''
+    for region in ODNodes:
+
+        times = region.getTimes()
 
         for t in times.values():
 
@@ -730,30 +921,131 @@ def regionProportionAnalysis(regions: list, total: int, AM: int, PM: int):
              " of all PM Trips ---"
 
 
+    return string
+
+def regionPercentAnalysis(regions: list):
+    regionMapCount = 0
+    regionTimeMapCount = 0
+    regionPathMapCount = 0
+
+    for r in regions:
+        regionMapCount += r.getCount()
+
+        times = r.getTimes()
+        for t in times:
+            t = times[t]
+            regionTimeMapCount += t.getCount()
+
+            paths = t.getPaths()
+
+            for p in paths:
+                pathNode = paths[p]
+
+                regionPathMapCount += pathNode.getCount()
+
+    s = "\n\n--- Region Percent Analysis ---"
+    s = s + "\nOD Trips Map to Region : " + str(regionMapCount / odMapCount)[:5]
+    s = s + "\nRegion Trips Map to Time: " + str(regionTimeMapCount / regionMapCount)[:5]
+    s = s + "\nTime Mapped to Path : " + str(regionPathMapCount / regionTimeMapCount)[:5]
+    s = s + "\nEnd Amount Mapped   : " + str(regionPathMapCount / totalTripCount)[:5]
+
+    return s
+
+
+
+def graphRegionCounts(regions: list):
+
     # the regions sorted based on counts, highest count first
     totalCountSorted = sorted(regions, key=lambda x: x.count, reverse=True)
     amCountSorted = sorted(regions, key=lambda x: x.amCount, reverse=True)
     pmCountSorted = sorted(regions, key=lambda x: x.pmCount, reverse=True)
 
+    count = 0
+    x1 = []
+    y1 = []
+    for i in totalCountSorted:
+        count += 1
+        x1.append(count)
+        y1.append(i.getCount())
+    # plotting the points
+    plt.plot(x1, y1, label="Total Count")
 
-    return string
+    count = 0
+    x2 = []
+    y2 = []
+    for i in amCountSorted:
+        count += 1
+        x2.append(count)
+        y2.append(i.getAmCount())
+    # plotting the points
+    plt.plot(x2, y2, label="AM Count")
+
+    count = 0
+    x3 = []
+    y3 = []
+    for i in pmCountSorted:
+        count += 1
+        x3.append(count)
+        y3.append(i.getPmCount())
+    # plotting the points
+    plt.plot(x3, y3, label="PM Count")
+
+    # naming the x axis
+    plt.xlabel('rank')
+    # naming the y axis
+    plt.ylabel('count')
+    # give the graph a  legend
+    plt.legend()
+    # giving a title to my graph
+    plt.title('Regions By Count')
+
+    # function to show the plot
+    plt.show()
+    plt.savefig("RegionsByCount.png")
+
+def graphEncompassed(regions: list):
+    # the regions sorted based on counts, highest count first
+    totalCountSorted = sorted(regions, key=lambda x: x.count, reverse=True)
+    amCountSorted = sorted(regions, key=lambda x: x.amCount, reverse=True)
+    pmCountSorted = sorted(regions, key=lambda x: x.pmCount, reverse=True)
+
+    count = 0
+    sumSeen = 0
+    x1 = []
+    y1 = []
+    for i in totalCountSorted:
+        count += 1
+        x1.append(count)
+
+        sumSeen += i.getCount()
+        y1.append(sumSeen / interestTripCount)
+
+    # plotting the points
+    plt.plot(x1, y1, label="Percentage Seen")
+
+    # naming the x axis
+    plt.xlabel('rank')
+    # naming the y axis
+    plt.ylabel('count')
+    # give the graph a  legend
+    plt.legend()
+    # giving a title to my graph
+    plt.title('Regions By Count')
+
+    # function to show the plot
+    plt.show()
+    plt.savefig("RegionsByCount.png")
 
 
-
-
-
-def regionAnalysis(nodes: list):
+def setUpRegons(nodes: list):
     """
 
     :param nodes: list of od nodes that contain all the data
     :return: the counts for each region
     """
 
-    start = time.time()
     matchedCoordinates = matchCoordinates("ActualGridToRegion.csv")
     end = time.time()
-    print(end - start)
-
 
     # what regions are we working with
     regions = createRegions("ActualGridToRegion.csv")
@@ -764,35 +1056,39 @@ def regionAnalysis(nodes: list):
     # go through all the od nodes, and add its counts to the correct regions counts
     updatedRegions = updateRegions(regions, nodesWithRegions)
 
-    # percent analysis on regions
-    percent = regionProportionAnalysis(updatedRegions, 3,3,3)
+    return updatedRegions
 
-    print(percent)
-
-
-    return ""
 
 
 # -----------------------------------------------------------analysis----------------------------
 
 with open(outputFileName, 'w') as file:
 
-    '''
+    # the regions
+    updatedRegions = setUpRegons(ODNodes)
+
     basic = basicInfo()
 
-    percent = percentAnalysis()
+    nodePercent = nodePercentAnalysis()
 
-    pathAnalysis = pathCountAnalysis(0)
+    pathAnalysis = nodePathCountAnalysis(0)
 
     props = NodeProportionAnalysis(0, 0, 0)
-    '''
 
-    region = regionAnalysis(ODNodes)
+    # proportion analysis on regions
+    regionProportion = regionProportionAnalysis(updatedRegions, 3, 3, 3)
 
-    # string = basic + percent + pathAnalysis + props
-    string = region
+    # percent capture analysis
+    regionPercent = regionPercentAnalysis(updatedRegions)
+
+    # graphRegionCounts(updatedRegions)
+    # graphEncompassed(updatedRegions)
+
+    string = basic + nodePercent + regionPercent
 
     file.write(string)
+
+
 
 file.close()
 
