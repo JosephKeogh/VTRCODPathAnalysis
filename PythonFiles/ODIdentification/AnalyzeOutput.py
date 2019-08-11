@@ -2,6 +2,8 @@ from Objects import Coordinate, TimeNode, ODNode, PathNode, HashTable, ODRegion
 from datetime import datetime, timedelta
 import sys
 import csv
+import time
+import matplotlib.pyplot as plt
 from pykml import parser
 
 sys.argv.pop(0)                                 # ignore this program's name
@@ -591,8 +593,8 @@ def updateRegions(regions: list, nodes: list):
                     '''update region'''
                     '''update the counts'''
                     r.setCount(r.getCount() + node.getCount())
-                    r.setAMCount(r.getAMCount() + node.getAmCount())
-                    r.setPMCount(r.getPMCount() + node.getPmCount())
+                    r.setAMCount(r.getAmCount() + node.getAmCount())
+                    r.setPMCount(r.getPmCount() + node.getPmCount())
 
                     '''update the time counts'''
                     nodeTimes = node.getTimes()
@@ -621,6 +623,123 @@ def updateRegions(regions: list, nodes: list):
 
     return regions
 
+def regionProportionAnalysis(regions: list, total: int, AM: int, PM: int):
+    """
+
+    :param regions: list of the regions
+    :param total: the cut off for being interesting for the total count, if the region contains totalx times the
+        expected count it is considered interesting
+    :param AM: the cut off for being interesting for the am count, if the region contains totalx times the
+        expected am count it is considered interesting
+    :param PM: the cut off for being interesting for the pm count, if the region contains totalx times the
+        expected pm count it is considered interesting
+    :return: a string that describes the proportion deistribution
+    """
+
+    '''total traffic analysis'''
+    significantFactor = total
+    expectedProportion = 1 / regions.__len__()
+    significantProportion = expectedProportion * significantFactor
+
+    string = "\n\n--- Regions Holding " + str(significantFactor) + "x more of Expected Total Traffic---"
+    string = string + "\n--- If 'Percent total interested trips' >= " + str(significantProportion)[:5] + " ---"
+
+    counter = 0
+    nodeString = ""
+    totalProportion = 0
+
+    for i in regions:
+
+        if (i.getCount() / odMapCount) >= significantProportion:
+            totalProportion += (i.getCount() / odMapCount)
+
+            nodeString = nodeString + "\n\n[" + str(counter) + "]"
+
+            '''node information'''
+            nodeString = nodeString + "\nOrigin     : " + i.origin + \
+                         "\nDestination: " + i.destination + \
+                         "\nODMapCount % (total): " + str(i.getCount() / odMapCount)[:5]
+
+            counter += 1
+
+    string = string + "\n---" + str(counter) + " Regions Encompass " + str(totalProportion)[:5] + \
+             " of all Interested Trips ---"
+    # string = string + nodeString
+
+    '''AM traffic analysis'''
+    significantFactor = AM
+    expectedProportion = 1 / regions.__len__()
+    significantProportion = expectedProportion * significantFactor
+
+    string = string + "\n\n--- Regions Holding " + str(significantFactor) + "x more of Expected AM Traffic---"
+    string = string + "\n--- If 'Percent AM trips' >= " + str(significantProportion)[:5] + " ---"
+
+    counter = 0
+    nodeString = ""
+    totalProportion = 0
+
+    for i in regions:
+
+        if (i.getAmCount() / totalAM) >= significantProportion:
+            totalProportion += (i.getAmCount() / totalAM)
+
+            nodeString = nodeString + "\n\n[" + str(counter) + "]"
+
+            '''node information'''
+            nodeString = nodeString + \
+                         "\nOrigin     : " + i.origin + \
+                         "\nDestination: " + i.destination + \
+                         "\nInt Trips % (total): " + str(i.getCount() / interestTripCount)[:5] + \
+                         "\nAM % (total)       : " + str(i.getAmCount() / totalAM)[:5]
+
+            counter += 1
+
+    string = string + "\n---" + str(counter) + " Regions Encompass " + str(totalProportion)[:5] + \
+             " of all AM Trips ---"
+    # string = string + nodeString
+
+    '''PM traffic analysis'''
+    significantFactor = PM
+    expectedProportion = 1 / regions.__len__()
+    significantProportion = expectedProportion * significantFactor
+
+    string = string + "\n\n--- Regions Holding " + str(significantFactor) + "x more of Expected PM Traffic---"
+    string = string + "\n--- If 'Percent PM trips' >= " + str(significantProportion)[:5] + " ---"
+
+    counter = 0
+    nodeString = ""
+    totalProportion = 0
+
+    for i in regions:
+
+        if (i.getPmCount() / totalPM) >= significantProportion:
+            totalProportion += (i.getPmCount() / totalPM)
+
+            nodeString = nodeString + "\n\n[" + str(counter) + "]"
+
+            '''node information'''
+            nodeString = nodeString + \
+                         "\nOrigin     : " + i.origin + \
+                         "\nDestination: " + i.destination + \
+                         "\nInt Trips % (total): " + str(i.getCount() / interestTripCount)[:5] + \
+                         "\nPM % (total)       : " + str(i.getPmCount() / totalPM)[:5]
+
+            counter += 1
+
+    string = string + "\n---" + str(counter) + " Regions Encompass " + str(totalProportion)[:5] + \
+             " of all PM Trips ---"
+
+
+    # the regions sorted based on counts, highest count first
+    totalCountSorted = sorted(regions, key=lambda x: x.count, reverse=True)
+    amCountSorted = sorted(regions, key=lambda x: x.amCount, reverse=True)
+    pmCountSorted = sorted(regions, key=lambda x: x.pmCount, reverse=True)
+
+
+    return string
+
+
+
 
 
 def regionAnalysis(nodes: list):
@@ -630,7 +749,11 @@ def regionAnalysis(nodes: list):
     :return: the counts for each region
     """
 
+    start = time.time()
     matchedCoordinates = matchCoordinates("ActualGridToRegion.csv")
+    end = time.time()
+    print(end - start)
+
 
     # what regions are we working with
     regions = createRegions("ActualGridToRegion.csv")
@@ -641,8 +764,10 @@ def regionAnalysis(nodes: list):
     # go through all the od nodes, and add its counts to the correct regions counts
     updatedRegions = updateRegions(regions, nodesWithRegions)
 
-    for i in updatedRegions:
-        print(i.toString())
+    # percent analysis on regions
+    percent = regionProportionAnalysis(updatedRegions, 3,3,3)
+
+    print(percent)
 
 
     return ""

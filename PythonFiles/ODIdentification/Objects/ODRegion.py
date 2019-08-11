@@ -37,10 +37,10 @@ class ODRegion:
     def getCount(self):
         return self.count
 
-    def getAMCount(self):
+    def getAmCount(self):
         return self.amCount
 
-    def getPMCount(self):
+    def getPmCount(self):
         return self.pmCount
 
     def setTimes(self, t: dict):
@@ -74,8 +74,8 @@ class ODRegion:
                  "\nDestination: " + self.destination + \
                  "\nDirection: " + direction + \
                  "\nCount: " + str(self.count) + \
-                 "\nAMCount: " + str(self.getAMCount()) + \
-                 "\nPMCount: " + str(self.getPMCount()) + \
+                 "\nAMCount: " + str(self.getAmCount()) + \
+                 "\nPMCount: " + str(self.getPmCount()) + \
                  "\nTimes:"
 
         '''iterate through timenodes'''
@@ -100,6 +100,9 @@ class ODRegion:
                         string = string + more
 
         return string
+
+    def toStringShort(self):
+        return "From: " + self.getOrigin() + " To: " + self.getDestination()
 
 
     '''methods'''
