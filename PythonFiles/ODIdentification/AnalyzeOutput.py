@@ -7,7 +7,7 @@ import matplotlib.pyplot as plt
 from pykml import parser
 
 programName = sys.argv.pop(0)                                 # ignore this program's name
-inputFileName = sys.argv.pop(0)
+inputfileName = sys.argv.pop(0)
 outputFileName = sys.argv.pop(0)
 sys.argv.append(programName)
 '''functions'''
@@ -45,9 +45,9 @@ noon = timeToInt(noonTime)
 ODNodes = []
 
 
-with open(inputFileName, 'r') as outputTextFile1:
+with open(inputfileName, 'r') as inputfile17:
 
-    for line in outputTextFile1:
+    for line in inputfile17:
         line = line.strip()
 
         '''get the general attributes from the outputfile'''
@@ -66,7 +66,7 @@ with open(inputFileName, 'r') as outputTextFile1:
         while line.__contains__("Index"):
 
             '''get the origin of the od node'''
-            voriginLine = outputTextFile1.readline().strip()
+            voriginLine = inputfile17.readline().strip()
             if voriginLine == '':
                 break
 
@@ -77,7 +77,7 @@ with open(inputFileName, 'r') as outputTextFile1:
             voriginC = Coordinate.Coordinate(float(voriginLat), float(voriginLong))
 
             '''get the destination of the od node'''
-            vdestLine = outputTextFile1.readline().strip()
+            vdestLine = inputfile17.readline().strip()
             vdestination = vdestLine[13:]
             vcommaIndex = vdestination.index(",")
             vdestlat = vdestination[:vcommaIndex]
@@ -85,18 +85,18 @@ with open(inputFileName, 'r') as outputTextFile1:
             vdestC = Coordinate.Coordinate(float(vdestlat), float(vdestlong))
 
             '''readout the direction'''
-            direction = outputTextFile1.readline()
+            direction = inputfile17.readline()
 
             '''get the count of the od node'''
-            vcountLine = outputTextFile1.readline().strip()
+            vcountLine = inputfile17.readline().strip()
             vcount = vcountLine[7:]
 
             '''get the am count of the od node'''
-            vamCountLine = outputTextFile1.readline().strip()
+            vamCountLine = inputfile17.readline().strip()
             vamCount = vamCountLine[9:]
 
             '''get the pm count of the od node'''
-            vpmCountLine = outputTextFile1.readline().strip()
+            vpmCountLine = inputfile17.readline().strip()
             vpmCount = vpmCountLine[9:]
 
             '''increment the global time period totals'''
@@ -117,10 +117,10 @@ with open(inputFileName, 'r') as outputTextFile1:
                 vodnode.setInbound(False)
 
             '''readout the "Times: "'''
-            readOut = outputTextFile1.readline().strip()
+            readOut = inputfile17.readline().strip()
 
             '''update the times of the od node'''
-            vt = outputTextFile1.readline().strip()
+            vt = inputfile17.readline().strip()
 
             '''for all the timenodes listed'''
             while vt.__contains__("WeekDay"):
@@ -138,12 +138,12 @@ with open(inputFileName, 'r') as outputTextFile1:
                 paths = {}
 
                 '''read the next line in the file'''
-                nl = outputTextFile1.readline().strip()
+                nl = inputfile17.readline().strip()
 
                 # changed the output of the hashtable to be correct
                 if nl.__contains__("Paths"):
 
-                    nl = outputTextFile1.readline().strip()
+                    nl = inputfile17.readline().strip()
 
                     while nl.__contains__("PathID"):
                         '''get the PathNode attributes'''
@@ -158,7 +158,7 @@ with open(inputFileName, 'r') as outputTextFile1:
                         '''add the PathNode to the dict of PathNodes'''
                         paths[path] = pathNode
 
-                        nl = outputTextFile1.readline().strip()
+                        nl = inputfile17.readline().strip()
 
                     vt = nl
 
@@ -179,7 +179,7 @@ with open(inputFileName, 'r') as outputTextFile1:
             if vodnode.__eq__(empty) is False:
                 ODNodes.append(vodnode)
 
-outputTextFile1.close()
+inputfile17.close()
 
 def basicInfo():
 
@@ -476,7 +476,7 @@ def regionPathCountAnalysis(cutOff: int, regions: list):
 
     '''update the other counts'''
     '''collect the counts for each path'''
-    for region in ODNodes:
+    for region in regions:
 
         times = region.getTimes()
 
@@ -577,10 +577,12 @@ def regionPathCountAnalysis(cutOff: int, regions: list):
     llexamples.append("Example: I-66 taken at 08:30 on Wednesdays had 100 trips with map-able paths")
 
     '''header'''
-    s = "\n\n--- Path Count Analysis ---"
+    s = "\n\n--- Regional Path Count Analysis ---"
     s = s + "\nOnly looking at paths with a count more than: " + str(cutOff)
     count = 0
     for a in l:
+
+
         average = ll[count] / int(a.__len__())
         average = round(average, 1)
         s = s + "\n" + llNames[count] + str(average)
@@ -801,18 +803,27 @@ def updateRegions(regions: list, nodes: list):
                             nodeTimeNodePaths = nodeTimeNode.getPaths()
                             regionTimeNodePaths = regionTimeNode.getPaths()
                             for p in nodeTimeNodePaths:
+
+                                # the actual path node from the time node
                                 nodeTimeNodePath = nodeTimeNodePaths[p]
 
+                                # if the region time already has seen this path, update it
                                 if regionTimeNodePaths.__contains__(p):
+
                                     regionTimeNodePath = regionTimeNodePaths[p]
 
                                     regionTimeNodePath.setCount(regionTimeNodePath.getCount() + nodeTimeNodePath.getCount())
 
                                     regionTimeNodePaths[p] = regionTimeNodePath
 
+                                # if the region time node has not already seen this path, add it
+                                else:
+                                    regionTimeNodePaths[p] = nodeTimeNodePath
+
                             regionTimes[t] = regionTimeNode
 
     return regions
+
 
 def regionProportionAnalysis(regions: list, total: int, AM: int, PM: int):
     """
@@ -1009,6 +1020,10 @@ def graphEncompassed(regions: list):
     amCountSorted = sorted(regions, key=lambda x: x.amCount, reverse=True)
     pmCountSorted = sorted(regions, key=lambda x: x.pmCount, reverse=True)
 
+    totalCount = 0
+    for i in totalCountSorted:
+        totalCount += i.getCount()
+
     count = 0
     sumSeen = 0
     x1 = []
@@ -1018,23 +1033,23 @@ def graphEncompassed(regions: list):
         x1.append(count)
 
         sumSeen += i.getCount()
-        y1.append(sumSeen / interestTripCount)
+        y1.append(sumSeen / totalCount)
 
     # plotting the points
-    plt.plot(x1, y1, label="Percentage Seen")
+    plt.plot(x1, y1)
 
     # naming the x axis
     plt.xlabel('rank')
     # naming the y axis
-    plt.ylabel('count')
+    plt.ylabel('Percent Seen')
     # give the graph a  legend
     plt.legend()
     # giving a title to my graph
-    plt.title('Regions By Count')
+    plt.title('Percentage Seen')
 
     # function to show the plot
     plt.show()
-    plt.savefig("RegionsByCount.png")
+    plt.savefig("RegionsPercentSeen.png")
 
 
 def setUpRegons(nodes: list):
@@ -1073,7 +1088,7 @@ with open(outputFileName, 'w') as file:
 
     pathAnalysis = nodePathCountAnalysis(0)
 
-    props = NodeProportionAnalysis(0, 0, 0)
+    nodeProportion = NodeProportionAnalysis(0, 0, 0)
 
     # proportion analysis on regions
     regionProportion = regionProportionAnalysis(updatedRegions, 3, 3, 3)
@@ -1081,10 +1096,13 @@ with open(outputFileName, 'w') as file:
     # percent capture analysis
     regionPercent = regionPercentAnalysis(updatedRegions)
 
-    # graphRegionCounts(updatedRegions)
-    # graphEncompassed(updatedRegions)
+    # region path count analysis
+    regionPaths = regionPathCountAnalysis(0, updatedRegions)
 
-    string = basic + nodePercent + regionPercent
+    graphRegionCounts(updatedRegions)
+    graphEncompassed(updatedRegions)
+
+    string = basic
 
     file.write(string)
 
