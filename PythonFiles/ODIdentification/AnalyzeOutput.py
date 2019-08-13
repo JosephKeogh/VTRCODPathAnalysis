@@ -1102,7 +1102,7 @@ with open(outputFileName, 'w') as file:
     graphRegionCounts(updatedRegions)
     graphEncompassed(updatedRegions)
 
-    string = basic
+    string = basic + nodePercent + regionPercent
 
     file.write(string)
 

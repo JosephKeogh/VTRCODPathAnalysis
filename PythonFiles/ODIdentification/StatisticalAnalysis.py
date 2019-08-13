@@ -10,6 +10,22 @@ import matplotlib.pyplot as plt
 
 
 
+def timeToInt(now):
+    """
+
+    :param time: the time in "00:00"
+    :return: an int of how many minutes have passed that day
+    """
+
+    """the current hour and min"""
+    hour = now[0:2]
+    min = now[3:]
+
+    hourInt = int(hour) * 60
+    minInt = int(min)
+
+    return hourInt + minInt
+
 
 def getODNodesFromFile(fileName: str, timeInterval: int):
     """
@@ -324,6 +340,28 @@ def setUpRegions(nodes: list):
     return updatedRegions
 
 
+def filterPaths(regions: list):
+    """
+
+    :param regions: the regions to have their paths filterd
+    :return: a list of regions will all the paths mapped to multiple paths
+    taken out
+    """
+    newRegions = []
+    for r in regions:
+        for t in r.getTimes().values():
+            paths = t.getPaths()
+            newPaths = {}
+            for p in paths:
+                pathNode = paths[p]
+                if pathNode.getPathID().__contains__("---") is False:
+                    newPaths[p] = paths[p]
+            t.setPaths(newPaths)
+        newRegions.append(r)
+
+    return newRegions
+
+
 def two_proprotions_test(success_a, size_a, success_b, size_b):
     """
     A/B test for two proportions;
@@ -350,10 +388,86 @@ def two_proprotions_test(success_a, size_a, success_b, size_b):
     prop_b = success_b / size_b
     prop_pooled = (success_a + success_b) / (size_a + size_b)
     var = prop_pooled * (1 - prop_pooled) * (1 / size_a + 1 / size_b)
+
     zscore = np.abs(prop_b - prop_a) / np.sqrt(var)
     one_side = 1 - stats.norm(loc=0, scale=1).cdf(zscore)
     pvalue = one_side * 2
     return zscore, pvalue
+
+
+def pathCountAnalysis(regions17: list, regions18: list):
+    """
+
+    :param regions17:
+    :param regions18:
+    :return:
+    """
+
+    masterList = []
+
+    masterList.append(["Path", "zscore", "pvalue"])
+
+    paths17 = {}
+    pathCount17 = 0
+    paths18 = {}
+    pathCount18 = 0
+
+    for r in regions17:
+
+        times = r.getTimes()
+
+        for t in times:
+
+            paths = times[t].getPaths()
+
+            for p in paths:
+
+                pathCount17 += paths[p].getCount()
+
+                if paths17.__contains__(p):
+                    master = paths17[p]
+                    other = paths[p]
+                    master.setCount(master.getCount() + other.getCount())
+
+                else:
+                    paths17[p] = paths[p]
+
+    for r in regions18:
+
+        times = r.getTimes()
+
+        for t in times:
+
+            paths = times[t].getPaths()
+
+            for p in paths:
+
+                pathCount18 += paths[p].getCount()
+
+                if paths18.__contains__(p):
+                    master = paths18[p]
+                    other = paths[p]
+                    master.setCount(master.getCount() + other.getCount())
+                else:
+                    paths18[p] = paths[p]
+
+    # make it so each list of paths contains the same paths
+    for e in paths17:
+        if paths18.__contains__(e) is False:
+            paths18[e] = PathNode.PathNode(e)
+    for f in paths18:
+        if paths17.__contains__(f) is False:
+            paths17[f] = PathNode.PathNode(f)
+
+    for p in paths17:
+        pathNode17 = paths17[p]
+        pathNode18 = paths18[p]
+        zscore, pvalue = two_proprotions_test(pathNode17.getCount(), pathCount17,
+                                              pathNode18.getCount(), pathCount18)
+        smallList = [p, zscore, pvalue]
+        masterList.append(smallList)
+
+    return masterList
 
 
 def regionCountAnalysis(regions17: list, regions18: list):
@@ -366,6 +480,9 @@ def regionCountAnalysis(regions17: list, regions18: list):
 
     # this is the list of lists to be returned
     masterList = []
+
+    masterList.append(["origin", 'destination', 'zscore', 'pvalue'])
+
 
     size17 = 0
     for i in regions17:
@@ -392,11 +509,15 @@ def completePathCountAnalysis(regions17: list, regions18: list):
 
     :param regions17: the 2017 regions
     :param regions18: the 2018 regions
-    :return: a list of lists containing the origin, destination, z score, and p value
+    :return: a list of lists containing the origin, destination,
+    day of week, time of day, path id,  z score, and p value
     """
 
     # this is the list of lists to be returned
     masterList = []
+
+    masterList.append(["origin", 'destination', 'weekday', 'time', 'path', 'zscore', 'pvalue'])
+
 
     size17 = 0
     for i in regions17:
@@ -425,67 +546,286 @@ def completePathCountAnalysis(regions17: list, regions18: list):
                                 paths17 = c.getPaths()
                                 paths18 = d.getPaths()
 
-                                for e in paths17.values():
-                                    for f in paths18.values():
+                                # make it so each list of paths contains the same paths
+                                for e in paths17:
+                                    if paths18.__contains__(e) is False:
+                                        paths18[e] = PathNode.PathNode(e)
+                                for f in paths18:
+                                    if paths17.__contains__(f) is False:
+                                        paths17[f] = PathNode.PathNode(f)
 
-                                        # if they both have the path
-                                        if e.getPathID() == f.getPathID():
-                                            zscore, pvalue = two_proprotions_test(e.getCount(), size17,
-                                                                                  f.getCount(), size18)
-                                            smallList = [a.origin, a.destination, c.getWeekDay(), c.getTimeID(),
-                                                         e.getPathID(), zscore, pvalue]
+                                for e in paths17:
+                                    pathNode17 = paths17[e]
+                                    pathNode18 = paths18[e]
+                                    zscore, pvalue = two_proprotions_test(pathNode17.getCount(), a.getCount(),
+                                                                          pathNode18.getCount(), b.getCount())
+                                    smallList = [a.origin, a.destination, c.getWeekDay(), c.getTimeID(),
+                                                 pathNode17.getPathID(), zscore, pvalue]
 
-                                            masterList.append(smallList)
-
-                                            break
-
-                                        # if only 17 has the path
-
-
+                                    masterList.append(smallList)
 
     return masterList
 
-def filterPaths(regions: list):
 
-    newRegions = []
-    for r in regions:
-        for t in r.getTimes().values():
-            paths = t.getPaths()
-            for p in paths:
-                pathNode = paths
-                if pathNode.getPathID().__contains__("---"):
-                    del paths[p]
-        newRegions.append(r)
+def regionPathCountAnalysis(regions17: list, regions18: list):
+    """
 
-    return newRegions
+    :param regions17: the 2017 regions
+    :param regions18: the 2018 regions
+    :return: a list of lists containing the origin, destination, path id,
+     z score, and p value
+    """
+
+    # this is the list of lists to be returned
+    masterList = []
+
+    masterList.append(["origin", 'destination', 'path', 'zscore', 'pvalue'])
+
+
+    size17 = 0
+    for i in regions17:
+        size17 += i.getCount()
+
+    size18 = 0
+    for i in regions18:
+        size18 += i.getCount()
+
+    for a in regions17:
+        for b in regions18:
+
+            masterpaths17 = {}
+            masterpaths18 = {}
+
+            # if we are looking at the same region
+            if a.origin == b.origin and a.destination == b.destination:
+
+                times17 = a.getTimes()
+                times18 = b.getTimes()
+
+                for t in times17.values():
+                    paths = t.getPaths()
+                    for p in paths:
+
+                        # if we have already seen this path
+                        if masterpaths17.__contains__(p):
+
+                            # update the path
+                            masterPathNode = masterpaths17[p]
+                            pathNode = paths[p]
+                            masterPathNode.setCount(masterPathNode.getCount() + pathNode.getCount())
+
+                        # if we have not already seen this path
+                        else:
+                            masterpaths17[p] = paths[p]
+
+                for t in times18.values():
+                    paths = t.getPaths()
+                    for p in paths:
+
+                        # if we have already seen this path
+                        if masterpaths18.__contains__(p):
+
+                            # update the path
+                            masterPathNode = masterpaths18[p]
+                            pathNode = paths[p]
+                            masterPathNode.setCount(masterPathNode.getCount() + pathNode.getCount())
+
+                        # if we have not seen the path
+                        else:
+                            masterpaths18[p] = paths[p]
+
+            # make it so each list of paths contains the same paths
+            for e in masterpaths17:
+                if masterpaths18.__contains__(e) is False:
+                    masterpaths18[e] = PathNode.PathNode(e)
+            for f in masterpaths18:
+                if masterpaths17.__contains__(f) is False:
+                    masterpaths17[f] = PathNode.PathNode(f)
+
+            for e in masterpaths17:
+                pathNode17 = masterpaths17[e]
+                pathNode18 = masterpaths18[e]
+                zscore, pvalue = two_proprotions_test(pathNode17.getCount(), a.getCount(),
+                                                      pathNode18.getCount(), b.getCount())
+                smallList = [a.origin, a.destination, pathNode17.getPathID(), zscore, pvalue]
+
+                masterList.append(smallList)
+
+    return masterList
+
+
+def regionTimePeriodPathCountAnalysis(regions17: list, regions18: list, amLow: str, amHigh: str, pmLow: str, pmHigh: str):
+    """
+    :param regions17: the 2017 regions
+    :param regions18: the 2018 regions
+    :param amLow: the start of the am period
+    :param amHigh: the end of the am period
+    :param pmLow: the start of the pm period
+    :param pmHigh: the end of the pm period
+    :return: a list of lists containing the origin, destination,
+    time period (morning or afternoon), path id,  z score, and p value
+    """
+
+    # this is the list of lists to be returned
+    masterList = []
+
+    masterList.append(["origin", 'destination', 'period', 'path', 'zscore', 'pvalue'])
+
+
+    size17 = 0
+    for i in regions17:
+        size17 += i.getCount()
+
+    size18 = 0
+    for i in regions18:
+        size18 += i.getCount()
+
+    # create a list of path counts for each year and each time period
+
+    for a in regions17:
+        for b in regions18:
+
+            am17Paths = {}
+            pm17Paths = {}
+
+            am18Paths = {}
+            pm18Paths = {}
+
+            if a.origin == b.destination and a.destination == b.destination:
+
+
+                # get all the path counts from 17
+                times = a.getTimes()
+                am = am17Paths
+                pm = pm17Paths
+                for t in times:
+
+                    timeNode = times[t]
+                    time = timeNode.getTimeID()
+                    paths = timeNode.getPaths()
+
+                    # if am
+                    if timeToInt(time) > timeToInt(amLow) and timeToInt(time) < timeToInt(amHigh):
+                        for p in paths:
+
+                            # if we have already seen this path
+                            if am.__contains__(p):
+                                masterPath = am[p]
+                                path = paths[p]
+                                masterPath.setCount(masterPath.getCount() + path.getCount())
+
+                            # if we have not seen this path
+                            else:
+                                am[p] = paths[p]
+                    # if pm
+                    if timeToInt(time) > timeToInt(pmLow) and timeToInt(time) < timeToInt(pmHigh):
+                        for p in paths:
+
+                            # if we have already seen this path
+                            if pm.__contains__(p):
+                                masterPath = pm[p]
+                                path = paths[p]
+                                masterPath.setCount(masterPath.getCount() + path.getCount())
+
+                            # if we have not seen this path
+                            else:
+                                pm[p] = paths[p]
+
+                # get all the path counts from 18
+                times = b.getTimes()
+                am = am18Paths
+                pm = pm18Paths
+
+                for t in times:
+
+                    timeNode = times[t]
+                    time = timeNode.getTimeID()
+                    paths = timeNode.getPaths()
+
+                    # if am
+                    if timeToInt(time) > timeToInt(amLow) and timeToInt(time) < timeToInt(amHigh):
+                        for p in paths:
+
+                            # if we have already seen this path
+                            if am.__contains__(p):
+                                masterPath = am[p]
+                                path = paths[p]
+                                masterPath.setCount(masterPath.getCount() + path.getCount())
+
+                            # if we have not seen this path
+                            else:
+                                am[p] = paths[p]
+                    # if pm
+                    if timeToInt(time) > timeToInt(pmLow) and timeToInt(time) < timeToInt(pmHigh):
+                        for p in paths:
+
+                            # if we have already seen this path
+                            if pm.__contains__(p):
+                                masterPath = pm[p]
+                                path = paths[p]
+                                masterPath.setCount(masterPath.getCount() + path.getCount())
+
+                            # if we have not seen this path
+                            else:
+                                pm[p] = paths[p]
+
+
+
+                # make it so each path list contains all the same paths (am to am and pm to pm)
+                # make it so each list of paths contains the same paths
+                for e in am17Paths:
+                    if am18Paths.__contains__(e) is False:
+                        am18Paths[e] = PathNode.PathNode(e)
+                for f in am18Paths:
+                    if am17Paths.__contains__(f) is False:
+                        am17Paths[f] = PathNode.PathNode(f)
+
+                for e in pm17Paths:
+                    if pm18Paths.__contains__(e) is False:
+                        pm18Paths[e] = PathNode.PathNode(e)
+                for f in pm18Paths:
+                    if pm17Paths.__contains__(f) is False:
+                        pm17Paths[f] = PathNode.PathNode(f)
+
+            # am analysis
+            for p in am17Paths:
+                pathNode17 = am17Paths[p]
+                pathNode18 = am18Paths[p]
+                zscore, pvalue = two_proprotions_test(pathNode17.getCount(), a.getCount(),
+                                                      pathNode18.getCount(), b.getCount())
+                smallList = [a.origin, a.destination, "AM", p, zscore, pvalue]
+                masterList.append(smallList)
+
+            # pm analysis
+            for p in pm17Paths:
+                pathNode17 = pm17Paths[p]
+                pathNode18 = pm18Paths[p]
+                zscore, pvalue = two_proprotions_test(pathNode17.getCount(), a.getCount(),
+                                                      pathNode18.getCount(), b.getCount())
+                smallList = [a.origin, a.destination, "PM", p, zscore, pvalue]
+                masterList.append(smallList)
+
+    return masterList
+
 
 def main():
 
     sys.argv.pop(0)
     inputFile17 = sys.argv.pop(0)
     inputFile18 = sys.argv.pop(0)
-    outputFile = sys.argv.pop(0)
 
-
-    print("Creating Nodes...")
-    # create the 2017 od nodes
+    # create the od nodes
     ODNodes17 = getODNodesFromFile(inputFile17, 30)
-    # create the 2018 od nodes
     ODNodes18 = getODNodesFromFile(inputFile18, 30)
-    print("Nodes Created")
 
-    print("Creating Regions...")
-    # create the 2017 regions
+    # create the regions
     regions17 = setUpRegions(ODNodes17)
     regions17 = filterPaths(regions17)
-    # create the 2018 regions
     regions18 = setUpRegions(ODNodes18)
     regions18 = filterPaths(regions18)
-    print("Regions Created")
 
 
     # analyze the region count
-    print("count analysis")
     regionalCountAnalysis = regionCountAnalysis(regions17, regions18)
     with open("STATregionalCountAnalysis.csv", 'w', newline='') as file:
         writer = csv.writer(file)
@@ -494,9 +834,31 @@ def main():
 
     # analyze the path counts
     # year to year
+    pathCounts = pathCountAnalysis(regions17, regions18)
+    with open("STATPathCountAnalysis.csv", 'w', newline='') as file:
+        writer = csv.writer(file)
+        writer.writerows(pathCounts)
+    file.close()
 
     # relative to od region
+    regionPathAnalysis = regionPathCountAnalysis(regions17, regions18)
+    with open("STATRegionPathCountAnalysis.csv", 'w', newline='') as file:
+        writer = csv.writer(file)
+        writer.writerows(regionPathAnalysis)
+    file.close()
+
     # relative to od region and morning and afternoon
+    regionTimePeriodPath = regionTimePeriodPathCountAnalysis(regions17, regions18, "00:00", "12:00", "12:00", "23:59")
+    with open("STATRegionTimePeriodPathCountAnalysis-total.csv", 'w', newline='') as file:
+        writer = csv.writer(file)
+        writer.writerows(regionTimePeriodPath)
+    file.close()
+    regionTimePeriodPath = regionTimePeriodPathCountAnalysis(regions17, regions18, "05:30", "09:30", "15:00", "17:00")
+    with open("STATRegionTimePeriodPathCountAnalysis-tollingHours.csv", 'w', newline='') as file:
+        writer = csv.writer(file)
+        writer.writerows(regionTimePeriodPath)
+    file.close()
+
     # relative to od region and thirty min time interval
     print("complete path count analysis")
     completePathAnalysis = completePathCountAnalysis(regions17, regions18)
@@ -504,8 +866,6 @@ def main():
         writer = csv.writer(file)
         writer.writerows(completePathAnalysis)
     file.close()
-
-
 
     print("Done.")
 

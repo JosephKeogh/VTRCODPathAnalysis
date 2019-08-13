@@ -1,0 +1,24 @@
+--- Basic Info ---
+Number of ODNodes: 10368
+
+--- Raw Numbers ---
+Total Trips: 10190744
+Int Trips  : 8075337
+OD Maps    : 7130902
+Time Maps  : 7130902
+Total AM   : 2980062
+Total PM   : 4150840
+Path Maps  : 10521
+
+--- Node Percent Analysis ---
+Trips of Interest % : 0.792
+Int Trips Map to OD : 0.883
+OD Trips Map to Time: 1.0
+Time Mapped to Path : 0.001
+End Amount Mapped   : 0.001
+
+--- Region Percent Analysis ---
+OD Trips Map to Region : 0.674
+Region Trips Map to Time: 1.0
+Time Mapped to Path : 0.001
+End Amount Mapped   : 0.000
