@@ -1,81 +1,81 @@
-origin,destination,zscore,pvalue,46
-"Prince William, NOVA","Capital Hill, DC",7.986337074,0,1
-"Prince William, NOVA","Arlington, DC",6.828684821,0,1
-"Prince William, NOVA","Alexandria, DC",6.699163933,0,1
-"Prince William, NOVA","Maryland, DC",21.55799883,0,1
-"Prince William, NOVA","Fort Hunt and Belvoir, DC",6.751069172,0,1
-"Prince William, NOVA","Springfield, DC",8.450429603,0,1
-"Prince William, NOVA","Annandale, DC",5.503765402,0,1
-"Fairfax County, NOVA","Capital Hill, DC",7.453872343,0,1
-"Fairfax County, NOVA","Arlington, DC",4.810961282,0,1
-"Fairfax County, NOVA","Alexandria, DC",5.711644267,0,1
-"Fairfax County, NOVA","Maryland, DC",14.75346421,0,1
-"Fairfax County, NOVA","Fort Hunt and Belvoir, DC",4.659341335,0,1
-"Fairfax County, NOVA","Springfield, DC",5.493053752,0,1
-"Arlington, DC","Loudoun County, NOVA",4.941152654,0,1
-"Arlington, DC","Prince William, NOVA",6.086259405,0,1
-"Arlington, DC","Fairfax County, NOVA",9.780415683,0,1
-"Alexandria, DC","Prince William, NOVA",5.520272597,0,1
-"Alexandria, DC","Fairfax County, NOVA",5.566571119,0,1
-"Tysons, DC","Loudoun County, NOVA",5.86637353,0,1
-"Tysons, DC","Prince William, NOVA",9.325585905,0,1
-"Tysons, DC","Fairfax County, NOVA",7.803118855,0,1
-"Loudoun County, NOVA","Maryland, DC",4.206348112,3.00E-05,1
-"Fairfax County, NOVA","Tysons, DC",3.89578888,0.0001,1
-"Annandale, DC","Fairfax County, NOVA",3.75834164,0.00017,1
-"Faquire, NOVA","Maryland, DC",3.732864024,0.00019,1
-"Prince William, NOVA","Tysons, DC",3.730274831,0.00019,1
-"Tysons, DC","Faquire, NOVA",3.516816715,0.00044,1
-"Maryland, DC","Loudoun County, NOVA",3.363422914,0.00077,1
-"Alexandria, DC","Loudoun County, NOVA",3.206200068,0.00135,1
-"Springfield, DC","Loudoun County, NOVA",3.008051183,0.00263,1
-"Alexandria and Arlington, NOVA","Maryland, DC",2.963085916,0.00305,1
-"Loudoun County, NOVA","Tysons, DC",2.733560418,0.00627,1
-"Faquire, NOVA","Tysons, DC",2.689766155,0.00715,1
-"Springfield, DC","Fairfax County, NOVA",2.659880811,0.00782,1
-"Maryland, DC","Fairfax County, NOVA",2.642146325,0.00824,1
-"Capital Hill, DC","Alexandria and Arlington, NOVA",2.610060976,0.00905,1
-"Annandale, DC","Alexandria and Arlington, NOVA",2.609557521,0.00907,1
-"Maryland, DC","Prince William, NOVA",2.320587269,0.02031,1
-"Loudoun County, NOVA","Springfield, DC",2.277298357,0.02277,1
-"Fort Hunt and Belvoir, DC","Fairfax County, NOVA",2.26152542,0.02373,1
-"Arlington, DC","Alexandria and Arlington, NOVA",2.244718514,0.02479,1
-"Springfield, DC","Faquire, NOVA",2.181754588,0.02913,1
-"Faquire, NOVA","Springfield, DC",2.098427626,0.03587,1
-"Alexandria and Arlington, NOVA","Arlington, DC",2.088091582,0.03679,1
-"Alexandria and Arlington, NOVA","Alexandria, DC",2.045159716,0.04084,1
-"Capital Hill, DC","Fairfax County, NOVA",1.992327041,0.04634,1
-"Fairfax County, NOVA","Annandale, DC",1.940153037,0.05236,0
-"Tysons, DC","Alexandria and Arlington, NOVA",1.93934453,0.05246,0
-"Alexandria, DC","Alexandria and Arlington, NOVA",1.746655398,0.0807,0
-"Loudoun County, NOVA","Fort Hunt and Belvoir, DC",1.728648622,0.08387,0
-"Loudoun County, NOVA","Arlington, DC",1.711196715,0.08704,0
-"Arlington, DC","Faquire, NOVA",1.310280181,0.1901,0
-"Maryland, DC","Faquire, NOVA",1.260260102,0.20758,0
-"Annandale, DC","Loudoun County, NOVA",1.235041134,0.21682,0
-"Alexandria, DC","Faquire, NOVA",1.218557411,0.22301,0
-"Springfield, DC","Prince William, NOVA",1.206434331,0.22765,0
-"Fort Hunt and Belvoir, DC","Faquire, NOVA",1.193278807,0.23276,0
-"Annandale, DC","Faquire, NOVA",1.146759041,0.25148,0
-"Faquire, NOVA","Arlington, DC",1.14530432,0.25208,0
-"Loudoun County, NOVA","Annandale, DC",0.999881469,0.31737,0
-"Alexandria and Arlington, NOVA","Tysons, DC",0.967831918,0.33313,0
-"Springfield, DC","Alexandria and Arlington, NOVA",0.91595857,0.35969,0
-"Annandale, DC","Prince William, NOVA",0.885501322,0.37589,0
-"Faquire, NOVA","Annandale, DC",0.850087856,0.39528,0
-"Fort Hunt and Belvoir, DC","Loudoun County, NOVA",0.845224992,0.39799,0
-"Fort Hunt and Belvoir, DC","Alexandria and Arlington, NOVA",0.775979249,0.43776,0
-"Capital Hill, DC","Loudoun County, NOVA",0.722884974,0.46975,0
-"Alexandria and Arlington, NOVA","Capital Hill, DC",0.672379744,0.50134,0
-"Alexandria and Arlington, NOVA","Fort Hunt and Belvoir, DC",0.563466061,0.57312,0
-"Faquire, NOVA","Capital Hill, DC",0.552975668,0.58028,0
-"Faquire, NOVA","Alexandria, DC",0.546857075,0.58448,0
-"Maryland, DC","Alexandria and Arlington, NOVA",0.535792992,0.5921,0
-"Capital Hill, DC","Faquire, NOVA",0.531827659,0.59485,0
-"Fort Hunt and Belvoir, DC","Prince William, NOVA",0.41844727,0.67562,0
-"Capital Hill, DC","Prince William, NOVA",0.235081516,0.81415,0
-"Loudoun County, NOVA","Capital Hill, DC",0.224025236,0.82274,0
-"Alexandria and Arlington, NOVA","Springfield, DC",0.137316621,0.89078,0
-"Loudoun County, NOVA","Alexandria, DC",0.131294657,0.89554,0
-"Alexandria and Arlington, NOVA","Annandale, DC",0.105414704,0.91605,0
-"Faquire, NOVA","Fort Hunt and Belvoir, DC",0.031628563,0.97477,0
+origin,destination,zscore,pvalue
+"Loudoun County, NOVA","Capital Hill, DC",0.22402523593252371,0.82274
+"Loudoun County, NOVA","Arlington, DC",1.711196715009133,0.08704
+"Loudoun County, NOVA","Alexandria, DC",0.1312946572156292,0.89554
+"Loudoun County, NOVA","Maryland, DC",4.20634811236373,3e-05
+"Loudoun County, NOVA","Tysons, DC",2.7335604179421003,0.00627
+"Loudoun County, NOVA","Fort Hunt and Belvoir, DC",1.7286486219239878,0.08387
+"Loudoun County, NOVA","Springfield, DC",2.2772983573528043,0.02277
+"Loudoun County, NOVA","Annandale, DC",0.9998814691260934,0.31737
+"Faquire, NOVA","Capital Hill, DC",0.5529756679117852,0.58028
+"Faquire, NOVA","Arlington, DC",1.145304320473259,0.25208
+"Faquire, NOVA","Alexandria, DC",0.5468570751732091,0.58448
+"Faquire, NOVA","Maryland, DC",3.732864024375423,0.00019
+"Faquire, NOVA","Tysons, DC",2.689766155023433,0.00715
+"Faquire, NOVA","Fort Hunt and Belvoir, DC",0.031628562669052965,0.97477
+"Faquire, NOVA","Springfield, DC",2.0984276256394847,0.03587
+"Faquire, NOVA","Annandale, DC",0.8500878563909121,0.39528
+"Prince William, NOVA","Capital Hill, DC",7.986337074217277,0.0
+"Prince William, NOVA","Arlington, DC",6.828684820576081,0.0
+"Prince William, NOVA","Alexandria, DC",6.699163932653545,0.0
+"Prince William, NOVA","Maryland, DC",21.557998828962695,0.0
+"Prince William, NOVA","Tysons, DC",3.7302748311133698,0.00019
+"Prince William, NOVA","Fort Hunt and Belvoir, DC",6.7510691717632545,0.0
+"Prince William, NOVA","Springfield, DC",8.450429602614525,0.0
+"Prince William, NOVA","Annandale, DC",5.503765402319203,0.0
+"Fairfax County, NOVA","Capital Hill, DC",7.453872342529305,0.0
+"Fairfax County, NOVA","Arlington, DC",4.810961281626325,0.0
+"Fairfax County, NOVA","Alexandria, DC",5.711644267282958,0.0
+"Fairfax County, NOVA","Maryland, DC",14.75346421197115,0.0
+"Fairfax County, NOVA","Tysons, DC",3.8957888796579443,0.0001
+"Fairfax County, NOVA","Fort Hunt and Belvoir, DC",4.659341334806766,0.0
+"Fairfax County, NOVA","Springfield, DC",5.493053752241642,0.0
+"Fairfax County, NOVA","Annandale, DC",1.94015303728495,0.05236
+"Alexandria and Arlington, NOVA","Capital Hill, DC",0.6723797444553468,0.50134
+"Alexandria and Arlington, NOVA","Arlington, DC",2.0880915816543766,0.03679
+"Alexandria and Arlington, NOVA","Alexandria, DC",2.0451597157872636,0.04084
+"Alexandria and Arlington, NOVA","Maryland, DC",2.96308591623418,0.00305
+"Alexandria and Arlington, NOVA","Tysons, DC",0.967831918474877,0.33313
+"Alexandria and Arlington, NOVA","Fort Hunt and Belvoir, DC",0.5634660613125835,0.57312
+"Alexandria and Arlington, NOVA","Springfield, DC",0.137316620997167,0.89078
+"Alexandria and Arlington, NOVA","Annandale, DC",0.10541470437314557,0.91605
+"Capital Hill, DC","Loudoun County, NOVA",0.7228849740050962,0.46975
+"Capital Hill, DC","Faquire, NOVA",0.5318276586508046,0.59485
+"Capital Hill, DC","Prince William, NOVA",0.2350815156000179,0.81415
+"Capital Hill, DC","Fairfax County, NOVA",1.992327041195909,0.04634
+"Capital Hill, DC","Alexandria and Arlington, NOVA",2.610060976361197,0.00905
+"Arlington, DC","Loudoun County, NOVA",4.94115265384324,0.0
+"Arlington, DC","Faquire, NOVA",1.3102801808973634,0.1901
+"Arlington, DC","Prince William, NOVA",6.086259405017236,0.0
+"Arlington, DC","Fairfax County, NOVA",9.78041568256895,0.0
+"Arlington, DC","Alexandria and Arlington, NOVA",2.244718513500761,0.02479
+"Alexandria, DC","Loudoun County, NOVA",3.2062000681846805,0.00135
+"Alexandria, DC","Faquire, NOVA",1.21855741056293,0.22301
+"Alexandria, DC","Prince William, NOVA",5.520272597240163,0.0
+"Alexandria, DC","Fairfax County, NOVA",5.566571118897795,0.0
+"Alexandria, DC","Alexandria and Arlington, NOVA",1.7466553977756154,0.0807
+"Maryland, DC","Loudoun County, NOVA",3.3634229137256746,0.00077
+"Maryland, DC","Faquire, NOVA",1.2602601022700153,0.20758
+"Maryland, DC","Prince William, NOVA",2.3205872686125812,0.02031
+"Maryland, DC","Fairfax County, NOVA",2.6421463253307547,0.00824
+"Maryland, DC","Alexandria and Arlington, NOVA",0.5357929916823906,0.5921
+"Tysons, DC","Loudoun County, NOVA",5.866373530272128,0.0
+"Tysons, DC","Faquire, NOVA",3.516816714924739,0.00044
+"Tysons, DC","Prince William, NOVA",9.325585905043514,0.0
+"Tysons, DC","Fairfax County, NOVA",7.803118855413224,0.0
+"Tysons, DC","Alexandria and Arlington, NOVA",1.939344529624572,0.05246
+"Fort Hunt and Belvoir, DC","Loudoun County, NOVA",0.8452249924248882,0.39799
+"Fort Hunt and Belvoir, DC","Faquire, NOVA",1.1932788072639229,0.23276
+"Fort Hunt and Belvoir, DC","Prince William, NOVA",0.41844727028929946,0.67562
+"Fort Hunt and Belvoir, DC","Fairfax County, NOVA",2.2615254196338674,0.02373
+"Fort Hunt and Belvoir, DC","Alexandria and Arlington, NOVA",0.7759792488030328,0.43776
+"Springfield, DC","Loudoun County, NOVA",3.00805118268689,0.00263
+"Springfield, DC","Faquire, NOVA",2.1817545882328164,0.02913
+"Springfield, DC","Prince William, NOVA",1.2064343305836522,0.22765
+"Springfield, DC","Fairfax County, NOVA",2.6598808111833714,0.00782
+"Springfield, DC","Alexandria and Arlington, NOVA",0.915958569517195,0.35969
+"Annandale, DC","Loudoun County, NOVA",1.2350411339334748,0.21682
+"Annandale, DC","Faquire, NOVA",1.1467590410341653,0.25148
+"Annandale, DC","Prince William, NOVA",0.8855013220823954,0.37589
+"Annandale, DC","Fairfax County, NOVA",3.7583416404602126,0.00017
+"Annandale, DC","Alexandria and Arlington, NOVA",2.6095575211930693,0.00907

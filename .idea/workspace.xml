@@ -2,10 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fbee1a1c-ed6b-4bd7-89fe-5a5f633f317d" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/PythonFiles/ODIdentification/AnalyzeOutput.py" beforeDir="false" afterPath="$PROJECT_DIR$/PythonFiles/ODIdentification/AnalyzeOutput.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PythonFiles/ODIdentification/RegionPathCounts.csv" beforeDir="false" afterPath="$PROJECT_DIR$/PythonFiles/ODIdentification/RegionPathCounts.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PythonFiles/ODIdentification/STATCompletePathAnalysis.csv" beforeDir="false" afterPath="$PROJECT_DIR$/PythonFiles/ODIdentification/STATCompletePathAnalysis.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PythonFiles/ODIdentification/STATRegionTimePeriodPathCountAnalysis-tollingHours.csv" beforeDir="false" afterPath="$PROJECT_DIR$/PythonFiles/ODIdentification/STATRegionTimePeriodPathCountAnalysis-tollingHours.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PythonFiles/ODIdentification/STATRegionTimePeriodPathCountAnalysis-total.csv" beforeDir="false" afterPath="$PROJECT_DIR$/PythonFiles/ODIdentification/STATRegionTimePeriodPathCountAnalysis-total.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PythonFiles/ODIdentification/STATregionalCountAnalysis.csv" beforeDir="false" afterPath="$PROJECT_DIR$/PythonFiles/ODIdentification/STATregionalCountAnalysis.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PythonFiles/ODIdentification/StatisticalAnalysis.py" beforeDir="false" afterPath="$PROJECT_DIR$/PythonFiles/ODIdentification/StatisticalAnalysis.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PythonFiles/ODIdentification/analysis2017.txt" beforeDir="false" afterPath="$PROJECT_DIR$/PythonFiles/ODIdentification/analysis2017.txt" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -14,119 +16,46 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="vertical" split-proportion="0.7712766">
-      <split-first>
-        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/PythonFiles/ODIdentification/StatisticalAnalysis.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="94">
-                  <caret line="397" column="56" selection-start-line="397" selection-start-column="56" selection-end-line="397" selection-end-column="56" />
-                  <folding>
-                    <element signature="e#0#79#0" expanded="true" />
-                    <element signature="e#293#558#0" />
-                    <element signature="e#475#5853#0" />
-                    <element signature="e#5807#6221#0" />
-                    <element signature="e#6262#7118#0" />
-                    <element signature="e#7176#7831#0" />
-                    <element signature="e#8053#10173#0" />
-                    <element signature="e#8047#8117#1" />
-                    <element signature="e#7958#8529#0" />
-                    <element signature="e#10919#11483#0" />
-                    <element signature="e#10999#11833#0" />
-                    <element signature="e#12751#14404#0" />
-                    <element signature="e#11847#12370#0" />
-                    <element signature="e#12679#14646#0" />
-                    <element signature="e#15586#18670#0" />
-                    <element signature="e#20709#26465#0" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/PythonFiles/ODIdentification/AnalyzeOutput.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="267">
-                  <caret line="1100" selection-start-line="1100" selection-end-line="1100" />
-                  <folding>
-                    <element signature="e#0#79#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-first>
-      <split-second>
-        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/PythonFiles/ODIdentification/Objects/HashTable.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="4097">
-                  <caret line="242" selection-start-line="202" selection-start-column="20" selection-end-line="242" />
-                  <folding>
-                    <element signature="e#0#38#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/PythonFiles/ODIdentification/Objects/ODRegion.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="2640">
-                  <caret line="159" column="30" selection-start-line="159" selection-start-column="30" selection-end-line="159" selection-end-column="30" />
-                  <folding>
-                    <element signature="e#0#58#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/PythonFiles/ODIdentification/Objects/ODNode.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="1717">
-                  <caret line="102" column="28" selection-start-line="102" selection-start-column="28" selection-end-line="102" selection-end-column="28" />
-                  <folding>
-                    <element signature="e#0#40#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/PythonFiles/ODIdentification/Objects/TimeNode.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="-969">
-                  <folding>
-                    <element signature="e#0#28#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/PythonFiles/ODIdentification/Objects/PathNode.py">
-              <provider selected="true" editor-type-id="text-editor" />
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/PythonFiles/ODIdentification/Objects/Coordinate.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="119">
-                  <caret line="8" column="16" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="16" />
-                  <folding>
-                    <element signature="e#0#31#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-second>
-    </splitter>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/PythonFiles/ODIdentification/StatisticalAnalysis.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="312">
+              <caret line="709" column="33" selection-start-line="709" selection-start-column="33" selection-end-line="709" selection-end-column="33" />
+              <folding>
+                <element signature="e#0#79#0" expanded="true" />
+                <element signature="e#293#558#0" />
+                <element signature="e#17892#21283#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/PythonFiles/ODIdentification/Objects/ODRegion.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1734">
+              <caret line="103" column="16" selection-start-line="103" selection-start-column="8" selection-end-line="103" selection-end-column="16" />
+              <folding>
+                <element signature="e#0#58#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/PythonFiles/ODIdentification/AnalyzeOutput.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="18598">
+              <caret line="1100" selection-start-line="1100" selection-end-line="1100" />
+              <folding>
+                <element signature="e#0#79#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -137,7 +66,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>def tostrin</find>
       <find>odnodes =</find>
       <find>percent</find>
       <find>percentAnalysis</find>
@@ -146,7 +74,6 @@
       <find>regionproportionanalysis</find>
       <find>odnodes</find>
       <find>amcount</find>
-      <find>tostring</find>
       <find>time</find>
       <find>= time</find>
       <find>total</find>
@@ -167,6 +94,8 @@
       <find>attachregions</find>
       <find>am</find>
       <find>timetoint</find>
+      <find>regionpathcountanalysis</find>
+      <find>tostring</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -210,16 +139,17 @@
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-1928" />
-    <option name="y" value="-8" />
-    <option name="width" value="384" />
-    <option name="height" value="103" />
+    <option name="x" value="-18" />
+    <option name="y" value="-18" />
+    <option name="width" value="3876" />
+    <option name="height" value="2196" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -241,6 +171,13 @@
             <path>
               <item name="VTRCODPathAnalysis" type="b2602c69:ProjectViewProjectNode" />
               <item name="VTRCODPathAnalysis" type="462c0819:PsiDirectoryNode" />
+              <item name="PythonFiles" type="462c0819:PsiDirectoryNode" />
+              <item name="ODIdentification" type="462c0819:PsiDirectoryNode" />
+              <item name="Objects" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="VTRCODPathAnalysis" type="b2602c69:ProjectViewProjectNode" />
+              <item name="VTRCODPathAnalysis" type="462c0819:PsiDirectoryNode" />
               <item name="Results" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -253,7 +190,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -700,19 +636,26 @@
       <option name="project" value="LOCAL" />
       <updated>1565665285570</updated>
     </task>
-    <option name="localTasksCounter" value="42" />
+    <task id="LOCAL-00042" summary="statistical analysis">
+      <created>1565729462422</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1565729462422</updated>
+    </task>
+    <option name="localTasksCounter" value="43" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-1928" y="-8" width="1936" height="1056" extended-state="6" />
+    <frame x="-6" y="-6" width="1292" height="692" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" weight="0.24678111" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24642289" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32894737" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.16143012" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.2641844" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39856374" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -1025,16 +968,6 @@
       </provider>
       <provider editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/PythonFiles/ODIdentification/Objects/ODRegion.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2640">
-          <caret line="159" column="30" selection-start-line="159" selection-start-column="30" selection-end-line="159" selection-end-column="30" />
-          <folding>
-            <element signature="e#0#58#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/PythonFiles/ODIdentification/Objects/PathNode.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -1047,19 +980,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/PythonFiles/ODIdentification/AnalyzeOutput.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="267">
-          <caret line="1100" selection-start-line="1100" selection-end-line="1100" />
-          <folding>
-            <element signature="e#0#79#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/PythonFiles/ODIdentification/Objects/Coordinate.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
+        <state>
           <caret line="8" column="16" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="16" />
           <folding>
             <element signature="e#0#31#0" expanded="true" />
@@ -1069,25 +992,32 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/PythonFiles/ODIdentification/StatisticalAnalysis.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="94">
-          <caret line="397" column="56" selection-start-line="397" selection-start-column="56" selection-end-line="397" selection-end-column="56" />
+        <state relative-caret-position="312">
+          <caret line="709" column="33" selection-start-line="709" selection-start-column="33" selection-end-line="709" selection-end-column="33" />
           <folding>
             <element signature="e#0#79#0" expanded="true" />
             <element signature="e#293#558#0" />
-            <element signature="e#475#5853#0" />
-            <element signature="e#5807#6221#0" />
-            <element signature="e#6262#7118#0" />
-            <element signature="e#7176#7831#0" />
-            <element signature="e#8053#10173#0" />
-            <element signature="e#8047#8117#1" />
-            <element signature="e#7958#8529#0" />
-            <element signature="e#10919#11483#0" />
-            <element signature="e#10999#11833#0" />
-            <element signature="e#12751#14404#0" />
-            <element signature="e#11847#12370#0" />
-            <element signature="e#12679#14646#0" />
-            <element signature="e#15586#18670#0" />
-            <element signature="e#20709#26465#0" />
+            <element signature="e#17892#21283#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PythonFiles/ODIdentification/Objects/ODRegion.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1734">
+          <caret line="103" column="16" selection-start-line="103" selection-start-column="8" selection-end-line="103" selection-end-column="16" />
+          <folding>
+            <element signature="e#0#58#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PythonFiles/ODIdentification/AnalyzeOutput.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="18598">
+          <caret line="1100" selection-start-line="1100" selection-end-line="1100" />
+          <folding>
+            <element signature="e#0#79#0" expanded="true" />
           </folding>
         </state>
       </provider>

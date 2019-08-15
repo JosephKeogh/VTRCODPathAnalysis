@@ -593,6 +593,8 @@ def regionPathCountAnalysis(regions17: list, regions18: list):
     for a in regions17:
         for b in regions18:
 
+            rejectCount = 0
+
             masterpaths17 = {}
             masterpaths18 = {}
 
@@ -634,23 +636,31 @@ def regionPathCountAnalysis(regions17: list, regions18: list):
                         else:
                             masterpaths18[p] = paths[p]
 
-            # make it so each list of paths contains the same paths
-            for e in masterpaths17:
-                if masterpaths18.__contains__(e) is False:
-                    masterpaths18[e] = PathNode.PathNode(e)
-            for f in masterpaths18:
-                if masterpaths17.__contains__(f) is False:
-                    masterpaths17[f] = PathNode.PathNode(f)
+                # make it so each list of paths contains the same paths
+                for e in masterpaths17:
+                    if masterpaths18.__contains__(e) is False:
+                        masterpaths18[e] = PathNode.PathNode(e)
+                for f in masterpaths18:
+                    if masterpaths17.__contains__(f) is False:
+                        masterpaths17[f] = PathNode.PathNode(f)
 
-            for e in masterpaths17:
-                pathNode17 = masterpaths17[e]
-                pathNode18 = masterpaths18[e]
-                zscore, pvalue = two_proprotions_test(pathNode17.getCount(), a.getCount(),
-                                                      pathNode18.getCount(), b.getCount())
-                smallList = [a.origin, a.destination, pathNode17.getPathID(), zscore, pvalue]
+                for e in masterpaths17:
+                    pathNode17 = masterpaths17[e]
+                    pathNode18 = masterpaths18[e]
+                    zscore, pvalue = two_proprotions_test(pathNode17.getCount(), a.getCount(),
+                                                          pathNode18.getCount(), b.getCount())
+                    smallList = [a.origin, a.destination, pathNode17.getPathID(), zscore, pvalue]
 
-                masterList.append(smallList)
+                    if pvalue <= 0.05:
+                        rejectCount += 1
 
+                    masterList.append(smallList)
+
+                '''
+                if masterpaths18.__len__() > 0:
+                    print(a.origin + "," + a.destination + "," + str(rejectCount) + "," + str(masterpaths18.__len__())
+                      + "," + str(rejectCount / masterpaths18.__len__()))
+                    '''
     return masterList
 
 
@@ -685,13 +695,19 @@ def regionTimePeriodPathCountAnalysis(regions17: list, regions18: list, amLow: s
     for a in regions17:
         for b in regions18:
 
+
+
             am17Paths = {}
             pm17Paths = {}
 
             am18Paths = {}
             pm18Paths = {}
 
-            if a.origin == b.destination and a.destination == b.destination:
+            if a.origin == b.origin and a.destination == b.destination:
+
+                rejectCount = 0
+                AMRejectCount = 0
+                PMRejectCount = 0
 
 
                 # get all the path counts from 17
@@ -787,23 +803,35 @@ def regionTimePeriodPathCountAnalysis(regions17: list, regions18: list, amLow: s
                     if pm17Paths.__contains__(f) is False:
                         pm17Paths[f] = PathNode.PathNode(f)
 
-            # am analysis
-            for p in am17Paths:
-                pathNode17 = am17Paths[p]
-                pathNode18 = am18Paths[p]
-                zscore, pvalue = two_proprotions_test(pathNode17.getCount(), a.getCount(),
-                                                      pathNode18.getCount(), b.getCount())
-                smallList = [a.origin, a.destination, "AM", p, zscore, pvalue]
-                masterList.append(smallList)
+                # am analysis
+                for p in am17Paths:
+                    pathNode17 = am17Paths[p]
+                    pathNode18 = am18Paths[p]
+                    zscore, pvalue = two_proprotions_test(pathNode17.getCount(), a.getCount(),
+                                                          pathNode18.getCount(), b.getCount())
+                    smallList = [a.origin, a.destination, "AM", p, zscore, pvalue]
+                    masterList.append(smallList)
 
-            # pm analysis
-            for p in pm17Paths:
-                pathNode17 = pm17Paths[p]
-                pathNode18 = pm18Paths[p]
-                zscore, pvalue = two_proprotions_test(pathNode17.getCount(), a.getCount(),
-                                                      pathNode18.getCount(), b.getCount())
-                smallList = [a.origin, a.destination, "PM", p, zscore, pvalue]
-                masterList.append(smallList)
+                    if pvalue <= 0.05:
+                        rejectCount += 1
+                        AMRejectCount += 1
+
+                # pm analysis
+                for p in pm17Paths:
+                    pathNode17 = pm17Paths[p]
+                    pathNode18 = pm18Paths[p]
+                    zscore, pvalue = two_proprotions_test(pathNode17.getCount(), a.getCount(),
+                                                          pathNode18.getCount(), b.getCount())
+                    smallList = [a.origin, a.destination, "PM", p, zscore, pvalue]
+                    masterList.append(smallList)
+
+                    if pvalue <= 0.05:
+                        rejectCount += 1
+                        PMRejectCount += 1
+
+                if pm17Paths.__len__() > 0 and am17Paths.__len__() > 0:
+                    print(amLow + "," + a.origin + "," + a.destination + "," + str(AMRejectCount / am17Paths.__len__())
+                          + "," + str(PMRejectCount / pm17Paths.__len__()))
 
     return masterList
 
@@ -860,7 +888,6 @@ def main():
     file.close()
 
     # relative to od region and thirty min time interval
-    print("complete path count analysis")
     completePathAnalysis = completePathCountAnalysis(regions17, regions18)
     with open("STATCompletePathAnalysis.csv", 'w', newline='') as file:
         writer = csv.writer(file)
