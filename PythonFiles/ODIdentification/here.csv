@@ -1,0 +1,77 @@
+Loudoun County, NOVA,Capital Hill, DC,2,4,0.5
+Loudoun County, NOVA,Arlington, DC,2,6,0.3333333333333333
+Loudoun County, NOVA,Alexandria, DC,1,4,0.25
+Loudoun County, NOVA,Maryland, DC,5,10,0.5
+Loudoun County, NOVA,Tysons, DC,0,3,0.0
+Loudoun County, NOVA,Fort Hunt and Belvoir, DC,1,5,0.2
+Loudoun County, NOVA,Springfield, DC,1,4,0.25
+Loudoun County, NOVA,Annandale, DC,0,2,0.0
+Faquire, NOVA,Capital Hill, DC,0,1,0.0
+Faquire, NOVA,Alexandria, DC,0,1,0.0
+Faquire, NOVA,Maryland, DC,0,4,0.0
+Faquire, NOVA,Tysons, DC,0,1,0.0
+Faquire, NOVA,Springfield, DC,0,1,0.0
+Faquire, NOVA,Annandale, DC,0,1,0.0
+Prince William, NOVA,Capital Hill, DC,1,8,0.125
+Prince William, NOVA,Arlington, DC,0,6,0.0
+Prince William, NOVA,Alexandria, DC,1,5,0.2
+Prince William, NOVA,Maryland, DC,4,10,0.4
+Prince William, NOVA,Tysons, DC,0,7,0.0
+Prince William, NOVA,Fort Hunt and Belvoir, DC,1,5,0.2
+Prince William, NOVA,Springfield, DC,1,8,0.125
+Prince William, NOVA,Annandale, DC,0,4,0.0
+Fairfax County, NOVA,Capital Hill, DC,3,13,0.23076923076923078
+Fairfax County, NOVA,Arlington, DC,2,14,0.14285714285714285
+Fairfax County, NOVA,Alexandria, DC,1,10,0.1
+Fairfax County, NOVA,Maryland, DC,7,24,0.2916666666666667
+Fairfax County, NOVA,Tysons, DC,2,9,0.2222222222222222
+Fairfax County, NOVA,Fort Hunt and Belvoir, DC,2,15,0.13333333333333333
+Fairfax County, NOVA,Springfield, DC,2,17,0.11764705882352941
+Fairfax County, NOVA,Annandale, DC,0,10,0.0
+Alexandria and Arlington, NOVA,Capital Hill, DC,1,8,0.125
+Alexandria and Arlington, NOVA,Arlington, DC,2,5,0.4
+Alexandria and Arlington, NOVA,Alexandria, DC,1,4,0.25
+Alexandria and Arlington, NOVA,Maryland, DC,3,12,0.25
+Alexandria and Arlington, NOVA,Tysons, DC,1,4,0.25
+Alexandria and Arlington, NOVA,Fort Hunt and Belvoir, DC,1,5,0.2
+Alexandria and Arlington, NOVA,Springfield, DC,0,4,0.0
+Alexandria and Arlington, NOVA,Annandale, DC,0,4,0.0
+Capital Hill, DC,Loudoun County, NOVA,2,11,0.18181818181818182
+Capital Hill, DC,Faquire, NOVA,3,8,0.375
+Capital Hill, DC,Prince William, NOVA,2,14,0.14285714285714285
+Capital Hill, DC,Fairfax County, NOVA,3,18,0.16666666666666666
+Capital Hill, DC,Alexandria and Arlington, NOVA,0,7,0.0
+Arlington, DC,Loudoun County, NOVA,2,10,0.2
+Arlington, DC,Faquire, NOVA,0,6,0.0
+Arlington, DC,Prince William, NOVA,2,12,0.16666666666666666
+Arlington, DC,Fairfax County, NOVA,4,13,0.3076923076923077
+Arlington, DC,Alexandria and Arlington, NOVA,0,5,0.0
+Alexandria, DC,Loudoun County, NOVA,0,5,0.0
+Alexandria, DC,Faquire, NOVA,0,2,0.0
+Alexandria, DC,Prince William, NOVA,0,7,0.0
+Alexandria, DC,Fairfax County, NOVA,0,7,0.0
+Alexandria, DC,Alexandria and Arlington, NOVA,0,1,0.0
+Maryland, DC,Loudoun County, NOVA,0,5,0.0
+Maryland, DC,Faquire, NOVA,0,4,0.0
+Maryland, DC,Prince William, NOVA,1,6,0.16666666666666666
+Maryland, DC,Fairfax County, NOVA,1,10,0.1
+Maryland, DC,Alexandria and Arlington, NOVA,0,2,0.0
+Tysons, DC,Loudoun County, NOVA,0,3,0.0
+Tysons, DC,Faquire, NOVA,0,7,0.0
+Tysons, DC,Prince William, NOVA,1,7,0.14285714285714285
+Tysons, DC,Fairfax County, NOVA,0,7,0.0
+Fort Hunt and Belvoir, DC,Faquire, NOVA,0,2,0.0
+Fort Hunt and Belvoir, DC,Prince William, NOVA,0,4,0.0
+Fort Hunt and Belvoir, DC,Fairfax County, NOVA,0,2,0.0
+Fort Hunt and Belvoir, DC,Alexandria and Arlington, NOVA,0,1,0.0
+Springfield, DC,Loudoun County, NOVA,0,4,0.0
+Springfield, DC,Faquire, NOVA,1,3,0.3333333333333333
+Springfield, DC,Prince William, NOVA,1,4,0.25
+Springfield, DC,Fairfax County, NOVA,1,5,0.2
+Springfield, DC,Alexandria and Arlington, NOVA,0,3,0.0
+Annandale, DC,Loudoun County, NOVA,0,6,0.0
+Annandale, DC,Faquire, NOVA,0,7,0.0
+Annandale, DC,Prince William, NOVA,1,11,0.09090909090909091
+Annandale, DC,Fairfax County, NOVA,1,13,0.07692307692307693
+Annandale, DC,Alexandria and Arlington, NOVA,0,4,0.0
+Done.
